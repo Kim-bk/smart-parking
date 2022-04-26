@@ -21,7 +21,7 @@ label_text_exit = Label(frame_confirm,text="Image Exit",font=('Courier',15),fg='
 label_text_exit.place(x=540,y=10)
 
 # image 1
-img_entrance = Image.open("img1.jpg")
+img_entrance = Image.open("D:\Semester 6\PBL5\Desktop\img1.jpg")
 img_entrance = img_entrance.resize((150,150))
 test = ImageTk.PhotoImage(img_entrance)
 
