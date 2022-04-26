@@ -108,7 +108,7 @@ if not success:
             print("Error, No webcam found!")
             sys.exit(1)
 
-def openFile():
+def openFileExit():
     global filePath
     filePath = filedialog.askopenfilename()
     print(filePath)
@@ -121,6 +121,19 @@ def openFile():
     label_image_test = Label(frame_photograph,image=test,borderwidth=3,relief='groove')
     label_image_test.image = test
     label_image_test.place(x=280,y=350)
+
+def openFileEntrance():
+    filePath = filedialog.askopenfilename()
+    print(filePath)
+    if len(filePath)>0:
+        img_entrance = Image.open(filePath)
+        img_entrance = img_entrance.resize((250,250))
+        test = ImageTk.PhotoImage(img_entrance)
+   
+    
+    label_image_test_entrance = Label(frame_photograph,image=test,borderwidth=3,relief='groove')
+    label_image_test_entrance.image = test
+    label_image_test_entrance.place(x=10,y=350)
 
    
     #main
@@ -221,8 +234,13 @@ def show_frame():
 image_frame = Frame(frame_photograph,width=250,height=250,borderwidth=3,relief='groove')
 image_frame.place(x=280,y=40)
 
-button_file = Button(frame_photograph,text="Open",command=openFile)
-button_file.place(x=300,y=300)
+button_file_entrance = Button(frame_photograph,text="Open Entrance",command=openFileEntrance)
+button_file_entrance.place(x=10,y=320)
+image_frame_test_entrance = Frame(frame_photograph,width=250,height=250,borderwidth=3,relief='groove')
+image_frame_test_entrance.place(x=10,y=350)
+
+button_file = Button(frame_photograph,text="Open Exit",command=openFileExit)
+button_file.place(x=300,y=320)
 image_frame_test = Frame(frame_photograph,width=250,height=250,borderwidth=3,relief='groove')
 image_frame_test.place(x=280,y=350)
 
