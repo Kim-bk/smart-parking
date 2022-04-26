@@ -4,7 +4,115 @@ from PIL import Image, ImageTk
 from numpy import size
 from  tkinter import ttk
 import cv2
+import sys
+from PIL import Image, ImageTk
+from datetime import datetime
+import os
 
+fileName = os.environ['ALLUSERSPROFILE'] + "\WebcamCap.txt"
+cancel = False
+link_img="img1.jpg"
+Dict = "./image/"
+
+
+def prompt_ok(event = 0):
+    global cancel, button, button1, button2
+    cancel = True
+
+    button.place_forget()
+    button1 = Button(frame_photograph, text="Take", command=saveAndExit)
+    button2 = Button(frame_photograph, text="Again", command=resume)
+    button1.place(anchor=CENTER, x = 100, y=310)
+    button2.place(anchor=CENTER, x = 170, y=310)
+    button1.focus()
+
+def saveAndExit(event = 0):
+    global link_img
+    global prevImg
+
+    if (len(sys.argv) < 2):
+        now = datetime.now()
+        timestamp = datetime.timestamp(now)
+        timestamp = str(timestamp)
+        filepath= timestamp.replace('.','_')
+        filepath = Dict + filepath+".png"
+    else:
+        filepath = sys.argv[1]
+
+    print ("Output file to: " + filepath)
+    link_img = filepath
+    prevImg.save(filepath)
+
+    # display
+    image_entrance_full = Image.open(link_img)
+    image_entrance_full = image_entrance_full.resize((250,250))
+    img1 = ImageTk.PhotoImage(image_entrance_full)
+    label_image = Label(frame_photograph,image=img1)
+    label_image.image = img1
+    label_image.place(x=280,y=40)
+   
+   
+
+def resume(event = 0):
+    global button1, button2, button, lmain, cancel
+
+    cancel = False
+
+    button1.place_forget()
+    button2.place_forget()
+
+    mainWindow.bind('<Return>', prompt_ok)
+    button.place(x = 120,y=300)
+    lmain.after(10, show_frame)
+
+
+   
+
+def changeCam(event=0, nextCam=-1):
+    global camIndex, cap, fileName
+
+    if nextCam == -1:
+        camIndex += 1
+    else:
+        camIndex = nextCam
+    del(cap)
+    cap = cv2.VideoCapture(camIndex)
+
+    #try to get a frame, if it returns nothing
+    success, frame = cap.read()
+    if not success:
+        camIndex = 0
+        del(cap)
+        cap = cv2.VideoCapture(camIndex)
+
+    f = open(fileName, 'w')
+    f.write(str(camIndex))
+    f.close()
+
+try:
+    f = open(fileName, 'r')
+    camIndex = int(f.readline())
+except:
+    camIndex = 0
+
+cap = cv2.VideoCapture(camIndex)
+capWidth = cap.get(3)
+capHeight = cap.get(4)
+
+success, frame = cap.read()
+if not success:
+    if camIndex == 0:
+        print("Error, No webcam found!")
+        sys.exit(1)
+    else:
+        changeCam(nextCam=0)
+        success, frame = cap.read()
+        if not success:
+            print("Error, No webcam found!")
+            sys.exit(1)
+
+
+#main
 root = Tk()
 root.geometry("1400x700")
 root.title("Management's smart park")
@@ -21,7 +129,7 @@ label_text_exit = Label(frame_confirm,text="Image Exit",font=('Courier',15),fg='
 label_text_exit.place(x=540,y=10)
 
 # image 1
-img_entrance = Image.open("D:\Semester 6\PBL5\Desktop\img1.jpg")
+img_entrance = Image.open('../Desktop/img2.jpg')
 img_entrance = img_entrance.resize((150,150))
 test = ImageTk.PhotoImage(img_entrance)
 
@@ -78,20 +186,29 @@ frame_photograph.place(x=15,y=15)
 
 label_entrance_full = Label(frame_photograph,text='Camera and Image entrance',font=('Courier',15,'bold'),fg='#008B8B')
 label_entrance_full.place(x=140,y=10)
-image_entrance_full = Image.open("img2.jpg")
-image_entrance_full = image_entrance_full.resize((250,250))
-img1 = ImageTk.PhotoImage(image_entrance_full)
-label_image = Label(frame_photograph,image=img1)
-label_image.image = img1
-label_image.place(x=280,y=40)
+mainWindow = Frame(frame_photograph,width=250,height=250)
+mainWindow.bind('<Escape>', lambda e: mainWindow.quit())
+mainWindow.place(x=10,y=40)
+lmain = Label(mainWindow, compound=CENTER, anchor=CENTER, relief=RAISED)
+lmain.config(width=250,height=250)
+button = Button(frame_photograph, text="Capture", command=prompt_ok)
+lmain.pack()
+button.place(x = 120,y=300)
+button.focus()
 
-label_entrance_full = Label(frame_photograph,text='Camera and Image exit',font=('Courier',15,'bold'),fg='#008B8B')
-label_entrance_full.place(x=140,y=350)
-image_exit_full = Image.open("image2.jpg")
-image_exit_full = image_exit_full.resize((250,250))
-img2 = ImageTk.PhotoImage(image_exit_full)
-label_image1 = Label(frame_photograph,image=img2)
-label_image1.image = img2
-label_image1.place(x=280,y=390)
+def show_frame():
+    global cancel, prevImg, button
+    _, frame = cap.read()
+    cv2image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGBA)
+
+    prevImg = Image.fromarray(cv2image)
+    imgtk = ImageTk.PhotoImage(image=prevImg)
+    lmain.imgtk = imgtk
+    lmain.configure(image=imgtk)
+    if not cancel:
+        lmain.after(10, show_frame)
+
+show_frame()
+mainWindow.mainloop()
 
 root.mainloop()
