@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import font
+from tkinter import filedialog
 from PIL import Image, ImageTk
 from numpy import size
 from  tkinter import ttk
@@ -11,6 +12,7 @@ import os
 
 fileName = os.environ['ALLUSERSPROFILE'] + "\WebcamCap.txt"
 cancel = False
+filePath = ''
 link_img="img1.jpg"
 Dict = "./image/"
 
@@ -47,7 +49,7 @@ def saveAndExit(event = 0):
     image_entrance_full = Image.open(link_img)
     image_entrance_full = image_entrance_full.resize((250,250))
     img1 = ImageTk.PhotoImage(image_entrance_full)
-    label_image = Label(frame_photograph,image=img1)
+    label_image = Label(frame_photograph,image=img1,borderwidth=3,relief="groove")
     label_image.image = img1
     label_image.place(x=280,y=40)
    
@@ -55,18 +57,13 @@ def saveAndExit(event = 0):
 
 def resume(event = 0):
     global button1, button2, button, lmain, cancel
-
     cancel = False
-
     button1.place_forget()
     button2.place_forget()
-
     mainWindow.bind('<Return>', prompt_ok)
     button.place(x = 120,y=300)
     lmain.after(10, show_frame)
 
-
-   
 
 def changeCam(event=0, nextCam=-1):
     global camIndex, cap, fileName
@@ -111,8 +108,24 @@ if not success:
             print("Error, No webcam found!")
             sys.exit(1)
 
+def openFile():
+    global filePath
+    filePath = filedialog.askopenfilename()
+    print(filePath)
+    if len(filePath)>0:
+        img_entrance = Image.open(filePath)
+        img_entrance = img_entrance.resize((250,250))
+        test = ImageTk.PhotoImage(img_entrance)
+   
+    
+    label_image_test = Label(frame_photograph,image=test,borderwidth=3,relief='groove')
+    label_image_test.image = test
+    label_image_test.place(x=280,y=350)
 
-#main
+   
+    #main
+
+
 root = Tk()
 root.geometry("1400x700")
 root.title("Management's smart park")
@@ -128,26 +141,23 @@ label_text_entrance.place(x=120,y=10)
 label_text_exit = Label(frame_confirm,text="Image Exit",font=('Courier',15),fg='#008B8B')
 label_text_exit.place(x=540,y=10)
 
-# image 1
-img_entrance = Image.open('../Desktop/img2.jpg')
-img_entrance = img_entrance.resize((150,150))
-test = ImageTk.PhotoImage(img_entrance)
 
-label_entrance = Label(frame_confirm,image=test)
-label_entrance.image = test
-label_entrance.place(x=30,y=40)
+frame_liensce_plate_entrance = Frame(frame_confirm,borderwidth=3,relief='groove',height=150,width=150)
+frame_liensce_plate_entrance.place(x=30,y=40)
 
-label_entrance_analys = Label(frame_confirm,image=test)
-label_entrance_analys.image = test
-label_entrance_analys.place(x=190,y=40)
+frame_liensce_plate_analys_entrance = Frame(frame_confirm,borderwidth=3,relief='groove',height=150,width=150)
+frame_liensce_plate_analys_entrance.place(x=190,y=40)
 
-label_exit = Label(frame_confirm,image=test)
-label_exit.image = test
-label_exit.place(x=450,y=40)
 
-label_exit_analys = Label(frame_confirm,image=test)
-label_exit_analys.image = test
-label_exit_analys.place(x=610,y=40)
+frame_liensce_plate_exit = Frame(frame_confirm,borderwidth=3,relief='groove',height=150,width=150)
+frame_liensce_plate_exit.place(x=450,y=40)
+
+frame_liensce_plate_analys_entrance = Frame(frame_confirm,borderwidth=3,relief='groove',height=150,width=150)
+frame_liensce_plate_analys_entrance.place(x=610,y=40)
+
+button_check = Button(frame_confirm,fg='#006400',bg='#FFF0F5',font=('Courier',15,'bold'),text='CHECK')
+button_check.place(x=350,y=200)
+
 
 #### frame contains table
 frame_table = Frame(root,width=800,height=300,borderwidth=3,relief="groove")
@@ -207,6 +217,14 @@ def show_frame():
     lmain.configure(image=imgtk)
     if not cancel:
         lmain.after(10, show_frame)
+
+image_frame = Frame(frame_photograph,width=250,height=250,borderwidth=3,relief='groove')
+image_frame.place(x=280,y=40)
+
+button_file = Button(frame_photograph,text="Open",command=openFile)
+button_file.place(x=300,y=300)
+image_frame_test = Frame(frame_photograph,width=250,height=250,borderwidth=3,relief='groove')
+image_frame_test.place(x=280,y=350)
 
 show_frame()
 mainWindow.mainloop()
