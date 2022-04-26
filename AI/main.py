@@ -169,13 +169,13 @@ def custom_f1score(y, y_pred):
 
 if __name__ == "__main__":
     #load the model has been trained before 
-    model = keras.models.load_model('../License-Plate-Recognition/data/train/character_model.h5',custom_objects={"custom_f1score": custom_f1score})
+    model = keras.models.load_model('../PBL5/AI/data/train/character_model.h5',custom_objects={"custom_f1score": custom_f1score})
 
      # Loads the data required for detecting the license plates from cascade classifier.
     #plate_cascade = cv2.CascadeClassifier('../License-Plate-Recognition/images/annotation/cascade.xml')
-    plate_cascade = cv2.CascadeClassifier('../License-Plate-Recognition/archive/cascade.xml')
+    plate_cascade = cv2.CascadeClassifier('../PBL5/AI/archive/cascade.xml')
  
-    img = cv2.imread('../License-Plate-Recognition/images/oto/82.jpg')
+    img = cv2.imread('../PBL5/AI/images/oto/82.jpg')
     #img = cv2.imread('../License-Plate-Recognition/images/oto/462.jpg')
     #img = cv2.imread('../License-Plate-Recognition/images/CarTGMT/AEONTP_6S81U5_checkin_2020-1-13-16-18bx9UOV6rY5.jpg')
     old_img = img
