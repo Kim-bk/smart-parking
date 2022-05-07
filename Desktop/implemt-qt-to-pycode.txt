@@ -1,0 +1,12 @@
+pyuic5 -x ui-main.ui -o generate.py
+
+===
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    w = 2280; h = 1520
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.resize(w, h)
+    MainWindow.show()
+    sys.exit(app.exec_())

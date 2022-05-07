@@ -22,7 +22,7 @@ def custom_f1score(y, y_pred):
 
 
 train_datagen = ImageDataGenerator(rescale=1./255, width_shift_range=0.1, height_shift_range=0.1)
-path = '../License-Plate-Recognition/archive/data/data/'
+path = 'D:/Semester 6/PBL5/AI/data_test'
 
 train_generator = train_datagen.flow_from_directory(
         path+'/train',  # this is the target directory
@@ -34,7 +34,6 @@ validation_generator = train_datagen.flow_from_directory(
         path+'/val',  # this is the target directory
         target_size=(28,28),  # all images will be resized to 28x28 batch_size=1,
         class_mode='sparse')
-
 
 K.clear_session()
 model = Sequential()
@@ -57,4 +56,4 @@ model.fit_generator(
       steps_per_epoch = train_generator.samples // batch_size,
       validation_data = validation_generator, 
       epochs = 80, verbose=1, callbacks=callbacks)
-model.save('../License-Plate-Recognition/data/train/character_model.h5')
+model.save('D:/Semester 6/PBL5/AI/data_test/character_model.h5')

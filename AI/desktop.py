@@ -3,7 +3,7 @@ from tkinter import font
 from tkinter import filedialog
 from PIL import Image, ImageTk
 from numpy import size
-from  tkinter import ttk
+from tkinter import ttk
 import cv2
 import sys
 from PIL import Image, ImageTk
