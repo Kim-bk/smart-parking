@@ -1,8 +1,12 @@
-from PyQt5.QtWidgets import QMainWindow, QApplication, QPushButton, QLabel, QGroupBox, QFileDialog
+from PyQt5.QtWidgets import *
 from PyQt5 import uic
 from PyQt5 import QtGui
+from PyQt5.QtCore import pyqtSignal, pyqtSlot, Qt, QThread, QTime, QTimer
+from PyQt5.QtGui import QPixmap
 import sys
-
+import cv2
+import numpy as np
+import datetime
 
 # AI code 
 import matplotlib.pyplot as plt
@@ -165,10 +169,52 @@ def f1score(y, y_pred):
   return f1_score(y, tf.math.argmax(y_pred, axis=1), average='micro') 
 
 def custom_f1score(y, y_pred):
-  return tf.py_function(f1score, (y, y_pred), tf.double)
-
-  
+  return tf.py_function(f1score, (y, y_pred), tf.double)  
 # end AI code
+
+def display_time(self):
+    while True:
+        QApplication.processEvents()
+        dt = datetime.datetime.now()
+        if dt.hour < 10:
+            if dt.minute < 10:
+                self.txtTime.setText('0%s:0%s:%s \t-\t %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+            elif dt.second < 10:
+                self.txtTime.setText('0%s:%s:0%s \t-\t %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+            else:
+                self.txtTime.setText('0%s:%s:%s \t-\t %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+       
+        elif dt.minute < 10:
+            if dt.hour < 10:
+                self.txtTime.setText('0%s:0%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+            elif dt.second < 10:
+                self.txtTime.setText('%s:0%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+            else:  
+                self.txtTime.setText('%s:0%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+
+        elif dt.second < 10:
+            if dt.hour < 10:
+                self.txtTime.setText('0%s:%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+            elif dt.minute < 10:
+                self.txtTime.setText('%s:0%s:0%s  - %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+            else:
+                self.txtTime.setText('%s:%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+        
+        else:
+            self.txtTime.setText('%s:%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+        # app.exec_()
+    
+#Show webcam
+class VideoThread(QThread):
+    change_pixmap_signal = pyqtSignal(np.ndarray)
+    def run(self):
+        # capture from web cam
+        cap = cv2.VideoCapture(0)
+        while True:
+            ret, cv_img = cap.read()
+            if ret:
+                self.change_pixmap_signal.emit(cv_img)
+
 
 
 class UI(QMainWindow):
@@ -180,11 +226,42 @@ class UI(QMainWindow):
         self.txtPlateIn.setEnabled(False)
         self.txtPlateOut.setEnabled(False)
 
+
         #Event
         self.btnEntrance.clicked.connect(self.btnEntrance_clicked)
         self.btnExit.clicked.connect(self.btnExit_clicked)
+
+        # create the video capture thread
+        self.thread = VideoThread()
+        # connect its signal to the update_image slot
+        self.thread.change_pixmap_signal.connect(self.update_image)
+        # start the thread
+        self.thread.start()
+
         #Show app
         self.show()
+
+        #load clock
+        display_time(self)
+
+
+    @pyqtSlot(np.ndarray)
+   
+    def update_image(self, cv_img):
+        """Updates the image_label with a new opencv image"""
+        qt_img = self.convert_cv_qt(cv_img)
+        self.lblCamEntrance.setPixmap(qt_img)
+
+    
+    def convert_cv_qt(self, cv_img):
+        """Convert from an opencv image to QPixmap"""
+        rgb_image = cv2.cvtColor(cv_img, cv2.COLOR_BGR2RGB)
+        h, w, ch = rgb_image.shape
+        bytes_per_line = ch * w
+        convert_to_Qt_format = QtGui.QImage(rgb_image.data, w, h, bytes_per_line, QtGui.QImage.Format_RGB888)
+        p = convert_to_Qt_format.scaled(640, 480, Qt.KeepAspectRatio)
+        return QPixmap.fromImage(p)
+
         
     def btnExit_clicked(self):
         options = QFileDialog.Options()
@@ -243,10 +320,7 @@ class UI(QMainWindow):
             self.lblGrayIn.setPixmap(QtGui.QPixmap("contour.jpg"))
 
             self.txtPlateIn.setText(show_results(char))
-        
 
-
-    
 if __name__ == "__main__":
     #Init variables for AI
     #Load the model has been trained before 
@@ -256,7 +330,10 @@ if __name__ == "__main__":
 
     # Setup App
     app = QApplication(sys.argv)
+  
     UIWindow = UI()
-    app.exec_()
+    #app.exec_()
 
+
+ 
 
