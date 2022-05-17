@@ -9,6 +9,7 @@ import cv2
 import numpy as np
 import datetime
 from PIL import ImageQt
+import os
 
 
 # AI code 
@@ -24,27 +25,22 @@ from sklearn.metrics import f1_score
 
 
 def detect_plate(img, text=''): # the function detects and perfors blurring on the number plate.
-    try:
-        plate_img = img.copy()
-        roi = img.copy()
+    plate_img = img.copy()
+    roi = img.copy()
 
-        plate_rect = plate_cascade.detectMultiScale(plate_img, scaleFactor = 1.2, minNeighbors = 7) # detects numberplates and returns the coordinates and dimensions of detected license plate's contours.
-    
-        # print(plate_rect)
-        for (x,y,w,h) in plate_rect:
-            roi_ = roi[y:y+h, x:x+w, :] # extracting the Region of Interest of license plate for blurring.
-            plate = roi[y:y+h, x:x+w, :]
-            cv2.rectangle(plate_img, (x+2,y), (x+w-3, y+h-5), (51,181,155), 3) # finally representing the detected contours by drawing rectangles around the edges.
-        if text!='':
-            plate_img = cv2.putText(plate_img, text, (x-w//2,y-h//2), 
-                                    cv2.FONT_HERSHEY_COMPLEX_SMALL , 0.5, (51,181,155), 1, cv2.LINE_AA)
-            
-        return plate_img, plate # returning the processed image.
+    plate_rect = plate_cascade.detectMultiScale(plate_img, scaleFactor = 1.2, minNeighbors = 7) # detects numberplates and returns the coordinates and dimensions of detected license plate's contours.
 
-    except UnboundLocalError:
-            message = "Không phát hiện được biển số xe vui lòng chụp lại!"
-            # win32api.MessageBox(0, message, 'title')
-            print(message)
+    # print(plate_rect)
+    for (x,y,w,h) in plate_rect:
+        roi_ = roi[y:y+h, x:x+w, :] # extracting the Region of Interest of license plate for blurring.
+        plate = roi[y:y+h, x:x+w, :]
+        cv2.rectangle(plate_img, (x+2,y), (x+w-3, y+h-5), (51,181,155), 3) # finally representing the detected contours by drawing rectangles around the edges.
+    if text!='':
+        plate_img = cv2.putText(plate_img, text, (x-w//2,y-h//2), 
+                                cv2.FONT_HERSHEY_COMPLEX_SMALL , 0.5, (51,181,155), 1, cv2.LINE_AA)
+        
+    return plate_img, plate # returning the processed image.
+  
 
 # Match contours to license plate or character template
 def find_contours(dimensions, img) :
@@ -175,6 +171,22 @@ def custom_f1score(y, y_pred):
   return tf.py_function(f1score, (y, y_pred), tf.double)  
 # end AI code
 
+def show_error_messagebox():
+    msg = QMessageBox()
+    msg.setIcon(QMessageBox.Warning)
+  
+    # setting message for Message Box
+    msg.setText("Không phát hiện được biển số xe vui lòng chụp lại !")
+      
+    # setting Message box window title
+    msg.setWindowTitle("Warning MessageBox")
+      
+    # declaring buttons on Message Box
+    msg.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
+      
+    # # start the app
+    msg.exec_()
+
 def display_time(self):
     while True:
         QApplication.processEvents()
@@ -215,6 +227,25 @@ def display_time(self):
         #app.exec_()
 
 
+def reset(self):
+    self.lblImgEntrance.clear()
+    self.lblCutPlateIn.clear()
+    self.lblGrayIn.clear()
+
+def process_liscense(img):
+    # Getting plate prom the processed image
+    try:
+        _, plate = detect_plate(img)
+        # Cắt khung chứa biển số
+        plate = cv2.cvtColor(plate, cv2.COLOR_BGR2RGB)
+        plate_tg = cv2.cvtColor(plate, cv2.COLOR_BGR2RGB)
+        cv2.imwrite('plate_cut.jpg',plate_tg)
+        char = segment_characters(plate)
+        rs = show_results(char)
+    except UnboundLocalError:  rs = '0'
+    except TypeError:  rs = '0'
+    return rs
+
 #Show webcam
 class VideoThread(QThread):
     change_pixmap_signal = pyqtSignal(np.ndarray)
@@ -225,7 +256,6 @@ class VideoThread(QThread):
             ret, cv_img = cap.read()
             if ret:
                 self.change_pixmap_signal.emit(cv_img)
-
 
 
 class UI(QMainWindow):
@@ -264,7 +294,11 @@ class UI(QMainWindow):
         display_time(self)
 
 
+
+
+
     @pyqtSlot(np.ndarray)
+
     def load_table(self):
         people = [{"ID": "1", "Card": "100221", "Name": "Hoang Kim", "Phone Number": "0935740126" ,"Booking Date": "16/05/2022", "Lisence Plate": "43D92646" }]
         row = 0
@@ -279,10 +313,29 @@ class UI(QMainWindow):
             row = row + 1
         
     def capture(self):
+        dt = datetime.datetime.now()
+        reset(self)
         image = ImageQt.fromqpixmap(self.lblCamEntrance.pixmap())
-        image.save('d:/Semester 6/PBL5/capture/capture.png') # get the absolute path in your computer
+        path_capture_entrance = 'd:/Semester 6/PBL5/capture/img-' + str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)+ '.jpg' 
+        image.save(path_capture_entrance) 
+        # get the absolute path in your computer
+        img = cv2.imread(path_capture_entrance)
+        char = process_liscense(img)
 
-        self.lblImgEntrance.setPixmap(QtGui.QPixmap('d:/Semester 6/PBL5/capture/capture.png'))
+        if char == '0' or len(char) < 8:
+            os.remove(path_capture_entrance)
+            show_error_messagebox()
+        else:
+            self.lblImgEntrance.setPixmap(QtGui.QPixmap(path_capture_entrance))
+            print('Biển số xe vào: ' + str(len(char)))
+
+            # Hiện khung chứa biển số được cắt
+            self.lblCutPlateIn.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
+            list_plate[0] = char
+
+            # Hiện khung chứa biển số được cắt ảnh trắng đen
+            self.lblGrayIn.setPixmap(QtGui.QPixmap("contour.jpg"))
+            self.txtPlateIn.setText(char)
 
     def update_image(self, cv_img):
         """Updates the image_label with a new opencv image"""
@@ -299,64 +352,53 @@ class UI(QMainWindow):
         p = convert_to_Qt_format.scaled(640, 480, Qt.KeepAspectRatio)
         return QPixmap.fromImage(p)
 
-        
+
     def btnExit_clicked(self):
+        
         options = QFileDialog.Options()
         options |= QFileDialog.DontUseNativeDialog
         fileName, _ = QFileDialog.getOpenFileName(self,"QFileDialog.getOpenFileName()", "","All Files (*)JPG Files (*.jpg);;PNG Files (*.png)", options=options)
         if fileName:
             # print(fileName)
-            self.lblImgExit.setPixmap(QtGui.QPixmap(fileName))
             img = cv2.imread(fileName)
+            char = process_liscense(img)
+            if char == '0' or len(char) < 8:
+               show_error_messagebox()
+            else: 
+                self.lblImgExit.setPixmap(QtGui.QPixmap(fileName))
+                print('Biển số xe ra: ' + char)
+
+                # Hiện khung chứa biển số được cắt
+                self.lblCutOut.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
+                list_plate[0] = char
             
-            # Getting plate prom the processed image
-            _, plate = detect_plate(img)
-
-            # Cắt khung chứa biển số
-            plate = cv2.cvtColor(plate, cv2.COLOR_BGR2RGB)
-            plate_tg = cv2.cvtColor(plate, cv2.COLOR_BGR2RGB)
-
-            cv2.imwrite('plate_cut.jpg',plate_tg)
-            char = segment_characters(plate)
-            print('Biển số xe ra: ' + show_results(char))
-
-            # Hiện khung chứa biển số được cắt
-            self.lblCutOut.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
-            list_plate[0] = show_results(char) 
-        
-            # Hiện khung chứa biển số được cắt ảnh trắng đen
-            self.lblGrayOut.setPixmap(QtGui.QPixmap("contour.jpg"))
-
-            self.txtPlateOut.setText(show_results(char))
+                # Hiện khung chứa biển số được cắt ảnh trắng đen
+                self.lblGrayOut.setPixmap(QtGui.QPixmap("contour.jpg"))
+                self.txtPlateOut.setText(char)
         
     def btnEntrance_clicked(self):
+        reset(self)
         options = QFileDialog.Options()
         options |= QFileDialog.DontUseNativeDialog
         fileName, _ = QFileDialog.getOpenFileName(self,"QFileDialog.getOpenFileName()", "","All Files (*)JPG Files (*.jpg);;PNG Files (*.png)", options=options)
         if fileName:
             # print(fileName)
-            self.lblImgEntrance.setPixmap(QtGui.QPixmap(fileName))
             img = cv2.imread(fileName)
+            char = process_liscense(img)
+
+            if char == '0' or len(char) < 8:
+                show_error_messagebox()
+            else: 
+                self.lblImgEntrance.setPixmap(QtGui.QPixmap(fileName))
+                print('Biển số xe vào: ' + char)
+                # Hiện khung chứa biển số được cắt
+                self.lblCutPlateIn.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
+                list_plate[0] = char
             
-            # Getting plate prom the processed image
-            _, plate = detect_plate(img)
+                # Hiện khung chứa biển số được cắt ảnh trắng đen
+                self.lblGrayIn.setPixmap(QtGui.QPixmap("contour.jpg"))
 
-            # Cắt khung chứa biển số
-            plate = cv2.cvtColor(plate, cv2.COLOR_BGR2RGB)
-            plate_tg = cv2.cvtColor(plate, cv2.COLOR_BGR2RGB)
-
-            cv2.imwrite('plate_cut.jpg',plate_tg)
-            char = segment_characters(plate)
-            print('Biển số xe vào: ' + show_results(char))
-
-            # Hiện khung chứa biển số được cắt
-            self.lblCutPlateIn.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
-            list_plate[0] = show_results(char) 
-        
-            # Hiện khung chứa biển số được cắt ảnh trắng đen
-            self.lblGrayIn.setPixmap(QtGui.QPixmap("contour.jpg"))
-
-            self.txtPlateIn.setText(show_results(char))
+                self.txtPlateIn.setText(char)
 
 if __name__ == "__main__":
     #Init variables for AI
