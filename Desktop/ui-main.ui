@@ -74,18 +74,11 @@
       <height>31</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">ciolor: rgb(255, 1, 1);</string>
+    </property>
     <property name="text">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Camera vào&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-   </widget>
-   <widget class="QListView" name="listView">
-    <property name="geometry">
-     <rect>
-      <x>900</x>
-      <y>540</y>
-      <width>931</width>
-      <height>351</height>
-     </rect>
     </property>
    </widget>
    <widget class="QGroupBox" name="imgEntrance">
@@ -106,7 +99,7 @@
     <property name="title">
      <string/>
     </property>
-    <widget class="QLabel" name="lblImgEntrance_2">
+    <widget class="QLabel" name="lblImgEntrance">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -137,8 +130,6 @@
       <bool>false</bool>
      </property>
     </widget>
-    <zorder>lblImgEntrance_2</zorder>
-    <zorder>lblImgEntrance</zorder>
    </widget>
    <widget class="QGroupBox" name="camExit">
     <property name="geometry">
@@ -180,9 +171,6 @@
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <zorder>lblImgExit_2</zorder>
-    <zorder>imgExit</zorder>
-    <zorder>lblImgExit_2</zorder>
    </widget>
    <widget class="QGroupBox" name="imgExit">
     <property name="geometry">
@@ -272,7 +260,7 @@ color:rgb(170, 0, 0)</string>
      <property name="title">
       <string/>
      </property>
-     <widget class="QLabel" name="lblCutPlateIn_2">
+     <widget class="QLabel" name="lblGrayIn">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -386,7 +374,7 @@ font-size:none;
      <property name="title">
       <string/>
      </property>
-     <widget class="QLabel" name="lblCutPlateIn_3">
+     <widget class="QLabel" name="lblCutOut">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -411,8 +399,6 @@ font-size:none;
        <bool>false</bool>
       </property>
      </widget>
-     <zorder>lblCutPlateIn_3</zorder>
-     <zorder>lblImgEntrance</zorder>
     </widget>
     <widget class="QGroupBox" name="cmpOut2">
      <property name="geometry">
@@ -426,7 +412,7 @@ font-size:none;
      <property name="title">
       <string/>
      </property>
-     <widget class="QLabel" name="lblCutPlateIn_4">
+     <widget class="QLabel" name="lblGrayOut">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -505,18 +491,41 @@ font-size:23px;</string>
      <property name="title">
       <string/>
      </property>
-     <zorder>lblImgEntrance</zorder>
     </widget>
-    <zorder>cmpIn2</zorder>
-    <zorder>label_8</zorder>
-    <zorder>cmpIn1</zorder>
-    <zorder>label_9</zorder>
-    <zorder>cmpOut1</zorder>
-    <zorder>cmpOut2</zorder>
-    <zorder>txtPlateIn</zorder>
-    <zorder>txtPlateOut</zorder>
-    <zorder>check</zorder>
-    <zorder>lblGrayOut</zorder>
+    <widget class="QLabel" name="lblFrame">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>911</width>
+       <height>321</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::WinPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="lineWidth">
+      <number>0</number>
+     </property>
+     <property name="midLineWidth">
+      <number>2</number>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="wordWrap">
+      <bool>false</bool>
+     </property>
+    </widget>
    </widget>
    <widget class="QGroupBox" name="camEntrance">
     <property name="geometry">
@@ -634,53 +643,66 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;t&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="lblImgEntrance">
+   <widget class="QTableWidget" name="tbData">
     <property name="geometry">
      <rect>
       <x>890</x>
-      <y>80</y>
-      <width>951</width>
-      <height>331</height>
+      <y>540</y>
+      <width>931</width>
+      <height>351</height>
      </rect>
     </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
+    <property name="whatsThis">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
-    <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
+    <property name="styleSheet">
+     <string notr="true">
+</string>
     </property>
-    <property name="lineWidth">
-     <number>5</number>
+    <column>
+     <property name="text">
+      <string>ID</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Card</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Name</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Phone Number</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Booking Date</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Lisence Plate</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QPushButton" name="btnScreenshot">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
     </property>
     <property name="text">
-     <string/>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-    <property name="wordWrap">
-     <bool>false</bool>
+     <string>Screenshot</string>
     </property>
    </widget>
-   <zorder>label_4</zorder>
-   <zorder>label_5</zorder>
-   <zorder>label_6</zorder>
-   <zorder>label_7</zorder>
-   <zorder>listView</zorder>
-   <zorder>imgEntrance</zorder>
-   <zorder>camExit</zorder>
-   <zorder>imgExit</zorder>
-   <zorder>groupBox_5</zorder>
-   <zorder>camEntrance</zorder>
-   <zorder>btnEntrance</zorder>
-   <zorder>btnExit</zorder>
-   <zorder>txtTime</zorder>
-   <zorder>lblImgExit</zorder>
-   <zorder>lblImgExit_2</zorder>
-   <zorder>lblImgEntrance</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolBar">

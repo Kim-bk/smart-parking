@@ -3,10 +3,13 @@ from PyQt5 import uic
 from PyQt5 import QtGui
 from PyQt5.QtCore import pyqtSignal, pyqtSlot, Qt, QThread, QTime, QTimer
 from PyQt5.QtGui import QPixmap
+from PyQt5 import QtWidgets
 import sys
 import cv2
 import numpy as np
 import datetime
+from PIL import ImageQt
+
 
 # AI code 
 import matplotlib.pyplot as plt
@@ -176,19 +179,24 @@ def display_time(self):
     while True:
         QApplication.processEvents()
         dt = datetime.datetime.now()
+        # print(dt)
         if dt.hour < 10:
             if dt.minute < 10:
-                self.txtTime.setText('0%s:0%s:%s \t-\t %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+                    self.txtTime.setText('0%s:0%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
             elif dt.second < 10:
-                self.txtTime.setText('0%s:%s:0%s \t-\t %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+                self.txtTime.setText('0%s:%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+            elif dt.second <10 and dt.minute <10:
+                self.txtTime.setText('0%s:0%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
             else:
-                self.txtTime.setText('0%s:%s:%s \t-\t %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+                self.txtTime.setText('0%s:%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
        
         elif dt.minute < 10:
             if dt.hour < 10:
                 self.txtTime.setText('0%s:0%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
             elif dt.second < 10:
                 self.txtTime.setText('%s:0%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+            elif dt.second < 10 and dt.hour < 10:
+                self.txtTime.setText('0%s:0%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
             else:  
                 self.txtTime.setText('%s:0%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
 
@@ -196,14 +204,17 @@ def display_time(self):
             if dt.hour < 10:
                 self.txtTime.setText('0%s:%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
             elif dt.minute < 10:
-                self.txtTime.setText('%s:0%s:0%s  - %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+                self.txtTime.setText('%s:0%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+            elif dt.hour < 10 and dt.minute < 10:
+                self.txtTime.setText('0%s:0%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
             else:
                 self.txtTime.setText('%s:%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
         
         else:
             self.txtTime.setText('%s:%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
-        # app.exec_()
-    
+        #app.exec_()
+
+
 #Show webcam
 class VideoThread(QThread):
     change_pixmap_signal = pyqtSignal(np.ndarray)
@@ -226,10 +237,18 @@ class UI(QMainWindow):
         self.txtPlateIn.setEnabled(False)
         self.txtPlateOut.setEnabled(False)
 
+        #Edit width columns in table
+        self.tbData.setColumnWidth(0,120)
+        self.tbData.setColumnWidth(1,220)
+        self.tbData.setColumnWidth(2,250)
+        self.tbData.setColumnWidth(3,200)
+        self.tbData.setColumnWidth(4,200)
 
         #Event
         self.btnEntrance.clicked.connect(self.btnEntrance_clicked)
         self.btnExit.clicked.connect(self.btnExit_clicked)
+        self.btnScreenshot.clicked.connect(self.capture)
+        self.load_table()
 
         # create the video capture thread
         self.thread = VideoThread()
@@ -246,7 +265,25 @@ class UI(QMainWindow):
 
 
     @pyqtSlot(np.ndarray)
-   
+    def load_table(self):
+        people = [{"ID": "1", "Card": "100221", "Name": "Hoang Kim", "Phone Number": "0935740126" ,"Booking Date": "16/05/2022", "Lisence Plate": "43D92646" }]
+        row = 0
+        self.tbData.setRowCount(len(people))
+        for person in people:
+            self.tbData.setItem(row, 0, QtWidgets.QTableWidgetItem(person["ID"]))
+            self.tbData.setItem(row, 1, QtWidgets.QTableWidgetItem(person["Card"]))
+            self.tbData.setItem(row, 2, QtWidgets.QTableWidgetItem(person["Name"]))
+            self.tbData.setItem(row, 3, QtWidgets.QTableWidgetItem(person["Phone Number"]))
+            self.tbData.setItem(row, 4, QtWidgets.QTableWidgetItem(person["Booking Date"]))
+            self.tbData.setItem(row, 5, QtWidgets.QTableWidgetItem(person["Lisence Plate"]))
+            row = row + 1
+        
+    def capture(self):
+        image = ImageQt.fromqpixmap(self.lblCamEntrance.pixmap())
+        image.save('d:/Semester 6/PBL5/capture/capture.png') # get the absolute path in your computer
+
+        self.lblImgEntrance.setPixmap(QtGui.QPixmap('d:/Semester 6/PBL5/capture/capture.png'))
+
     def update_image(self, cv_img):
         """Updates the image_label with a new opencv image"""
         qt_img = self.convert_cv_qt(cv_img)
