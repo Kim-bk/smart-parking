@@ -277,5 +277,5 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "Booking Date"))
         item = self.tbData.horizontalHeaderItem(5)
         item.setText(_translate("MainWindow", "Lisence Plate"))
-        self.btnScreenshot.setText(_translate("MainWindow", "Screenshot"))
+        self.btnScreenshot.setText(_translate("MainWindow", "Capture"))
         self.toolBar.setWindowTitle(_translate("MainWindow", "toolBar"))

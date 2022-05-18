@@ -231,6 +231,8 @@ def reset(self):
     self.lblImgEntrance.clear()
     self.lblCutPlateIn.clear()
     self.lblGrayIn.clear()
+    self.txtPlateIn.clear()
+    self.txtPlateOut.clear()
 
 def process_liscense(img):
     # Getting plate prom the processed image
@@ -246,16 +248,19 @@ def process_liscense(img):
     except TypeError:  rs = '0'
     return rs
 
-#Show webcam
+#Show cam esp32 vs webcam
 class VideoThread(QThread):
-    change_pixmap_signal = pyqtSignal(np.ndarray)
+    change_pixmap_signal1 = pyqtSignal(np.ndarray)
+    change_pixmap_signal2 = pyqtSignal(np.ndarray)
     def run(self):
-        # capture from web cam
-        cap = cv2.VideoCapture(0)
+        cap_esp32 = cv2.VideoCapture("http://192.168.43.37:81/stream")
+        cap_webcam = cv2.VideoCapture(0)
         while True:
-            ret, cv_img = cap.read()
-            if ret:
-                self.change_pixmap_signal.emit(cv_img)
+            ret1, cv_img1 = cap_esp32.read()
+            ret2, cv_img2 = cap_webcam.read()
+            if ret1 and ret2:
+                self.change_pixmap_signal1.emit(cv_img1)
+                self.change_pixmap_signal2.emit(cv_img2)
 
 
 class UI(QMainWindow):
@@ -283,18 +288,16 @@ class UI(QMainWindow):
         # create the video capture thread
         self.thread = VideoThread()
         # connect its signal to the update_image slot
-        self.thread.change_pixmap_signal.connect(self.update_image)
+        self.thread.change_pixmap_signal1.connect(self.update_image_entrance)
+        self.thread.change_pixmap_signal2.connect(self.update_image_exit)
         # start the thread
         self.thread.start()
-
+  
         #Show app
         self.show()
 
         #load clock
         display_time(self)
-
-
-
 
 
     @pyqtSlot(np.ndarray)
@@ -337,12 +340,16 @@ class UI(QMainWindow):
             self.lblGrayIn.setPixmap(QtGui.QPixmap("contour.jpg"))
             self.txtPlateIn.setText(char)
 
-    def update_image(self, cv_img):
+    def update_image_entrance(self, cv_img):
         """Updates the image_label with a new opencv image"""
         qt_img = self.convert_cv_qt(cv_img)
         self.lblCamEntrance.setPixmap(qt_img)
 
-    
+    def update_image_exit(self, cv_img):
+        """Updates the image_label with a new opencv image"""
+        qt_img = self.convert_cv_qt(cv_img)
+        self.lblCamExit.setPixmap(qt_img)
+        
     def convert_cv_qt(self, cv_img):
         """Convert from an opencv image to QPixmap"""
         rgb_image = cv2.cvtColor(cv_img, cv2.COLOR_BGR2RGB)
