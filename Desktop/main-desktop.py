@@ -15,6 +15,9 @@ from flask import Flask,request, render_template
 from threading import Thread
 import sys
 import requests
+# Process database with mongodb
+from datetime import datetime
+from mongo import createCheckIn,findAll,createCheckOut
 
 # AI code 
 import matplotlib.pyplot as plt
@@ -26,6 +29,8 @@ import keras
 from tensorflow.python.saved_model import loader_impl
 from tensorflow.python.keras.saving.saved_model import load as saved_model_load
 from sklearn.metrics import f1_score 
+
+id_rfid = ''
 
 def detect_plate(self, img, pos): # the function detects and perfors blurring on the number plate.
     plate_img = img.copy()
@@ -345,7 +350,7 @@ class UI(QMainWindow):
         self.tbData.setColumnWidth(2,250)
         self.tbData.setColumnWidth(3,200)
         self.tbData.setColumnWidth(4,200)
-
+        
         #Event
         self.btnEntrance.clicked.connect(self.btnEntrance_clicked)
         self.btnExit.clicked.connect(self.btnExit_clicked)
@@ -412,25 +417,42 @@ class UI(QMainWindow):
 
 
     def load_table(self):
-        people = [{"ID": "1", "Card": "100221", "Name": "Hoang Kim", "Phone Number": "0935740126" ,"Booking Datetime": "16/05/2022 15:30","Lisence Plate": "43D92646" }]
+        list = findAll()
+        people =[]
+        for item in list:
+            data_item = {
+                "Card":item["customer"]["customer_card"],
+                "Name":item["customer"]["name"],
+                "Phone_Number":item["customer"]["number_phone"],
+                "Booking_Date":item["date_check_in"],
+                "Lisence_Plate":item["license_plate"],
+            }
+            people.append(data_item)
+       # people = [{"ID": "1", "Card": "100221", "Name": "Hoang Kim", "Phone Number": "0935740126" ,"Booking Date": "16/05/2022", "Lisence Plate": "43D92646" }]
         row = 0
         self.tbData.setRowCount(len(people))
         for person in people:
-            self.tbData.setItem(row, 0, QtWidgets.QTableWidgetItem(person["ID"]))
-            self.tbData.setItem(row, 1, QtWidgets.QTableWidgetItem(person["Card"]))
-            self.tbData.setItem(row, 2, QtWidgets.QTableWidgetItem(person["Name"]))
-            self.tbData.setItem(row, 3, QtWidgets.QTableWidgetItem(person["Phone Number"]))
-            self.tbData.setItem(row, 4, QtWidgets.QTableWidgetItem(person["Booking Datetime"]))
-            self.tbData.setItem(row, 5, QtWidgets.QTableWidgetItem(person["Lisence Plate"]))
+            self.tbData.setItem(row, 0, QtWidgets.QTableWidgetItem(person["Card"]))
+            self.tbData.setItem(row, 1, QtWidgets.QTableWidgetItem(person["Name"]))
+            self.tbData.setItem(row, 2, QtWidgets.QTableWidgetItem(person["Phone_Number"]))
+            self.tbData.setItem(row, 3, QtWidgets.QTableWidgetItem(person["Booking_Date"]))
+            self.tbData.setItem(row, 4, QtWidgets.QTableWidgetItem(person["Lisence_Plate"]))
+
             row = row + 1
         
     def capture(self):
+        global id_rfid
         if(get_id()!=None):
+            id_rfid = get_id()
             send_string()
         if(get_id_ra()!=None):
             send_string_ra()
+
+            
     def capture_entrance(self):
-        dt = datetime.datetime.now()
+        dt = datetime.now()
+        dt = dt.strftime("%d/%m/%Y %H:%M:%S")  
+
         reset(self, 'entrance')
         image = ImageQt.fromqpixmap(self.lblCamEntrance.pixmap())
         path_capture_entrance = '../PBL5/capture/img-' + str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)+ '.jpg' 
@@ -446,6 +468,11 @@ class UI(QMainWindow):
             # self.lblImgEntrance.setPixmap(QtGui.QPixmap(path_capture_entrance))
             print('Biển số xe vào: ' + str(len(char)))
 
+            ##### Create data
+            createCheckIn(id_rfid,str(char),dt)
+
+
+
             # Hiện khung chứa biển số được cắt
             self.lblCutPlateIn.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
             list_plate[0] = char
@@ -455,7 +482,9 @@ class UI(QMainWindow):
             self.txtPlateIn.setText(char)
 
     def capture_exit(self):
-        dt = datetime.datetime.now()
+        dt = datetime.now()
+        dt = dt.strftime("%d/%m/%Y %H:%M:%S") 
+
         reset(self,'exit')
         image = ImageQt.fromqpixmap(self.lblCamExit.pixmap())
         dt = datetime.datetime.now()
@@ -470,7 +499,12 @@ class UI(QMainWindow):
             show_error_messagebox()
         else:
             # self.lblImgExit.setPixmap(QtGui.QPixmap(path_capture_exit))
-            print('Biển số xe vào: ' + str(len(char)))
+            print('Biển số xe ra: ' + str(len(char)))
+
+            ########## data
+            createCheckOut(id_rfid,str(char),dt)
+
+
 
             # Hiện khung chứa biển số được cắt
             self.lblCutOut.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
