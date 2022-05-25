@@ -10,7 +10,11 @@ import numpy as np
 import datetime
 from PIL import ImageQt
 import os
+from flask import Flask,request, render_template
 
+from threading import Thread
+import sys
+import requests
 
 # AI code 
 import matplotlib.pyplot as plt
@@ -23,11 +27,9 @@ from tensorflow.python.saved_model import loader_impl
 from tensorflow.python.keras.saving.saved_model import load as saved_model_load
 from sklearn.metrics import f1_score 
 
-
-def detect_plate(img, text=''): # the function detects and perfors blurring on the number plate.
+def detect_plate(self, img, pos): # the function detects and perfors blurring on the number plate.
     plate_img = img.copy()
     roi = img.copy()
-
     plate_rect = plate_cascade.detectMultiScale(plate_img, scaleFactor = 1.2, minNeighbors = 7) # detects numberplates and returns the coordinates and dimensions of detected license plate's contours.
 
     # print(plate_rect)
@@ -35,12 +37,24 @@ def detect_plate(img, text=''): # the function detects and perfors blurring on t
         roi_ = roi[y:y+h, x:x+w, :] # extracting the Region of Interest of license plate for blurring.
         plate = roi[y:y+h, x:x+w, :]
         cv2.rectangle(plate_img, (x+2,y), (x+w-3, y+h-5), (51,181,155), 3) # finally representing the detected contours by drawing rectangles around the edges.
-    if text!='':
-        plate_img = cv2.putText(plate_img, text, (x-w//2,y-h//2), 
-                                cv2.FONT_HERSHEY_COMPLEX_SMALL , 0.5, (51,181,155), 1, cv2.LINE_AA)
+         
+        if pos == 'entrance':
+            path = 'D:/Semester 6/PBL5/detect/entrance_detect.jpg'
+            # if os.path.exists(path):
+            #     os.remove(path)
+            cv2.imwrite(path, plate_img)
+            self.lblImgEntrance.setPixmap(QtGui.QPixmap(path))
+        if pos == 'exit':
+            path = 'D:/Semester 6/PBL5/detect/exit_detect.jpg'
+            # if os.path.exists(path):
+            #     os.remove(path)
+            cv2.imwrite(path, plate_img)
+            self.lblImgExit.setPixmap(QtGui.QPixmap(path))
         
-    return plate_img, plate # returning the processed image.
-  
+    try:
+        return plate_img, plate # returning the processed image.
+    except UnboundLocalError:   return '0'
+
 
 # Match contours to license plate or character template
 def find_contours(dimensions, img) :
@@ -187,81 +201,134 @@ def show_error_messagebox():
     # # start the app
     msg.exec_()
 
-def display_time(self):
-    while True:
-        QApplication.processEvents()
-        dt = datetime.datetime.now()
-        # print(dt)
-        if dt.hour < 10:
-            if dt.minute < 10:
-                    self.txtTime.setText('0%s:0%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
-            elif dt.second < 10:
-                self.txtTime.setText('0%s:%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
-            elif dt.second <10 and dt.minute <10:
-                self.txtTime.setText('0%s:0%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
-            else:
-                self.txtTime.setText('0%s:%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
-       
-        elif dt.minute < 10:
-            if dt.hour < 10:
-                self.txtTime.setText('0%s:0%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
-            elif dt.second < 10:
-                self.txtTime.setText('%s:0%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
-            elif dt.second < 10 and dt.hour < 10:
-                self.txtTime.setText('0%s:0%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
-            else:  
-                self.txtTime.setText('%s:0%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+def show_error_messagebox():
+    msg = QMessageBox()
+    msg.setIcon(QMessageBox.Warning)
+  
+    # setting message for Message Box
+    msg.setText("Không phát hiện được biển số xe vui lòng chụp lại !")
+      
+    # setting Message box window title
+    msg.setWindowTitle("Warning MessageBox")
+      
+    # declaring buttons on Message Box
+    msg.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
+      
+    # # start the app
+    msg.exec_()
 
-        elif dt.second < 10:
-            if dt.hour < 10:
-                self.txtTime.setText('0%s:%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
-            elif dt.minute < 10:
-                self.txtTime.setText('%s:0%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
-            elif dt.hour < 10 and dt.minute < 10:
-                self.txtTime.setText('0%s:0%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
-            else:
-                self.txtTime.setText('%s:%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
-        
-        else:
-            self.txtTime.setText('%s:%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
-        #app.exec_()
+def show_success_messagebox():
+    msg = QMessageBox()
+    msg.setIcon(QMessageBox.Warning)
+  
+    # setting message for Message Box
+    msg.setText("Nhận dạng biển số thành công !")
+      
+    # setting Message box window title
+    msg.setWindowTitle("Success MessageBox")
+      
+    # declaring buttons on Message Box
+    msg.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
+      
+    # # start the app
+    msg.exec_()
 
 
-def reset(self):
-    self.lblImgEntrance.clear()
-    self.lblCutPlateIn.clear()
-    self.lblGrayIn.clear()
-    self.txtPlateIn.clear()
-    self.txtPlateOut.clear()
+def reset(self, pos = ''):
+    if pos == 'entrance':
+        self.lblImgEntrance.clear()
+        self.lblCutPlateIn.clear()
+        self.txtPlateIn.clear()
+        self.lblGrayIn.clear()
 
-def process_liscense(img):
+    elif pos == 'exit':
+        self.lblImgExit.clear()
+        self.txtPlateOut.clear()
+        self.lblCutOut.clear()
+        self.lblGrayOut.clear()
+
+    else:
+        self.lblImgEntrance.clear()
+        self.lblImgExit.clear()
+        self.lblCutPlateIn.clear()
+        self.lblGrayIn.clear()
+        self.lblGrayOut.clear()
+        self.txtPlateIn.clear()
+        self.txtPlateOut.clear()
+        self.lblCutOut.clear()
+
+def process_liscense(self, img, pos):
     # Getting plate prom the processed image
     try:
-        _, plate = detect_plate(img)
-        # Cắt khung chứa biển số
-        plate = cv2.cvtColor(plate, cv2.COLOR_BGR2RGB)
-        plate_tg = cv2.cvtColor(plate, cv2.COLOR_BGR2RGB)
-        cv2.imwrite('plate_cut.jpg',plate_tg)
-        char = segment_characters(plate)
-        rs = show_results(char)
-    except UnboundLocalError:  rs = '0'
+        _, plate = detect_plate(self, img, pos)
+        if plate == '0':
+            rs = '0'
+        else:
+            # Cắt khung chứa biển số
+            plate = cv2.cvtColor(plate, cv2.COLOR_BGR2RGB)
+            plate_tg = cv2.cvtColor(plate, cv2.COLOR_BGR2RGB)
+            cv2.imwrite('plate_cut.jpg',plate_tg)
+            char = segment_characters(plate)
+            rs = show_results(char)
     except TypeError:  rs = '0'
+    except ValueError: rs = '0'
     return rs
+
 
 #Show cam esp32 vs webcam
 class VideoThread(QThread):
     change_pixmap_signal1 = pyqtSignal(np.ndarray)
     change_pixmap_signal2 = pyqtSignal(np.ndarray)
+ 
     def run(self):
-        cap_esp32 = cv2.VideoCapture("http://192.168.43.37:81/stream")
+        # cap_esp32 = cv2.VideoCapture(0)
         cap_webcam = cv2.VideoCapture(0)
         while True:
-            ret1, cv_img1 = cap_esp32.read()
+            # ret1, cv_img1 = cap_esp32.read()
             ret2, cv_img2 = cap_webcam.read()
-            if ret1 and ret2:
-                self.change_pixmap_signal1.emit(cv_img1)
+            if  ret2 : #and ret1 :
+                # self.change_pixmap_signal1.emit(cv_img1)
                 self.change_pixmap_signal2.emit(cv_img2)
+          
+class ClockThread(QThread):
+    change_time = ''
+    def run(self):
+        while True:
+            QApplication.processEvents()
+            dt = datetime.datetime.now()
+            # print(dt)
+            if dt.hour < 10:
+                if dt.minute < 10:
+                    self.update_time.emit('0%s:0%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+                elif dt.second < 10:
+                    self.update_time.emit('0%s:%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+                elif dt.second <10 and dt.minute <10:
+                    self.txtTime.setText('0%s:0%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+                else:
+                    self.txtTime.setText('0%s:%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+        
+            elif dt.minute < 10:
+                if dt.hour < 10:
+                    self.txtTime.setText('0%s:0%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+                elif dt.second < 10:
+                    self.txtTime.setText('%s:0%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+                elif dt.second < 10 and dt.hour < 10:
+                    self.txtTime.setText('0%s:0%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+                else:  
+                    self.txtTime.setText('%s:0%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
 
+            elif dt.second < 10:
+                if dt.hour < 10:
+                    self.txtTime.setText('0%s:%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+                elif dt.minute < 10:
+                    self.txtTime.setText('%s:0%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+                elif dt.hour < 10 and dt.minute < 10:
+                    self.txtTime.setText('0%s:0%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+                else:
+                    self.txtTime.setText('%s:%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+            
+            else:
+                self.txtTime.setText('%s:%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
 
 class UI(QMainWindow):
     def __init__(self):
@@ -282,28 +349,69 @@ class UI(QMainWindow):
         #Event
         self.btnEntrance.clicked.connect(self.btnEntrance_clicked)
         self.btnExit.clicked.connect(self.btnExit_clicked)
-        self.btnScreenshot.clicked.connect(self.capture)
+        # self.btnScreenshot_Entrance.clicked.connect(self.capture_entrance)
+      
+        self.btnScreenshot_Exit.clicked.connect(self.capture_exit)
         self.load_table()
 
-        # create the video capture thread
         self.thread = VideoThread()
         # connect its signal to the update_image slot
         self.thread.change_pixmap_signal1.connect(self.update_image_entrance)
         self.thread.change_pixmap_signal2.connect(self.update_image_exit)
         # start the thread
         self.thread.start()
-  
+
+        # task_clock = ClockThread()
+        # task_clock.change_time.connect(self.update_time)
+        # task_clock.start()
         #Show app
         self.show()
 
-        #load clock
-        display_time(self)
-
+        self.display_time()
 
     @pyqtSlot(np.ndarray)
+    def display_time(self):
+        while True:
+            QApplication.processEvents()
+            dt = datetime.datetime.now()
+            # print(dt)
+            if dt.hour < 10:
+                if dt.minute < 10:
+                    self.txtTime.setText('0%s:0%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+                elif dt.second < 10:
+                    self.txtTime.setText('0%s:%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+                elif dt.second <10 and dt.minute <10:
+                    self.txtTime.setText('0%s:0%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+                else:
+                    self.txtTime.setText('0%s:%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+        
+            elif dt.minute < 10:
+                if dt.hour < 10:
+                    self.txtTime.setText('0%s:0%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+                elif dt.second < 10:
+                    self.txtTime.setText('%s:0%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+                elif dt.second < 10 and dt.hour < 10:
+                    self.txtTime.setText('0%s:0%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+                else:  
+                    self.txtTime.setText('%s:0%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+
+            elif dt.second < 10:
+                if dt.hour < 10:
+                    self.txtTime.setText('0%s:%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+                elif dt.minute < 10:
+                    self.txtTime.setText('%s:0%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+                elif dt.hour < 10 and dt.minute < 10:
+                    self.txtTime.setText('0%s:0%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+                else:
+                    self.txtTime.setText('%s:%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+            
+            else:
+                self.txtTime.setText('%s:%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
+            #app.exec_()
+
 
     def load_table(self):
-        people = [{"ID": "1", "Card": "100221", "Name": "Hoang Kim", "Phone Number": "0935740126" ,"Booking Date": "16/05/2022", "Lisence Plate": "43D92646" }]
+        people = [{"ID": "1", "Card": "100221", "Name": "Hoang Kim", "Phone Number": "0935740126" ,"Booking Datetime": "16/05/2022 15:30","Lisence Plate": "43D92646" }]
         row = 0
         self.tbData.setRowCount(len(people))
         for person in people:
@@ -311,25 +419,25 @@ class UI(QMainWindow):
             self.tbData.setItem(row, 1, QtWidgets.QTableWidgetItem(person["Card"]))
             self.tbData.setItem(row, 2, QtWidgets.QTableWidgetItem(person["Name"]))
             self.tbData.setItem(row, 3, QtWidgets.QTableWidgetItem(person["Phone Number"]))
-            self.tbData.setItem(row, 4, QtWidgets.QTableWidgetItem(person["Booking Date"]))
+            self.tbData.setItem(row, 4, QtWidgets.QTableWidgetItem(person["Booking Datetime"]))
             self.tbData.setItem(row, 5, QtWidgets.QTableWidgetItem(person["Lisence Plate"]))
             row = row + 1
         
-    def capture(self):
+    def capture_entrance(self):
         dt = datetime.datetime.now()
-        reset(self)
+        reset(self, 'entrance')
         image = ImageQt.fromqpixmap(self.lblCamEntrance.pixmap())
         path_capture_entrance = 'd:/Semester 6/PBL5/capture/img-' + str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)+ '.jpg' 
         image.save(path_capture_entrance) 
         # get the absolute path in your computer
         img = cv2.imread(path_capture_entrance)
-        char = process_liscense(img)
+        char = process_liscense(self, img, 'entrance')
 
         if char == '0' or len(char) < 8:
             os.remove(path_capture_entrance)
             show_error_messagebox()
         else:
-            self.lblImgEntrance.setPixmap(QtGui.QPixmap(path_capture_entrance))
+            # self.lblImgEntrance.setPixmap(QtGui.QPixmap(path_capture_entrance))
             print('Biển số xe vào: ' + str(len(char)))
 
             # Hiện khung chứa biển số được cắt
@@ -340,15 +448,67 @@ class UI(QMainWindow):
             self.lblGrayIn.setPixmap(QtGui.QPixmap("contour.jpg"))
             self.txtPlateIn.setText(char)
 
+    def capture_exit(self):
+        dt = datetime.datetime.now()
+        reset(self,'exit')
+        image = ImageQt.fromqpixmap(self.lblCamExit.pixmap())
+        dt = datetime.datetime.now()
+        path_capture_exit = 'd:/Semester 6/PBL5/capture/img-' + str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)+ '.jpg' 
+        image.save(path_capture_exit) 
+        # get the absolute path in your computer
+        img = cv2.imread(path_capture_exit)
+        char = process_liscense(self, img, 'exit')
+
+        if char == '0' or len(char) < 8:
+            os.remove(path_capture_exit)
+            show_error_messagebox()
+        else:
+            # self.lblImgExit.setPixmap(QtGui.QPixmap(path_capture_exit))
+            print('Biển số xe vào: ' + str(len(char)))
+
+            # Hiện khung chứa biển số được cắt
+            self.lblCutOut.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
+            list_plate[0] = char
+
+            # Hiện khung chứa biển số được cắt ảnh trắng đen
+            self.lblGrayOut.setPixmap(QtGui.QPixmap("contour.jpg"))
+            self.txtPlateOut.setText(char)
+    
+
+    def rectangle_detect(self, img, pos):
+        # qt_img = self.convert_cv_qt(img)
+        # self.lblCamExit.setPixmap(qt_img)
+      
+        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        plate_rect = plate_cascade.detectMultiScale(gray, scaleFactor = 1.2, minNeighbors = 7) 
+        for (x,y,w,h) in plate_rect:
+            cv2.rectangle(img, (x+2,y), (x+w-3, y+h-5), (51,181,155), 3) 
+        if pos == 'exit':
+            cv2.namedWindow('detect_entrance')
+            cv2.moveWindow('detect_entrance', 40, 30)
+            cv2.imshow('img1',img)
+            # qt_img = self.convert_cv_qt(read_img)
+            # self.lblCamExit.setPixmap(qt_img)
+        if pos == 'entrance':
+            cv2.namedWindow('detect_exit')
+            cv2.moveWindow('detect_exit', 80, 70)
+            cv2.imshow('img1',img)
+            
+            #cv2.imshow('img',img)
+            #qt_img = self.convert_cv_qt(img)
+            # self.lblCamEntrance.setPixmap(qt_img)
+
     def update_image_entrance(self, cv_img):
         """Updates the image_label with a new opencv image"""
         qt_img = self.convert_cv_qt(cv_img)
         self.lblCamEntrance.setPixmap(qt_img)
-
+      
+       
     def update_image_exit(self, cv_img):
         """Updates the image_label with a new opencv image"""
         qt_img = self.convert_cv_qt(cv_img)
         self.lblCamExit.setPixmap(qt_img)
+       
         
     def convert_cv_qt(self, cv_img):
         """Convert from an opencv image to QPixmap"""
@@ -361,18 +521,18 @@ class UI(QMainWindow):
 
 
     def btnExit_clicked(self):
-        
+        reset(self, 'exit')
         options = QFileDialog.Options()
         options |= QFileDialog.DontUseNativeDialog
         fileName, _ = QFileDialog.getOpenFileName(self,"QFileDialog.getOpenFileName()", "","All Files (*)JPG Files (*.jpg);;PNG Files (*.png)", options=options)
         if fileName:
             # print(fileName)
             img = cv2.imread(fileName)
-            char = process_liscense(img)
+            char = process_liscense(self, img, 'exit')
             if char == '0' or len(char) < 8:
                show_error_messagebox()
             else: 
-                self.lblImgExit.setPixmap(QtGui.QPixmap(fileName))
+               # self.lblImgExit.setPixmap(QtGui.QPixmap(fileName))
                 print('Biển số xe ra: ' + char)
 
                 # Hiện khung chứa biển số được cắt
@@ -384,19 +544,19 @@ class UI(QMainWindow):
                 self.txtPlateOut.setText(char)
         
     def btnEntrance_clicked(self):
-        reset(self)
+        reset(self, 'entrance')
         options = QFileDialog.Options()
         options |= QFileDialog.DontUseNativeDialog
         fileName, _ = QFileDialog.getOpenFileName(self,"QFileDialog.getOpenFileName()", "","All Files (*)JPG Files (*.jpg);;PNG Files (*.png)", options=options)
         if fileName:
             # print(fileName)
             img = cv2.imread(fileName)
-            char = process_liscense(img)
+            char = process_liscense(self, img, 'entrance')
 
             if char == '0' or len(char) < 8:
                 show_error_messagebox()
             else: 
-                self.lblImgEntrance.setPixmap(QtGui.QPixmap(fileName))
+              #  self.lblImgEntrance.setPixmap(QtGui.QPixmap(fileName))
                 print('Biển số xe vào: ' + char)
                 # Hiện khung chứa biển số được cắt
                 self.lblCutPlateIn.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
@@ -414,11 +574,10 @@ if __name__ == "__main__":
     plate_cascade = cv2.CascadeClassifier('../PBL5/AI/archive/cascade.xml')
     list_plate = ["",""]
 
-    # Setup App
     app = QApplication(sys.argv)
-  
     UIWindow = UI()
-    #app.exec_()
+
+    app.exec_()
 
 
  
