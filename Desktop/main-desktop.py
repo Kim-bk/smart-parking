@@ -10,7 +10,11 @@ import numpy as np
 import datetime
 from PIL import ImageQt
 import os
+from flask import Flask,request, render_template
 
+from threading import Thread
+import sys
+import requests
 
 # AI code 
 import matplotlib.pyplot as plt
@@ -258,7 +262,7 @@ class VideoThread(QThread):
         while True:
             ret1, cv_img1 = cap_esp32.read()
             ret2, cv_img2 = cap_webcam.read()
-            if ret1 and ret2:
+            if ret2:
                 self.change_pixmap_signal1.emit(cv_img1)
                 self.change_pixmap_signal2.emit(cv_img2)
 
@@ -268,7 +272,7 @@ class UI(QMainWindow):
         super(UI,self).__init__()
 
         #Load the ui file 
-        uic.loadUi("D:/Semester 6/PBL5/Desktop/ui-main.ui", self)
+        uic.loadUi("C:/Users/ACER/Desktop/Project/New folder/pbl5-smart-parking/Desktop/ui-main.ui", self)
         self.txtPlateIn.setEnabled(False)
         self.txtPlateOut.setEnabled(False)
 
@@ -297,7 +301,7 @@ class UI(QMainWindow):
         self.show()
 
         #load clock
-        display_time(self)
+        # display_time(self)
 
 
     @pyqtSlot(np.ndarray)
@@ -316,10 +320,14 @@ class UI(QMainWindow):
             row = row + 1
         
     def capture(self):
+        if(get_id()!=None):
+            send_string()
+        if(get_id_ra()!=None):
+            send_string_ra()
         dt = datetime.datetime.now()
         reset(self)
         image = ImageQt.fromqpixmap(self.lblCamEntrance.pixmap())
-        path_capture_entrance = 'd:/Semester 6/PBL5/capture/img-' + str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)+ '.jpg' 
+        path_capture_entrance = 'C:/Users/ACER/Desktop/Project/New folder/pbl5-smart-parking/capture/img-' + str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)+ '.jpg' 
         image.save(path_capture_entrance) 
         # get the absolute path in your computer
         img = cv2.imread(path_capture_entrance)
@@ -410,15 +418,51 @@ class UI(QMainWindow):
 if __name__ == "__main__":
     #Init variables for AI
     #Load the model has been trained before 
-    model = keras.models.load_model('../PBL5/AI/data_test/character_model.h5',custom_objects={"custom_f1score": custom_f1score})
-    plate_cascade = cv2.CascadeClassifier('../PBL5/AI/archive/cascade.xml')
+    model = keras.models.load_model('C:/Users/ACER/Desktop/Project/New folder/pbl5-smart-parking/AI/data_test/character_model.h5',custom_objects={"custom_f1score": custom_f1score})
+    plate_cascade = cv2.CascadeClassifier('C:/Users/ACER/Desktop/Project/New folder/pbl5-smart-parking/AI/archive/cascade.xml')
     list_plate = ["",""]
 
     # Setup App
     app = QApplication(sys.argv)
-  
+    
     UIWindow = UI()
-    #app.exec_()
+    
+    app_ = Flask(__name__)
+    # Gui data lên server để esp lấy về
+    @app_.route("/rfid", methods=["GET"])
+    def send_string():
+        if request.method == "GET":  # if we make a post request to the endpoint, look for the image in the request body
+            check ="True"
+            requests.post("http://192.168.43.65:7350", check)
+            return check
+
+    @app_.route("/update-sensor", methods=["POST"])
+    def get_id():
+        if request.method == "POST":  # if we make a post request to the endpoint, look for the image in the request body
+            id = request.get_data()
+            print(id)
+            return id
+        # Gui data lên server để esp lấy về
+    @app_.route("/rfid-ra", methods=["GET"])
+    def send_string_ra():
+        if request.method == "GET":  # if we make a post request to the endpoint, look for the image in the request body
+            check ="True"
+            requests.post("http://192.168.43.65:7350", check)
+            return check
+
+    @app_.route("/update-sensor-ra", methods=["POST"])
+    def get_id_ra():
+        if request.method == "POST":  # if we make a post request to the endpoint, look for the image in the request body
+            id = request.get_data()
+            print(id)
+            return id
+    
+    
+    
+    kwargs = {'host': '192.168.43.65', 'port': 7350, 'threaded': True, 'use_reloader': False, 'debug': False}
+    flaskThread = Thread(target=app_.run, daemon=True, kwargs=kwargs).start()
+    
+    app.exec_()
 
 
  
