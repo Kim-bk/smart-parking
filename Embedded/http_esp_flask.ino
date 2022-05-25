@@ -51,7 +51,7 @@ int pictureNumber = 0;
 
 const char *ssid = "Hoang Dat";
 const char *password = "17062001";
-const char *post_url = "http://192.168.0.105:7350/upload-image"; // Location where images are POSTED
+// const char *post_url = "http://192.168.0.105:7350/upload-image"; // Location where images are POSTED
 const char *get_url = "http://192.168.0.105:7350/rfid";
 bool internet_connected = false;
 #include <ArduinoOTA.h>

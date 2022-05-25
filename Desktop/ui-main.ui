@@ -689,11 +689,24 @@ p, li { white-space: pre-wrap; }
      </property>
     </column>
    </widget>
-   <widget class="QPushButton" name="btnScreenshot">
+   <widget class="QPushButton" name="btnScreenshot_Entrance">
     <property name="geometry">
      <rect>
       <x>20</x>
       <y>40</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Capture</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnScreenshot_Exit">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>500</y>
       <width>131</width>
       <height>31</height>
      </rect>
