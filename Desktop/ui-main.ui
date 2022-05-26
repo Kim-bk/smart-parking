@@ -658,21 +658,19 @@ p, li { white-space: pre-wrap; }
     <property name="styleSheet">
      <string notr="true"/>
     </property>
-    <column>
-     <property name="text">
-      <string>ID</string>
-     </property>
-    </column>
+   
     <column>
      <property name="text">
       <string>Card</string>
      </property>
     </column>
+
     <column>
      <property name="text">
       <string>Name</string>
      </property>
     </column>
+    
     <column>
      <property name="text">
       <string>Phone Number</string>

@@ -15,6 +15,9 @@ from flask import Flask,request, render_template
 from threading import Thread
 import sys
 import requests
+# Process database with mongodb
+from datetime import datetime
+from mongo import createCheckIn,findAll,createCheckOut,getByIdRfid
 
 # AI code 
 import matplotlib.pyplot as plt
@@ -26,6 +29,8 @@ import keras
 from tensorflow.python.saved_model import loader_impl
 from tensorflow.python.keras.saving.saved_model import load as saved_model_load
 from sklearn.metrics import f1_score 
+
+id_rfid =''
 
 def detect_plate(self, img, pos): # the function detects and perfors blurring on the number plate.
     plate_img = img.copy()
@@ -281,13 +286,14 @@ class VideoThread(QThread):
     change_pixmap_signal2 = pyqtSignal(np.ndarray)
  
     def run(self):
-        # cap_esp32 = cv2.VideoCapture(0)
-        cap_webcam = cv2.VideoCapture(0)
+        cap_esp32_entrance = cv2.VideoCapture("http://192.168.43.26:81/stream")
+        cap_esp32_exit = cv2.VideoCapture("http://192.168.43.115:81/stream")
+        #cap_webcam = cv2.VideoCapture(0)
         while True:
-            # ret1, cv_img1 = cap_esp32.read()
-            ret2, cv_img2 = cap_webcam.read()
-            if  ret2 : #and ret1 :
-                # self.change_pixmap_signal1.emit(cv_img1)
+            ret1, cv_img1 = cap_esp32_entrance.read()
+            ret2, cv_img2 = cap_esp32_exit.read()
+            if  ret2 and ret1 :
+                self.change_pixmap_signal1.emit(cv_img1)
                 self.change_pixmap_signal2.emit(cv_img2)
           
 class ClockThread(QThread):
@@ -335,7 +341,7 @@ class UI(QMainWindow):
         super(UI,self).__init__()
 
         #Load the ui file 
-        uic.loadUi("C:/Users/ACER/Desktop/Project/New folder/pbl5-smart-parking/Desktop/ui-main.ui", self)
+        uic.loadUi("C:/Users/ACER/Desktop/Project/New folder/PBL5/Desktop/ui-main.ui", self)
         self.txtPlateIn.setEnabled(False)
         self.txtPlateOut.setEnabled(False)
 
@@ -345,7 +351,7 @@ class UI(QMainWindow):
         self.tbData.setColumnWidth(2,250)
         self.tbData.setColumnWidth(3,200)
         self.tbData.setColumnWidth(4,200)
-
+        
         #Event
         self.btnEntrance.clicked.connect(self.btnEntrance_clicked)
         self.btnExit.clicked.connect(self.btnExit_clicked)
@@ -368,6 +374,68 @@ class UI(QMainWindow):
         self.show()
         #load clock
         # display_time(self)
+        
+        app_ = Flask(__name__)
+        # Gửi data lên server để esp lấy về
+        @app_.route("/rfid", methods=["GET"])
+        def send_string():
+            if request.method == "GET":  # if we make a post request to the endpoint, look for the image in the request body
+                if(getByIdRfid(id_rfid_vao)!=None):
+                    #Code chụp ảnh và lưu biển số xe vào db ở đây 
+                    
+                    
+                    #*********
+                    print("Da chup")
+                    check ="True"
+                    requests.post("http://192.168.43.65:7350", check)
+                    return check
+                else:
+                    print("Cut")
+                    check ="False"
+                    requests.post("http://192.168.43.65:7350", check)
+                    return check
+                    
+        @app_.route("/send-id", methods=["POST"])
+        def get_id():
+            if request.method == "POST":  # if we make a post request to the endpoint, look for the image in the request body
+                data = request.get_data()
+                global id_rfid_vao
+                id = str(data)
+                print(id[2:-1])
+                id_rfid_vao = id[2:-1]
+                return data
+            # Gui data lên server để esp lấy về
+        @app_.route("/rfid-ra", methods=["GET"])
+        def send_string_ra():
+            if request.method == "GET":  # if we make a post request to the endpoint, look for the image in the request body
+                if(getByIdRfid(id_rfid_ra)!=None):
+                    #Code chụp ảnh và lấy biển số xe ra
+                    
+                    #***************
+                    
+                    #Sau đó:
+                    #if(Check biển số xe ra):
+                    print("Da chup")
+                    check ="True"
+                    requests.post("http://192.168.43.65:7350", check)
+                    return check
+                else:
+                    print("Cut")
+                    check ="False"
+                    requests.post("http://192.168.43.65:7350", check)
+                    return check
+
+        @app_.route("/update-sensor-ra", methods=["POST"])
+        def get_id_ra():
+            if request.method == "POST":  # if we make a post request to the endpoint, look for the image in the request body
+                data = request.get_data()
+                global id_rfid_ra
+                id = str(data)
+                print(id[2:-1])
+                id_rfid_ra = id[2:-1]
+                return data
+        kwargs = {'host': '192.168.43.65', 'port': 7350, 'threaded': True, 'use_reloader': False, 'debug': False}
+        flaskThread = Thread(target=app_.run, daemon=True, kwargs=kwargs).start()
 
 
     @pyqtSlot(np.ndarray)
@@ -412,25 +480,34 @@ class UI(QMainWindow):
 
 
     def load_table(self):
-        people = [{"ID": "1", "Card": "100221", "Name": "Hoang Kim", "Phone Number": "0935740126" ,"Booking Datetime": "16/05/2022 15:30","Lisence Plate": "43D92646" }]
+        list = findAll()
+        people =[]
+        for item in list:
+            data_item = {
+                "Card":item["customer"]["customer_card"],
+                "Name":item["customer"]["name"],
+                "Phone_Number":item["customer"]["number_phone"],
+                "Booking_Date":item["date_check_in"],
+                "Lisence_Plate":item["license_plate"],
+            }
+            people.append(data_item)
+       # people = [{"ID": "1", "Card": "100221", "Name": "Hoang Kim", "Phone Number": "0935740126" ,"Booking Date": "16/05/2022", "Lisence Plate": "43D92646" }]
         row = 0
         self.tbData.setRowCount(len(people))
         for person in people:
-            self.tbData.setItem(row, 0, QtWidgets.QTableWidgetItem(person["ID"]))
-            self.tbData.setItem(row, 1, QtWidgets.QTableWidgetItem(person["Card"]))
-            self.tbData.setItem(row, 2, QtWidgets.QTableWidgetItem(person["Name"]))
-            self.tbData.setItem(row, 3, QtWidgets.QTableWidgetItem(person["Phone Number"]))
-            self.tbData.setItem(row, 4, QtWidgets.QTableWidgetItem(person["Booking Datetime"]))
-            self.tbData.setItem(row, 5, QtWidgets.QTableWidgetItem(person["Lisence Plate"]))
+            self.tbData.setItem(row, 0, QtWidgets.QTableWidgetItem(person["Card"]))
+            self.tbData.setItem(row, 1, QtWidgets.QTableWidgetItem(person["Name"]))
+            self.tbData.setItem(row, 2, QtWidgets.QTableWidgetItem(person["Phone_Number"]))
+            self.tbData.setItem(row, 3, QtWidgets.QTableWidgetItem(person["Booking_Date"]))
+            self.tbData.setItem(row, 4, QtWidgets.QTableWidgetItem(person["Lisence_Plate"]))
+
             row = row + 1
         
-    def capture(self):
-        if(get_id()!=None):
-            send_string()
-        if(get_id_ra()!=None):
-            send_string_ra()
+     
     def capture_entrance(self):
-        dt = datetime.datetime.now()
+        dt = datetime.now()
+        dt = dt.strftime("%d/%m/%Y %H:%M:%S")  
+
         reset(self, 'entrance')
         image = ImageQt.fromqpixmap(self.lblCamEntrance.pixmap())
         path_capture_entrance = '../PBL5/capture/img-' + str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)+ '.jpg' 
@@ -446,6 +523,11 @@ class UI(QMainWindow):
             # self.lblImgEntrance.setPixmap(QtGui.QPixmap(path_capture_entrance))
             print('Biển số xe vào: ' + str(len(char)))
 
+            ##### Create data
+            createCheckIn(id_rfid,str(char),dt)
+
+
+
             # Hiện khung chứa biển số được cắt
             self.lblCutPlateIn.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
             list_plate[0] = char
@@ -455,11 +537,13 @@ class UI(QMainWindow):
             self.txtPlateIn.setText(char)
 
     def capture_exit(self):
-        dt = datetime.datetime.now()
+        dt = datetime.now()
+        dt = dt.strftime("%d/%m/%Y %H:%M:%S") 
+
         reset(self,'exit')
         image = ImageQt.fromqpixmap(self.lblCamExit.pixmap())
         dt = datetime.datetime.now()
-        path_capture_exit = 'd:/Semester 6/PBL5/capture/img-' + str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)+ '.jpg' 
+        path_capture_exit = '../PBL5/capture/img-' + str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)+ '.jpg' 
         image.save(path_capture_exit) 
         # get the absolute path in your computer
         img = cv2.imread(path_capture_exit)
@@ -470,7 +554,11 @@ class UI(QMainWindow):
             show_error_messagebox()
         else:
             # self.lblImgExit.setPixmap(QtGui.QPixmap(path_capture_exit))
-            print('Biển số xe vào: ' + str(len(char)))
+            print('Biển số xe ra: ' + str(len(char)))
+
+            ########## data
+            createCheckOut(id_rfid,str(char),dt)
+
 
             # Hiện khung chứa biển số được cắt
             self.lblCutOut.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
@@ -584,43 +672,14 @@ if __name__ == "__main__":
     
     UIWindow = UI()
     
-    app_ = Flask(__name__)
-    # Gui data lên server để esp lấy về
-    @app_.route("/rfid", methods=["GET"])
-    def send_string():
-        if request.method == "GET":  # if we make a post request to the endpoint, look for the image in the request body
-            check ="True"
-            requests.post("http://192.168.43.65:7350", check)
-            return check
-
-    @app_.route("/update-sensor", methods=["POST"])
-    def get_id():
-        if request.method == "POST":  # if we make a post request to the endpoint, look for the image in the request body
-            id = request.get_data()
-            print(id)
-            return id
-        # Gui data lên server để esp lấy về
-    @app_.route("/rfid-ra", methods=["GET"])
-    def send_string_ra():
-        if request.method == "GET":  # if we make a post request to the endpoint, look for the image in the request body
-            check ="True"
-            requests.post("http://192.168.43.65:7350", check)
-            return check
-
-    @app_.route("/update-sensor-ra", methods=["POST"])
-    def get_id_ra():
-        if request.method == "POST":  # if we make a post request to the endpoint, look for the image in the request body
-            id = request.get_data()
-            print(id)
-            return id
     
     
     
-    kwargs = {'host': '192.168.43.65', 'port': 7350, 'threaded': True, 'use_reloader': False, 'debug': False}
-    flaskThread = Thread(target=app_.run, daemon=True, kwargs=kwargs).start()
+    
+    # kwargs = {'host': '192.168.43.65', 'port': 7350, 'threaded': True, 'use_reloader': False, 'debug': False}
+    # flaskThread = Thread(target=app_.run, daemon=True, kwargs=kwargs).start()
    
     app.exec_()
 
 
  
-
