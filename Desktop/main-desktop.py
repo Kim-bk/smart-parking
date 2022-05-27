@@ -340,7 +340,7 @@ class UI(QMainWindow):
         super(UI,self).__init__()
 
         #Load the ui file 
-        uic.loadUi("C:/Users/ACER/Desktop/Project/New folder/pbl5-smart-parking/Desktop/ui-main.ui", self)
+        uic.loadUi("../PBL5/Desktop/ui-main.ui", self)
         self.txtPlateIn.setEnabled(False)
         self.txtPlateOut.setEnabled(False)
 
@@ -371,8 +371,42 @@ class UI(QMainWindow):
         # task_clock.start()
         #Show app
         self.show()
+        app_ = Flask(__name__)
+        # Gui data lên server để esp lấy về
+        @app_.route("/rfid", methods=["GET"])
+        def send_string():
+            if request.method == "GET":  # if we make a post request to the endpoint, look for the image in the request body
+                check ="True"
+                requests.post("http://192.168.43.65:7350", check)
+                return check
+
+        @app_.route("/update-sensor", methods=["POST"])
+        def get_id():
+            if request.method == "POST":  # if we make a post request to the endpoint, look for the image in the request body
+                id = request.get_data()
+                print(id)
+                return id
+            # Gui data lên server để esp lấy về
+        @app_.route("/rfid-ra", methods=["GET"])
+        def send_string_ra():
+            if request.method == "GET":  # if we make a post request to the endpoint, look for the image in the request body
+                check ="True"
+                requests.post("http://192.168.43.65:7350", check)
+                return check
+
+        @app_.route("/update-sensor-ra", methods=["POST"])
+        def get_id_ra():
+            if request.method == "POST":  # if we make a post request to the endpoint, look for the image in the request body
+                id = request.get_data()
+                print(id)
+                return id
+    
+    
+    
+        kwargs = {'host': '192.168.43.65', 'port': 7350, 'threaded': True, 'use_reloader': False, 'debug': False}
+        flaskThread = Thread(target=app_.run, daemon=True, kwargs=kwargs).start()
         #load clock
-        # display_time(self)
+        self.display_time()
 
 
     @pyqtSlot(np.ndarray)
@@ -440,15 +474,6 @@ class UI(QMainWindow):
 
             row = row + 1
         
-    def capture(self):
-        global id_rfid
-        if(get_id()!=None):
-            id_rfid = get_id()
-            send_string()
-        if(get_id_ra()!=None):
-            send_string_ra()
-
-            
     def capture_entrance(self):
         dt = datetime.now()
         dt = dt.strftime("%d/%m/%Y %H:%M:%S")  
@@ -618,40 +643,7 @@ if __name__ == "__main__":
     
     UIWindow = UI()
     
-    app_ = Flask(__name__)
-    # Gui data lên server để esp lấy về
-    @app_.route("/rfid", methods=["GET"])
-    def send_string():
-        if request.method == "GET":  # if we make a post request to the endpoint, look for the image in the request body
-            check ="True"
-            requests.post("http://192.168.43.65:7350", check)
-            return check
-
-    @app_.route("/update-sensor", methods=["POST"])
-    def get_id():
-        if request.method == "POST":  # if we make a post request to the endpoint, look for the image in the request body
-            id = request.get_data()
-            print(id)
-            return id
-        # Gui data lên server để esp lấy về
-    @app_.route("/rfid-ra", methods=["GET"])
-    def send_string_ra():
-        if request.method == "GET":  # if we make a post request to the endpoint, look for the image in the request body
-            check ="True"
-            requests.post("http://192.168.43.65:7350", check)
-            return check
-
-    @app_.route("/update-sensor-ra", methods=["POST"])
-    def get_id_ra():
-        if request.method == "POST":  # if we make a post request to the endpoint, look for the image in the request body
-            id = request.get_data()
-            print(id)
-            return id
-    
-    
-    
-    kwargs = {'host': '192.168.43.65', 'port': 7350, 'threaded': True, 'use_reloader': False, 'debug': False}
-    flaskThread = Thread(target=app_.run, daemon=True, kwargs=kwargs).start()
+   
    
     app.exec_()
 
