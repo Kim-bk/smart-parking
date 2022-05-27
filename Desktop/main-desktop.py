@@ -7,7 +7,6 @@ from PyQt5 import QtWidgets
 import sys
 import cv2
 import numpy as np
-import datetime
 from PIL import ImageQt
 import os
 from flask import Flask,request, render_template
@@ -195,49 +194,25 @@ def custom_f1score(y, y_pred):
 def show_error_messagebox():
     msg = QMessageBox()
     msg.setIcon(QMessageBox.Warning)
-  
-    # setting message for Message Box
     msg.setText("Không phát hiện được biển số xe vui lòng chụp lại !")
-      
-    # setting Message box window title
     msg.setWindowTitle("Warning MessageBox")
-      
-    # declaring buttons on Message Box
     msg.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
-      
-    # # start the app
     msg.exec_()
 
 def show_error_messagebox():
     msg = QMessageBox()
     msg.setIcon(QMessageBox.Warning)
-  
-    # setting message for Message Box
     msg.setText("Không phát hiện được biển số xe vui lòng chụp lại !")
-      
-    # setting Message box window title
     msg.setWindowTitle("Warning MessageBox")
-      
-    # declaring buttons on Message Box
     msg.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
-      
-    # # start the app
     msg.exec_()
 
 def show_success_messagebox():
     msg = QMessageBox()
     msg.setIcon(QMessageBox.Warning)
-  
-    # setting message for Message Box
     msg.setText("Nhận dạng biển số thành công !")
-      
-    # setting Message box window title
     msg.setWindowTitle("Success MessageBox")
-      
-    # declaring buttons on Message Box
     msg.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
-      
-    # # start the app
     msg.exec_()
 
 
@@ -288,62 +263,23 @@ class VideoThread(QThread):
     change_pixmap_signal2 = pyqtSignal(np.ndarray)
  
     def run(self):
-        cap_esp32_entrance = cv2.VideoCapture("http://192.168.43.26:81/stream")
-        cap_esp32_exit = cv2.VideoCapture("http://192.168.43.115:81/stream")
-        #cap_webcam = cv2.VideoCapture(0)
+        # cap_esp32_entrance = cv2.VideoCapture("http://192.168.43.26:81/stream")
+        # cap_esp32_exit = cv2.VideoCapture("http://192.168.43.115:81/stream")
+        cap_esp32_exit = cv2.VideoCapture(0)
+     
         while True:
-            ret1, cv_img1 = cap_esp32_entrance.read()
+            # ret1, cv_img1 = cap_esp32_entrance.read()
             ret2, cv_img2 = cap_esp32_exit.read()
-            if  ret2 and ret1 :
-                self.change_pixmap_signal1.emit(cv_img1)
+            if  ret2  :
+                # self.change_pixmap_signal1.emit(cv_img1)
                 self.change_pixmap_signal2.emit(cv_img2)
           
-class ClockThread(QThread):
-    change_time = ''
-    def run(self):
-        while True:
-            QApplication.processEvents()
-            dt = datetime.datetime.now()
-            # print(dt)
-            if dt.hour < 10:
-                if dt.minute < 10:
-                    self.update_time.emit('0%s:0%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
-                elif dt.second < 10:
-                    self.update_time.emit('0%s:%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
-                elif dt.second <10 and dt.minute <10:
-                    self.txtTime.setText('0%s:0%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
-                else:
-                    self.txtTime.setText('0%s:%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
-        
-            elif dt.minute < 10:
-                if dt.hour < 10:
-                    self.txtTime.setText('0%s:0%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
-                elif dt.second < 10:
-                    self.txtTime.setText('%s:0%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
-                elif dt.second < 10 and dt.hour < 10:
-                    self.txtTime.setText('0%s:0%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
-                else:  
-                    self.txtTime.setText('%s:0%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
-
-            elif dt.second < 10:
-                if dt.hour < 10:
-                    self.txtTime.setText('0%s:%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
-                elif dt.minute < 10:
-                    self.txtTime.setText('%s:0%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
-                elif dt.hour < 10 and dt.minute < 10:
-                    self.txtTime.setText('0%s:0%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
-                else:
-                    self.txtTime.setText('%s:%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
-            
-            else:
-                self.txtTime.setText('%s:%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
-
 class UI(QMainWindow):
     def __init__(self):
         super(UI,self).__init__()
 
         #Load the ui file 
-        uic.loadUi("C:/Users/ACER/Desktop/Project/New folder/PBL5/Desktop/ui-main.ui", self)
+        uic.loadUi("../PBL5/Desktop/ui-main.ui", self)
         self.txtPlateIn.setEnabled(False)
         self.txtPlateOut.setEnabled(False)
 
@@ -378,8 +314,7 @@ class UI(QMainWindow):
             if request.method == "GET":  # if we make a post request to the endpoint, look for the image in the request body
                 if(getByIdRfid(id_rfid_vao)!=None):
                     #Code chụp ảnh và lưu biển số xe vào db ở đây 
-                    
-                    
+
                     #*********
                     print("Da chup")
                     check ="True"
@@ -406,9 +341,7 @@ class UI(QMainWindow):
             if request.method == "GET":  # if we make a post request to the endpoint, look for the image in the request body
                 if(getByIdRfid(id_rfid_ra)!=None):
                     #Code chụp ảnh và lấy biển số xe ra
-                    
                     #***************
-                    
                     #Sau đó:
                     #if(Check biển số xe ra):
                     print("Da chup")
@@ -433,14 +366,13 @@ class UI(QMainWindow):
         kwargs = {'host': '192.168.43.65', 'port': 7350, 'threaded': True, 'use_reloader': False, 'debug': False}
         flaskThread = Thread(target=app_.run, daemon=True, kwargs=kwargs).start()
         #load clock
-        # display_time(self)
-
+        self.display_time()
 
     @pyqtSlot(np.ndarray)
     def display_time(self):
         while True:
             QApplication.processEvents()
-            dt = datetime.datetime.now()
+            dt = datetime.now()
             # print(dt)
             if dt.hour < 10:
                 if dt.minute < 10:
@@ -474,7 +406,6 @@ class UI(QMainWindow):
             
             else:
                 self.txtTime.setText('%s:%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
-            #app.exec_()
 
 
     def load_table(self):
@@ -523,8 +454,6 @@ class UI(QMainWindow):
             ##### Create data
             createCheckIn(id_rfid,str(char),dt)
 
-
-
             # Hiện khung chứa biển số được cắt
             self.lblCutPlateIn.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
             list_plate[0] = char
@@ -539,7 +468,7 @@ class UI(QMainWindow):
 
         reset(self,'exit')
         image = ImageQt.fromqpixmap(self.lblCamExit.pixmap())
-        dt = datetime.datetime.now()
+        dt = datetime.now()
         path_capture_exit = '../PBL5/capture/img-' + str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)+ '.jpg' 
         image.save(path_capture_exit) 
         # get the absolute path in your computer
@@ -569,7 +498,6 @@ class UI(QMainWindow):
     def rectangle_detect(self, img, pos):
         # qt_img = self.convert_cv_qt(img)
         # self.lblCamExit.setPixmap(qt_img)
-      
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         plate_rect = plate_cascade.detectMultiScale(gray, scaleFactor = 1.2, minNeighbors = 7) 
         for (x,y,w,h) in plate_rect:
@@ -600,7 +528,6 @@ class UI(QMainWindow):
         qt_img = self.convert_cv_qt(cv_img)
         self.lblCamExit.setPixmap(qt_img)
        
-        
     def convert_cv_qt(self, cv_img):
         """Convert from an opencv image to QPixmap"""
         rgb_image = cv2.cvtColor(cv_img, cv2.COLOR_BGR2RGB)
@@ -609,7 +536,6 @@ class UI(QMainWindow):
         convert_to_Qt_format = QtGui.QImage(rgb_image.data, w, h, bytes_per_line, QtGui.QImage.Format_RGB888)
         p = convert_to_Qt_format.scaled(640, 480, Qt.KeepAspectRatio)
         return QPixmap.fromImage(p)
-
 
     def btnExit_clicked(self):
         reset(self, 'exit')
@@ -662,7 +588,7 @@ if __name__ == "__main__":
     #Init variables for AI
     #Load the model has been trained before 
     model = keras.models.load_model('../PBL5/AI/data_test/character_model.h5',custom_objects={"custom_f1score": custom_f1score})
-    plate_cascade = cv2.CascadeClassifier('../PBL5/AI/AI/archive/cascade.xml')
+    plate_cascade = cv2.CascadeClassifier('../PBL5/AI/archive/cascade.xml')
     list_plate = ["",""]
     app = QApplication(sys.argv)
     UIWindow = UI()
