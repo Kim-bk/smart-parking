@@ -17,7 +17,9 @@ import sys
 import requests
 # Process database with mongodb
 from datetime import datetime
+
 from mongo import createCheckIn,findAll,createCheckOut,getByIdRfid
+
 
 # AI code 
 import matplotlib.pyplot as plt
@@ -366,15 +368,9 @@ class UI(QMainWindow):
         self.thread.change_pixmap_signal2.connect(self.update_image_exit)
         # start the thread
         self.thread.start()
-
-        # task_clock = ClockThread()
-        # task_clock.change_time.connect(self.update_time)
-        # task_clock.start()
         #Show app
         self.show()
-        #load clock
-        # display_time(self)
-        
+    
         app_ = Flask(__name__)
         # Gửi data lên server để esp lấy về
         @app_.route("/rfid", methods=["GET"])
@@ -436,6 +432,8 @@ class UI(QMainWindow):
                 return data
         kwargs = {'host': '192.168.43.65', 'port': 7350, 'threaded': True, 'use_reloader': False, 'debug': False}
         flaskThread = Thread(target=app_.run, daemon=True, kwargs=kwargs).start()
+        #load clock
+        # display_time(self)
 
 
     @pyqtSlot(np.ndarray)
@@ -502,8 +500,7 @@ class UI(QMainWindow):
             self.tbData.setItem(row, 4, QtWidgets.QTableWidgetItem(person["Lisence_Plate"]))
 
             row = row + 1
-        
-     
+                 
     def capture_entrance(self):
         dt = datetime.now()
         dt = dt.strftime("%d/%m/%Y %H:%M:%S")  
@@ -667,18 +664,8 @@ if __name__ == "__main__":
     model = keras.models.load_model('../PBL5/AI/data_test/character_model.h5',custom_objects={"custom_f1score": custom_f1score})
     plate_cascade = cv2.CascadeClassifier('../PBL5/AI/AI/archive/cascade.xml')
     list_plate = ["",""]
-
     app = QApplication(sys.argv)
-    
     UIWindow = UI()
-    
-    
-    
-    
-    
-    # kwargs = {'host': '192.168.43.65', 'port': 7350, 'threaded': True, 'use_reloader': False, 'debug': False}
-    # flaskThread = Thread(target=app_.run, daemon=True, kwargs=kwargs).start()
-   
     app.exec_()
 
 
