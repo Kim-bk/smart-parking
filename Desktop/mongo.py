@@ -10,7 +10,6 @@ def connection():
     return conn
 
 
-
 def createCheckIn(customer_card,license_plate,date_check_in):
     db_customer = connection()['smart_parking']['customer']
     db_parking = connection()['smart_parking']['customer_parking']

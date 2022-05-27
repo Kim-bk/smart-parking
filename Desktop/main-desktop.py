@@ -17,7 +17,9 @@ import sys
 import requests
 # Process database with mongodb
 from datetime import datetime
-from mongo import createCheckIn,findAll,createCheckOut
+
+from mongo import createCheckIn,findAll,createCheckOut,getByIdRfid
+
 
 # AI code 
 import matplotlib.pyplot as plt
@@ -30,7 +32,7 @@ from tensorflow.python.saved_model import loader_impl
 from tensorflow.python.keras.saving.saved_model import load as saved_model_load
 from sklearn.metrics import f1_score 
 
-id_rfid = ''
+id_rfid =''
 
 def detect_plate(self, img, pos): # the function detects and perfors blurring on the number plate.
     plate_img = img.copy()
@@ -286,13 +288,14 @@ class VideoThread(QThread):
     change_pixmap_signal2 = pyqtSignal(np.ndarray)
  
     def run(self):
-        # cap_esp32 = cv2.VideoCapture(0)
-        cap_webcam = cv2.VideoCapture(0)
+        cap_esp32_entrance = cv2.VideoCapture("http://192.168.43.26:81/stream")
+        cap_esp32_exit = cv2.VideoCapture("http://192.168.43.115:81/stream")
+        #cap_webcam = cv2.VideoCapture(0)
         while True:
-            # ret1, cv_img1 = cap_esp32.read()
-            ret2, cv_img2 = cap_webcam.read()
-            if  ret2 : #and ret1 :
-                # self.change_pixmap_signal1.emit(cv_img1)
+            ret1, cv_img1 = cap_esp32_entrance.read()
+            ret2, cv_img2 = cap_esp32_exit.read()
+            if  ret2 and ret1 :
+                self.change_pixmap_signal1.emit(cv_img1)
                 self.change_pixmap_signal2.emit(cv_img2)
           
 class ClockThread(QThread):
@@ -340,7 +343,7 @@ class UI(QMainWindow):
         super(UI,self).__init__()
 
         #Load the ui file 
-        uic.loadUi("../PBL5/Desktop/ui-main.ui", self)
+        uic.loadUi("C:/Users/ACER/Desktop/Project/New folder/PBL5/Desktop/ui-main.ui", self)
         self.txtPlateIn.setEnabled(False)
         self.txtPlateOut.setEnabled(False)
 
@@ -365,48 +368,72 @@ class UI(QMainWindow):
         self.thread.change_pixmap_signal2.connect(self.update_image_exit)
         # start the thread
         self.thread.start()
-
-        # task_clock = ClockThread()
-        # task_clock.change_time.connect(self.update_time)
-        # task_clock.start()
         #Show app
         self.show()
+    
         app_ = Flask(__name__)
-        # Gui data lên server để esp lấy về
+        # Gửi data lên server để esp lấy về
         @app_.route("/rfid", methods=["GET"])
         def send_string():
             if request.method == "GET":  # if we make a post request to the endpoint, look for the image in the request body
-                check ="True"
-                requests.post("http://192.168.43.65:7350", check)
-                return check
-
-        @app_.route("/update-sensor", methods=["POST"])
+                if(getByIdRfid(id_rfid_vao)!=None):
+                    #Code chụp ảnh và lưu biển số xe vào db ở đây 
+                    
+                    
+                    #*********
+                    print("Da chup")
+                    check ="True"
+                    requests.post("http://192.168.43.65:7350", check)
+                    return check
+                else:
+                    print("Cut")
+                    check ="False"
+                    requests.post("http://192.168.43.65:7350", check)
+                    return check
+                    
+        @app_.route("/send-id", methods=["POST"])
         def get_id():
             if request.method == "POST":  # if we make a post request to the endpoint, look for the image in the request body
-                id = request.get_data()
-                print(id)
-                return id
+                data = request.get_data()
+                global id_rfid_vao
+                id = str(data)
+                print(id[2:-1])
+                id_rfid_vao = id[2:-1]
+                return data
             # Gui data lên server để esp lấy về
         @app_.route("/rfid-ra", methods=["GET"])
         def send_string_ra():
             if request.method == "GET":  # if we make a post request to the endpoint, look for the image in the request body
-                check ="True"
-                requests.post("http://192.168.43.65:7350", check)
-                return check
+                if(getByIdRfid(id_rfid_ra)!=None):
+                    #Code chụp ảnh và lấy biển số xe ra
+                    
+                    #***************
+                    
+                    #Sau đó:
+                    #if(Check biển số xe ra):
+                    print("Da chup")
+                    check ="True"
+                    requests.post("http://192.168.43.65:7350", check)
+                    return check
+                else:
+                    print("Cut")
+                    check ="False"
+                    requests.post("http://192.168.43.65:7350", check)
+                    return check
 
         @app_.route("/update-sensor-ra", methods=["POST"])
         def get_id_ra():
             if request.method == "POST":  # if we make a post request to the endpoint, look for the image in the request body
-                id = request.get_data()
-                print(id)
-                return id
-    
-    
-    
+                data = request.get_data()
+                global id_rfid_ra
+                id = str(data)
+                print(id[2:-1])
+                id_rfid_ra = id[2:-1]
+                return data
         kwargs = {'host': '192.168.43.65', 'port': 7350, 'threaded': True, 'use_reloader': False, 'debug': False}
         flaskThread = Thread(target=app_.run, daemon=True, kwargs=kwargs).start()
         #load clock
-        self.display_time()
+        # display_time(self)
 
 
     @pyqtSlot(np.ndarray)
@@ -473,7 +500,7 @@ class UI(QMainWindow):
             self.tbData.setItem(row, 4, QtWidgets.QTableWidgetItem(person["Lisence_Plate"]))
 
             row = row + 1
-        
+                 
     def capture_entrance(self):
         dt = datetime.now()
         dt = dt.strftime("%d/%m/%Y %H:%M:%S")  
@@ -513,7 +540,7 @@ class UI(QMainWindow):
         reset(self,'exit')
         image = ImageQt.fromqpixmap(self.lblCamExit.pixmap())
         dt = datetime.datetime.now()
-        path_capture_exit = 'd:/Semester 6/PBL5/capture/img-' + str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)+ '.jpg' 
+        path_capture_exit = '../PBL5/capture/img-' + str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)+ '.jpg' 
         image.save(path_capture_exit) 
         # get the absolute path in your computer
         img = cv2.imread(path_capture_exit)
@@ -528,7 +555,6 @@ class UI(QMainWindow):
 
             ########## data
             createCheckOut(id_rfid,str(char),dt)
-
 
 
             # Hiện khung chứa biển số được cắt
@@ -638,15 +664,6 @@ if __name__ == "__main__":
     model = keras.models.load_model('../PBL5/AI/data_test/character_model.h5',custom_objects={"custom_f1score": custom_f1score})
     plate_cascade = cv2.CascadeClassifier('../PBL5/AI/AI/archive/cascade.xml')
     list_plate = ["",""]
-
     app = QApplication(sys.argv)
-    
     UIWindow = UI()
-    
-   
-   
     app.exec_()
-
-
- 
-
