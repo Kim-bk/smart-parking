@@ -418,7 +418,7 @@ class UI(QMainWindow):
     def capture_entrance(self, id_rfid_vao):
         dt = datetime.now()
         dt = dt.strftime("%d/%m/%Y %H:%M:%S")  
-
+        success = False
         reset(self, 'entrance')
         for _ in range(1, 10):
             image = ImageQt.fromqpixmap(self.lblCamEntrance.pixmap())
@@ -430,7 +430,6 @@ class UI(QMainWindow):
 
             if char == '0' or len(char) < 8:
                 os.remove(path_capture_entrance)
-                show_error_messagebox()
             else:
                 # self.lblImgEntrance.setPixmap(QtGui.QPixmap(path_capture_entrance))
                 print('Biển số xe vào: ' + str(len(char)))
@@ -445,12 +444,16 @@ class UI(QMainWindow):
                 # Hiện khung chứa biển số được cắt ảnh trắng đen
                 self.lblGrayIn.setPixmap(QtGui.QPixmap("contour.jpg"))
                 self.txtPlateIn.setText(char)
+                success = True
                 break
+        if success == False:
+            show_error_messagebox()
 
     def capture_exit(self):
         dt = datetime.now()
         dt = dt.strftime("%d/%m/%Y %H:%M:%S") 
-
+        success = False
+        wrong_pl = False
         reset(self,'exit')
         for _ in range(1,10):
             image = ImageQt.fromqpixmap(self.lblCamExit.pixmap())
@@ -463,7 +466,6 @@ class UI(QMainWindow):
 
             if char == '0' or len(char) < 8:
                 os.remove(path_capture_exit)
-                show_error_messagebox()
             else:
                 if getPlatebyRfid(id_rfid_ra) != None:
                     print('Biển số xe ra: ' + str(len(char)))
@@ -479,8 +481,13 @@ class UI(QMainWindow):
                     self.txtPlateOut.setText(char)
                 else:
                     os.remove(path_capture_exit)
-                    show_error_messagebox('wrong_plate')
+                    wrong_pl = True
+                success = True
                 break
+        if success == False:
+            show_error_messagebox()
+        if success == True and wrong_pl == True:
+            show_error_messagebox('wrong_plate')
 
     def update_image_entrance(self, cv_img):
         """Updates the image_label with a new opencv image"""
