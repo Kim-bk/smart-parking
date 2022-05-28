@@ -420,63 +420,67 @@ class UI(QMainWindow):
         dt = dt.strftime("%d/%m/%Y %H:%M:%S")  
 
         reset(self, 'entrance')
-        image = ImageQt.fromqpixmap(self.lblCamEntrance.pixmap())
-        path_capture_entrance = '../PBL5/capture/img-' + str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)+ '.jpg' 
-        image.save(path_capture_entrance) 
-        # get the absolute path in your computer
-        img = cv2.imread(path_capture_entrance)
-        char = process_liscense(self, img, 'entrance')
+        for _ in range(1, 10):
+            image = ImageQt.fromqpixmap(self.lblCamEntrance.pixmap())
+            path_capture_entrance = '../PBL5/capture/img-' + str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)+ '.jpg' 
+            image.save(path_capture_entrance) 
+            # get the absolute path in your computer
+            img = cv2.imread(path_capture_entrance)
+            char = process_liscense(self, img, 'entrance')
 
-        if char == '0' or len(char) < 8:
-            os.remove(path_capture_entrance)
-            show_error_messagebox()
-        else:
-            # self.lblImgEntrance.setPixmap(QtGui.QPixmap(path_capture_entrance))
-            print('Biển số xe vào: ' + str(len(char)))
+            if char == '0' or len(char) < 8:
+                os.remove(path_capture_entrance)
+                show_error_messagebox()
+            else:
+                # self.lblImgEntrance.setPixmap(QtGui.QPixmap(path_capture_entrance))
+                print('Biển số xe vào: ' + str(len(char)))
 
-            ##### Create data
-            createCheckIn(id_rfid_vao,str(char),dt)
+                ##### Create data
+                createCheckIn(id_rfid_vao,str(char),dt)
 
-            # Hiện khung chứa biển số được cắt
-            self.lblCutPlateIn.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
-            list_plate[0] = char
+                # Hiện khung chứa biển số được cắt
+                self.lblCutPlateIn.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
+                list_plate[0] = char
 
-            # Hiện khung chứa biển số được cắt ảnh trắng đen
-            self.lblGrayIn.setPixmap(QtGui.QPixmap("contour.jpg"))
-            self.txtPlateIn.setText(char)
+                # Hiện khung chứa biển số được cắt ảnh trắng đen
+                self.lblGrayIn.setPixmap(QtGui.QPixmap("contour.jpg"))
+                self.txtPlateIn.setText(char)
+                break
 
     def capture_exit(self):
         dt = datetime.now()
         dt = dt.strftime("%d/%m/%Y %H:%M:%S") 
 
         reset(self,'exit')
-        image = ImageQt.fromqpixmap(self.lblCamExit.pixmap())
-        dt = datetime.now()
-        path_capture_exit = '../PBL5/capture/img-' + str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)+ '.jpg' 
-        image.save(path_capture_exit) 
-        # get the absolute path in your computer
-        img = cv2.imread(path_capture_exit)
-        char = process_liscense(self, img, 'exit')
+        for _ in range(1,10):
+            image = ImageQt.fromqpixmap(self.lblCamExit.pixmap())
+            dt = datetime.now()
+            path_capture_exit = '../PBL5/capture/img-' + str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)+ '.jpg' 
+            image.save(path_capture_exit) 
+            # get the absolute path in your computer
+            img = cv2.imread(path_capture_exit)
+            char = process_liscense(self, img, 'exit')
 
-        if char == '0' or len(char) < 8:
-            os.remove(path_capture_exit)
-            show_error_messagebox()
-        else:
-            if getPlatebyRfid(id_rfid_ra) != None:
-                print('Biển số xe ra: ' + str(len(char)))
-                ########## data
-                createCheckOut(id_rfid_ra,str(char),dt)
-                    
-                # Hiện khung chứa biển số được cắt
-                self.lblCutOut.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
-                list_plate[0] = char
-
-                # Hiện khung chứa biển số được cắt ảnh trắng đen
-                self.lblGrayOut.setPixmap(QtGui.QPixmap("contour.jpg"))
-                self.txtPlateOut.setText(char)
-            else:
+            if char == '0' or len(char) < 8:
                 os.remove(path_capture_exit)
-                show_error_messagebox('wrong_plate')
+                show_error_messagebox()
+            else:
+                if getPlatebyRfid(id_rfid_ra) != None:
+                    print('Biển số xe ra: ' + str(len(char)))
+                    ########## data
+                    createCheckOut(id_rfid_ra,str(char),dt)
+                        
+                    # Hiện khung chứa biển số được cắt
+                    self.lblCutOut.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
+                    list_plate[0] = char
+
+                    # Hiện khung chứa biển số được cắt ảnh trắng đen
+                    self.lblGrayOut.setPixmap(QtGui.QPixmap("contour.jpg"))
+                    self.txtPlateOut.setText(char)
+                    break
+                else:
+                    os.remove(path_capture_exit)
+                    show_error_messagebox('wrong_plate')
 
     def update_image_entrance(self, cv_img):
         """Updates the image_label with a new opencv image"""
