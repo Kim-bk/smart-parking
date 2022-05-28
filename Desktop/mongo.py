@@ -47,3 +47,8 @@ def getByIdRfid(id_rfid):
     db_customer = connection()['smart_parking']['customer']
     results = db_customer.find_one({'customer_card':id_rfid})
     return results
+
+def getPlatebyRfid(rfid_card):
+    #biển số xe
+    plate=''
+    return plate
