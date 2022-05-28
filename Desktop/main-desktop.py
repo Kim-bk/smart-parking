@@ -31,14 +31,13 @@ from tensorflow.python.saved_model import loader_impl
 from tensorflow.python.keras.saving.saved_model import load as saved_model_load
 from sklearn.metrics import f1_score 
 
-id_rfid =''
+from Desktop.mongo import getPlatebyRfid 
+
 
 def detect_plate(self, img, pos): # the function detects and perfors blurring on the number plate.
     plate_img = img.copy()
     roi = img.copy()
     plate_rect = plate_cascade.detectMultiScale(plate_img, scaleFactor = 1.2, minNeighbors = 7) # detects numberplates and returns the coordinates and dimensions of detected license plate's contours.
-
-    # print(plate_rect)
     for (x,y,w,h) in plate_rect:
         roi_ = roi[y:y+h, x:x+w, :] # extracting the Region of Interest of license plate for blurring.
         plate = roi[y:y+h, x:x+w, :]
@@ -46,14 +45,10 @@ def detect_plate(self, img, pos): # the function detects and perfors blurring on
          
         if pos == 'entrance':
             path = '../PBL5/detect/entrance_detect.jpg'
-            # if os.path.exists(path):
-            #     os.remove(path)
             cv2.imwrite(path, plate_img)
             self.lblImgEntrance.setPixmap(QtGui.QPixmap(path))
         if pos == 'exit':
             path = '../PBL5/detect/exit_detect.jpg'
-            # if os.path.exists(path):
-            #     os.remove(path)
             cv2.imwrite(path, plate_img)
             self.lblImgExit.setPixmap(QtGui.QPixmap(path))
         
@@ -64,7 +59,6 @@ def detect_plate(self, img, pos): # the function detects and perfors blurring on
 
 # Match contours to license plate or character template
 def find_contours(dimensions, img) :
-
     # Find all contours in the image
     cntrs, _ = cv2.findContours(img.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
@@ -76,7 +70,6 @@ def find_contours(dimensions, img) :
     
     # Check largest 5 or  15 contours for license plate or character respectively
     cntrs = sorted(cntrs, key=cv2.contourArea, reverse=True)[:15]
-    
     ii = cv2.imread('contour.jpg')
     
     x_cntr_list = []
@@ -95,9 +88,9 @@ def find_contours(dimensions, img) :
             char = img[intY:intY+intHeight, intX:intX+intWidth]
             char = cv2.resize(char, (20, 40))
 
-            plt.figure(4)
-            cv2.rectangle(ii, (intX,intY), (intWidth+intX, intY+intHeight), (50,21,200), 2)
-            plt.imshow(ii, cmap='gray')
+            # plt.figure(4)
+            # cv2.rectangle(ii, (intX,intY), (intWidth+intX, intY+intHeight), (50,21,200), 2)
+            # plt.imshow(ii, cmap='gray')
 
             # Make result formatted for classification: invert colors
             char = cv2.subtract(255, char)
@@ -114,20 +107,17 @@ def find_contours(dimensions, img) :
   
     # Return characters on ascending order with respect to the x-coordinate (most-left character first)
             
-    # plt.show()
     # arbitrary function that stores sorted list of character indeces
     indices = sorted(range(len(x_cntr_list)), key=lambda k: x_cntr_list[k])
     img_res_copy = []
     for idx in indices:
         img_res_copy.append(img_res[idx])# stores character images according to their index
     img_res = np.array(img_res_copy)
-    # print(img_res)
 
     return img_res
 
 # Find characters in the resulting images
 def segment_characters(image) :
-
     # Preprocess cropped license plate image
     img = cv2.resize(image, (333, 75))
     img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -145,9 +135,7 @@ def segment_characters(image) :
     img_dilate[:,330:333] = 255
 
     # Estimations of character contours sizes of cropped license plates
-    plt.figure(3)
     dimensions = [LP_WIDTH/6, LP_WIDTH/2, LP_HEIGHT/10, 2*LP_HEIGHT/3]
-    plt.imshow(img_dilate, cmap='gray')
     cv2.imwrite('contour.jpg',img_dilate)
     # Get contours within cropped license plate
     char_list = find_contours(dimensions, img_dilate)
@@ -180,7 +168,6 @@ def show_results(char):
         output.append(character) #storing the result in a list
         
     plate_number = ''.join(output)
-    
     return plate_number
 
 # Metrics for checking the model performance while training
@@ -191,18 +178,14 @@ def custom_f1score(y, y_pred):
   return tf.py_function(f1score, (y, y_pred), tf.double)  
 # end AI code
 
-def show_error_messagebox():
-    msg = QMessageBox()
-    msg.setIcon(QMessageBox.Warning)
-    msg.setText("Không phát hiện được biển số xe vui lòng chụp lại !")
-    msg.setWindowTitle("Warning MessageBox")
-    msg.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
-    msg.exec_()
 
-def show_error_messagebox():
+def show_error_messagebox(err = ''):
     msg = QMessageBox()
     msg.setIcon(QMessageBox.Warning)
-    msg.setText("Không phát hiện được biển số xe vui lòng chụp lại !")
+    if err == 'wrong_plate':
+        msg.setText("Biển số xe ra không đúng !")
+    else:
+        msg.setText("Không phát hiện được biển số xe vui lòng chụp lại !")
     msg.setWindowTitle("Warning MessageBox")
     msg.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
     msg.exec_()
@@ -263,15 +246,14 @@ class VideoThread(QThread):
     change_pixmap_signal2 = pyqtSignal(np.ndarray)
  
     def run(self):
-        # cap_esp32_entrance = cv2.VideoCapture("http://192.168.43.26:81/stream")
-        # cap_esp32_exit = cv2.VideoCapture("http://192.168.43.115:81/stream")
-        cap_esp32_exit = cv2.VideoCapture(0)
+        cap_esp32_entrance = cv2.VideoCapture("http://192.168.43.26:81/stream")
+        cap_esp32_exit = cv2.VideoCapture("http://192.168.43.115:81/stream")
      
         while True:
-            # ret1, cv_img1 = cap_esp32_entrance.read()
+            ret1, cv_img1 = cap_esp32_entrance.read()
             ret2, cv_img2 = cap_esp32_exit.read()
             if  ret2  :
-                # self.change_pixmap_signal1.emit(cv_img1)
+                self.change_pixmap_signal1.emit(cv_img1)
                 self.change_pixmap_signal2.emit(cv_img2)
           
 class UI(QMainWindow):
@@ -314,7 +296,7 @@ class UI(QMainWindow):
             if request.method == "GET":  # if we make a post request to the endpoint, look for the image in the request body
                 if(getByIdRfid(id_rfid_vao)!=None):
                     #Code chụp ảnh và lưu biển số xe vào db ở đây 
-
+                    self.capture_entrance(id_rfid_vao)
                     #*********
                     print("Da chup")
                     check ="True"
@@ -341,6 +323,7 @@ class UI(QMainWindow):
             if request.method == "GET":  # if we make a post request to the endpoint, look for the image in the request body
                 if(getByIdRfid(id_rfid_ra)!=None):
                     #Code chụp ảnh và lấy biển số xe ra
+                    self.capture_exit(id_rfid_ra)
                     #***************
                     #Sau đó:
                     #if(Check biển số xe ra):
@@ -432,7 +415,7 @@ class UI(QMainWindow):
 
             row = row + 1
                  
-    def capture_entrance(self):
+    def capture_entrance(self, id_rfid_vao):
         dt = datetime.now()
         dt = dt.strftime("%d/%m/%Y %H:%M:%S")  
 
@@ -452,7 +435,7 @@ class UI(QMainWindow):
             print('Biển số xe vào: ' + str(len(char)))
 
             ##### Create data
-            createCheckIn(id_rfid,str(char),dt)
+            createCheckIn(id_rfid_vao,str(char),dt)
 
             # Hiện khung chứa biển số được cắt
             self.lblCutPlateIn.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
@@ -479,43 +462,21 @@ class UI(QMainWindow):
             os.remove(path_capture_exit)
             show_error_messagebox()
         else:
-            # self.lblImgExit.setPixmap(QtGui.QPixmap(path_capture_exit))
-            print('Biển số xe ra: ' + str(len(char)))
+            if getPlatebyRfid(id_rfid_ra) != None:
+                print('Biển số xe ra: ' + str(len(char)))
+                ########## data
+                createCheckOut(id_rfid_ra,str(char),dt)
+                    
+                # Hiện khung chứa biển số được cắt
+                self.lblCutOut.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
+                list_plate[0] = char
 
-            ########## data
-            createCheckOut(id_rfid,str(char),dt)
-
-
-            # Hiện khung chứa biển số được cắt
-            self.lblCutOut.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
-            list_plate[0] = char
-
-            # Hiện khung chứa biển số được cắt ảnh trắng đen
-            self.lblGrayOut.setPixmap(QtGui.QPixmap("contour.jpg"))
-            self.txtPlateOut.setText(char)
-    
-
-    def rectangle_detect(self, img, pos):
-        # qt_img = self.convert_cv_qt(img)
-        # self.lblCamExit.setPixmap(qt_img)
-        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-        plate_rect = plate_cascade.detectMultiScale(gray, scaleFactor = 1.2, minNeighbors = 7) 
-        for (x,y,w,h) in plate_rect:
-            cv2.rectangle(img, (x+2,y), (x+w-3, y+h-5), (51,181,155), 3) 
-        if pos == 'exit':
-            cv2.namedWindow('detect_entrance')
-            cv2.moveWindow('detect_entrance', 40, 30)
-            cv2.imshow('img1',img)
-            # qt_img = self.convert_cv_qt(read_img)
-            # self.lblCamExit.setPixmap(qt_img)
-        if pos == 'entrance':
-            cv2.namedWindow('detect_exit')
-            cv2.moveWindow('detect_exit', 80, 70)
-            cv2.imshow('img1',img)
-            
-            #cv2.imshow('img',img)
-            #qt_img = self.convert_cv_qt(img)
-            # self.lblCamEntrance.setPixmap(qt_img)
+                # Hiện khung chứa biển số được cắt ảnh trắng đen
+                self.lblGrayOut.setPixmap(QtGui.QPixmap("contour.jpg"))
+                self.txtPlateOut.setText(char)
+            else:
+                os.remove(path_capture_exit)
+                show_error_messagebox('wrong_plate')
 
     def update_image_entrance(self, cv_img):
         """Updates the image_label with a new opencv image"""
