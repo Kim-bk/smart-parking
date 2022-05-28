@@ -477,10 +477,10 @@ class UI(QMainWindow):
                     # Hiện khung chứa biển số được cắt ảnh trắng đen
                     self.lblGrayOut.setPixmap(QtGui.QPixmap("contour.jpg"))
                     self.txtPlateOut.setText(char)
-                    break
                 else:
                     os.remove(path_capture_exit)
                     show_error_messagebox('wrong_plate')
+                break
 
     def update_image_entrance(self, cv_img):
         """Updates the image_label with a new opencv image"""
