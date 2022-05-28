@@ -356,7 +356,6 @@ class UI(QMainWindow):
         while True:
             QApplication.processEvents()
             dt = datetime.now()
-            # print(dt)
             if dt.hour < 10:
                 if dt.minute < 10:
                     self.txtTime.setText('0%s:0%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
@@ -412,7 +411,6 @@ class UI(QMainWindow):
             self.tbData.setItem(row, 2, QtWidgets.QTableWidgetItem(person["Phone_Number"]))
             self.tbData.setItem(row, 3, QtWidgets.QTableWidgetItem(person["Booking_Date"]))
             self.tbData.setItem(row, 4, QtWidgets.QTableWidgetItem(person["Lisence_Plate"]))
-
             row = row + 1
                  
     def capture_entrance(self, id_rfid_vao):
@@ -439,7 +437,6 @@ class UI(QMainWindow):
 
                 # Hiện khung chứa biển số được cắt
                 self.lblCutPlateIn.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
-                list_plate[0] = char
 
                 # Hiện khung chứa biển số được cắt ảnh trắng đen
                 self.lblGrayIn.setPixmap(QtGui.QPixmap("contour.jpg"))
@@ -449,7 +446,7 @@ class UI(QMainWindow):
         if success == False:
             show_error_messagebox()
 
-    def capture_exit(self):
+    def capture_exit(self, id_rfid_ra):
         dt = datetime.now()
         dt = dt.strftime("%d/%m/%Y %H:%M:%S") 
         success = False
@@ -467,14 +464,13 @@ class UI(QMainWindow):
             if char == '0' or len(char) < 8:
                 os.remove(path_capture_exit)
             else:
-                if getPlatebyRfid(id_rfid_ra) != None:
+                if getPlatebyRfid(id_rfid_ra) == char:
                     print('Biển số xe ra: ' + str(len(char)))
                     ########## data
                     createCheckOut(id_rfid_ra,str(char),dt)
                         
                     # Hiện khung chứa biển số được cắt
                     self.lblCutOut.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
-                    list_plate[0] = char
 
                     # Hiện khung chứa biển số được cắt ảnh trắng đen
                     self.lblGrayOut.setPixmap(QtGui.QPixmap("contour.jpg"))
@@ -526,7 +522,6 @@ class UI(QMainWindow):
 
                 # Hiện khung chứa biển số được cắt
                 self.lblCutOut.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
-                list_plate[0] = char
             
                 # Hiện khung chứa biển số được cắt ảnh trắng đen
                 self.lblGrayOut.setPixmap(QtGui.QPixmap("contour.jpg"))
@@ -549,7 +544,6 @@ class UI(QMainWindow):
                 print('Biển số xe vào: ' + char)
                 # Hiện khung chứa biển số được cắt
                 self.lblCutPlateIn.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
-                list_plate[0] = char
             
                 # Hiện khung chứa biển số được cắt ảnh trắng đen
                 self.lblGrayIn.setPixmap(QtGui.QPixmap("contour.jpg"))
@@ -561,7 +555,6 @@ if __name__ == "__main__":
     #Load the model has been trained before 
     model = keras.models.load_model('../PBL5/AI/data_test/character_model.h5',custom_objects={"custom_f1score": custom_f1score})
     plate_cascade = cv2.CascadeClassifier('../PBL5/AI/archive/cascade.xml')
-    list_plate = ["",""]
     app = QApplication(sys.argv)
     UIWindow = UI()
     app.exec_()
