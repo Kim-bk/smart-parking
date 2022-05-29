@@ -22,7 +22,6 @@ def createCheckIn(customer_card,license_plate,date_check_in):
             'date_check_out':'',
             'status':True}
     db_parking.insert_one(data)
-
 dt = datetime.now()
 dt = dt.strftime("%d/%m/%Y %H:%M:%S")  
 #createCheckIn("8317128168",'92EA-12345', dt )
