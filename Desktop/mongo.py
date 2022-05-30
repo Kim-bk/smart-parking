@@ -1,5 +1,6 @@
 from ast import Return
 from asyncio.windows_events import NULL
+import re
 from pymongo import MongoClient
 from datetime import datetime
 #data_find = test.find_one({"customer_card":"123456789"})
@@ -22,20 +23,26 @@ def createCheckIn(customer_card,license_plate,date_check_in):
             'date_check_out':'',
             'status':True}
     db_parking.insert_one(data)
+    
+
 dt = datetime.now()
 dt = dt.strftime("%d/%m/%Y %H:%M:%S")  
-#createCheckIn("8317128168",'92EA-12345', dt )
+#createCheckIn("8317128168",'92EA-98765', dt )
 
 
 def createCheckOut(customer_card,license_plate,date_check_out):
     db_customer = connection()['smart_parking']['customer']
     db_parking = connection()['smart_parking']['customer_parking']
     customer = db_customer.find_one({"customer_card": customer_card})
-    db_parking.find_one_and_update({"customer": customer,'license_plate':license_plate,'status':True}, 
+    kq=db_parking.find_one_and_update({"customer": customer,'license_plate':license_plate,'status':True}, 
                                  {"$set": {"date_check_out": date_check_out,"fee":5000,'status':False}})
+    if kq==None:
+        return 0
+    return 1
+        
 dt = datetime.now()
 dt = dt.strftime("%d/%m/%Y %H:%M:%S")  
-#createCheckOut("8317128168",'92EA-12345', dt )
+#createCheckOut("22723560168",'92EA-12345', dt )
 
 def findAll():
     db_parking = connection()['smart_parking']['customer_parking']
