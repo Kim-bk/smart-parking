@@ -174,11 +174,12 @@ if __name__ == "__main__":
  
     #load the model has been trained before
     model = keras.models.load_model('D:/Semester6/PBL5/AI/data_test/character_model.h5',custom_objects={"custom_f1score": custom_f1score})
-    stages = 60
-    for i in range(7342, 41420):
+    stages = 396
+    for img in range(32634, 41420):
         try:
             path_img = 'D:/Semester6/PBL5/AI/images/oto/detected/' + str(i) + '.jpg'
             if path.exists(path_img):
+                print(str(img))
                 img = cv2.imread(path_img)
                 #img = cv2.imread('../License-Plate-Recognition/images/oto/462.jpg')
                 #img = cv2.imread('../License-Plate-Recognition/images/CarTGMT/AEONTP_6S81U5_checkin_2020-1-13-16-18bx9UOV6rY5.jpg')
@@ -192,18 +193,16 @@ if __name__ == "__main__":
                 print('===STAGE'+ str(stages) + '===')
                 for i,ch in enumerate(char):
                     out = False
-                    j = 1
+                    j = -150
                     img = cv2.resize(ch, (28,28), interpolation=cv2.INTER_AREA)
                     while path.exists('D:/Semester6/PBL5/AI/data_test/train/class_' + str(show_results()[i]) + '/' + str(j) + '.jpg') == True:
-                        j = j + 15
+                        j = j + 1
                         
                     cv2.imwrite('D:/Semester6/PBL5/AI/data_test/train/class_' + str(show_results()[i]) + '/' + str(j) + '.jpg', img)
-                print('===END STAGE'+ str(stages) + '===')
+                print('===END IMG'+ str(img) + '===')
                 stages = stages + 1
         except: continue
     print('************')
     print('FINISH')
-    print('************')    
-
-
+    print('************')  
 
