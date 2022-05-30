@@ -17,7 +17,7 @@ import requests
 # Process database with mongodb
 from datetime import datetime
 
-from mongo import createCheckIn,findAll,createCheckOut,getByIdRfid,getPlatebyRfid
+from mongo import createCheckIn,findAll,createCheckOut,getByIdRfid
 
 
 # AI code 
@@ -31,10 +31,11 @@ from tensorflow.python.saved_model import loader_impl
 from tensorflow.python.keras.saving.saved_model import load as saved_model_load
 from sklearn.metrics import f1_score 
 
-
+from Desktop.mongo import getPlatebyRfid 
 
 
 def detect_plate(self, img, pos): # the function detects and perfors blurring on the number plate.
+    success = False
     plate_img = img.copy()
     roi = img.copy()
     plate_rect = plate_cascade.detectMultiScale(plate_img, scaleFactor = 1.2, minNeighbors = 7) # detects numberplates and returns the coordinates and dimensions of detected license plate's contours.
@@ -53,8 +54,11 @@ def detect_plate(self, img, pos): # the function detects and perfors blurring on
             self.lblImgExit.setPixmap(QtGui.QPixmap(path))
         
     try:
-        return plate_img, plate # returning the processed image.
-    except UnboundLocalError:   return '0'
+        success = True
+        return plate_img, plate, success # returning the processed image.
+    except UnboundLocalError:  
+        return plate_img, plate, success
+    
 
 
 # Match contours to license plate or character template
@@ -199,11 +203,34 @@ def show_success_messagebox():
     msg.exec_()
 
 
+def reset(self, pos = ''):
+    if pos == 'entrance':
+        self.lblImgEntrance.clear()
+        self.lblCutPlateIn.clear()
+        self.txtPlateIn.clear()
+        self.lblGrayIn.clear()
+
+    elif pos == 'exit':
+        self.lblImgExit.clear()
+        self.txtPlateOut.clear()
+        self.lblCutOut.clear()
+        self.lblGrayOut.clear()
+
+    else:
+        self.lblImgEntrance.clear()
+        self.lblImgExit.clear()
+        self.lblCutPlateIn.clear()
+        self.lblGrayIn.clear()
+        self.lblGrayOut.clear()
+        self.txtPlateIn.clear()
+        self.txtPlateOut.clear()
+        self.lblCutOut.clear()
+
 def process_liscense(self, img, pos):
     # Getting plate prom the processed image
     try:
-        _, plate = detect_plate(self, img, pos)
-        if plate == '0':
+        _, plate, success = detect_plate(self, img, pos)
+        if success == False:
             rs = '0'
         else:
             # Cắt khung chứa biển số
@@ -269,24 +296,21 @@ class UI(QMainWindow):
         app_ = Flask(__name__)
         # Gửi data lên server để esp lấy về
         @app_.route("/rfid", methods=["GET"])
-        def send_string_vao():
+        def send_string():
             if request.method == "GET":  # if we make a post request to the endpoint, look for the image in the request body
                 if(getByIdRfid(id_rfid_vao)!=None):
                     #Code chụp ảnh và lưu biển số xe vào db ở đây 
-                    check = self.capture_entrance()
-                    if check:
-                        print("Da gui")
-                        check ="True" 
-                        requests.post("http://192.168.43.65:7350", check) #mo cong
-                    else:
-                        print("Cut")
-                        check ="False" # lcd chụp ảnh biển bị lỗi / vui lòng chụp lại
-                        requests.post("http://192.168.43.65:7350", check)
+                    self.capture_entrance(id_rfid_vao)
+                    #*********
+                    print("Da chup")
+                    check ="True"
+                    requests.post("http://192.168.43.65:7350", check)
+                    return check
                 else:
                     print("Cut")
-                    check ="not_in_db" # biển số xe chưa được đăng ký
+                    check ="False"
                     requests.post("http://192.168.43.65:7350", check)
-                return check
+                    return check
                     
         @app_.route("/send-id", methods=["POST"])
         def get_id():
@@ -302,23 +326,22 @@ class UI(QMainWindow):
         def send_string_ra():
             if request.method == "GET":  # if we make a post request to the endpoint, look for the image in the request body
                 if(getByIdRfid(id_rfid_ra)!=None):
-                    check = self.capture_exit()
-                    if check:
-                        print("Da chup")
-                        check ="True"
-                        requests.post("http://192.168.43.65:7350", check)
-                        return check
-                    else:
-                        print("Cut")
-                        check ="False"
-                        requests.post("http://192.168.43.65:7350", check)
+                    #Code chụp ảnh và lấy biển số xe ra
+                    self.capture_exit(id_rfid_ra)
+                    #***************
+                    #Sau đó:
+                    #if(Check biển số xe ra):
+                    print("Da chup")
+                    check ="True"
+                    requests.post("http://192.168.43.65:7350", check)
+                    return check
                 else:
                     print("Cut")
-                    check ="not_in_db"
+                    check ="False"
                     requests.post("http://192.168.43.65:7350", check)
-                return check
+                    return check
 
-        @app_.route("/send-id-ra", methods=["POST"])
+        @app_.route("/update-sensor-ra", methods=["POST"])
         def get_id_ra():
             if request.method == "POST":  # if we make a post request to the endpoint, look for the image in the request body
                 data = request.get_data()
@@ -370,29 +393,6 @@ class UI(QMainWindow):
             else:
                 self.txtTime.setText('%s:%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
 
-    def reset(self):
-        # print(''+pos)
-        # if pos == 'entrance':
-        #     self.lblImgEntrance.clear()
-        #     self.lblCutPlateIn.clear()
-        #     self.txtPlateIn.clear()
-        #     self.lblGrayIn.clear()
-
-        # elif pos == 'exit':
-        #     self.lblImgExit.clear()
-        #     self.txtPlateOut.clear()
-        #     self.lblCutOut.clear()
-        #     self.lblGrayOut.clear()
-
-        # else:
-        self.lblImgEntrance.clear()
-        self.lblImgExit.clear()
-        self.lblCutPlateIn.clear()
-        self.lblGrayIn.clear()
-        self.lblGrayOut.clear()
-        self.txtPlateIn.clear()
-        self.txtPlateOut.clear()
-        self.lblCutOut.clear()
 
     def load_table(self):
         list = findAll()
@@ -417,25 +417,28 @@ class UI(QMainWindow):
             self.tbData.setItem(row, 4, QtWidgets.QTableWidgetItem(person["Lisence_Plate"]))
             row = row + 1
                  
-    def capture_entrance(self):
+    def capture_entrance(self, id_rfid_vao):
         dt = datetime.now()
+        dt = dt.strftime("%d/%m/%Y %H:%M:%S")  
         success = False
-        # self.reset()
-        count = 10
-        while count > 0:
+        reset(self, 'entrance')
+        for _ in range(1, 10):
             image = ImageQt.fromqpixmap(self.lblCamEntrance.pixmap())
             path_capture_entrance = '../PBL5/capture/img-' + str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)+ '.jpg' 
             image.save(path_capture_entrance) 
+            # get the absolute path in your computer
             img = cv2.imread(path_capture_entrance)
             char = process_liscense(self, img, 'entrance')
 
             if char == '0' or len(char) < 8:
                 os.remove(path_capture_entrance)
             else:
+                # self.lblImgEntrance.setPixmap(QtGui.QPixmap(path_capture_entrance))
                 print('Biển số xe vào: ' + str(len(char)))
 
                 ##### Create data
                 createCheckIn(id_rfid_vao,str(char),dt)
+
                 # Hiện khung chứa biển số được cắt
                 self.lblCutPlateIn.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
 
@@ -444,22 +447,21 @@ class UI(QMainWindow):
                 self.txtPlateIn.setText(char)
                 success = True
                 break
-            count = count - 1
         if success == False:
             show_error_messagebox()
-        return success
 
     def capture_exit(self, id_rfid_ra):
         dt = datetime.now()
+        dt = dt.strftime("%d/%m/%Y %H:%M:%S") 
         success = False
         wrong_pl = False
-        # reset(self,'exit')
-        count = 10
-        while count > 0:
+        reset(self,'exit')
+        for _ in range(1,10):
             image = ImageQt.fromqpixmap(self.lblCamExit.pixmap())
             dt = datetime.now()
             path_capture_exit = '../PBL5/capture/img-' + str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)+ '.jpg' 
             image.save(path_capture_exit) 
+            # get the absolute path in your computer
             img = cv2.imread(path_capture_exit)
             char = process_liscense(self, img, 'exit')
 
@@ -482,13 +484,10 @@ class UI(QMainWindow):
                     wrong_pl = True
                 success = True
                 break
-            count = count - 1
         if success == False:
             show_error_messagebox()
         if success == True and wrong_pl == True:
             show_error_messagebox('wrong_plate')
-            success = False
-        return success
 
     def update_image_entrance(self, cv_img):
         """Updates the image_label with a new opencv image"""
@@ -511,7 +510,7 @@ class UI(QMainWindow):
         return QPixmap.fromImage(p)
 
     def btnExit_clicked(self):
-        reset(self, 'exit')
+        # reset(self, 'exit')
         options = QFileDialog.Options()
         options |= QFileDialog.DontUseNativeDialog
         fileName, _ = QFileDialog.getOpenFileName(self,"QFileDialog.getOpenFileName()", "","All Files (*)JPG Files (*.jpg);;PNG Files (*.png)", options=options)
