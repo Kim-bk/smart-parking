@@ -443,12 +443,12 @@ class UI(QMainWindow):
 
                 # Xu ly mo cong duoi ni nhe
                 # # Hiện khung chứa biển số được cắt
-                # self.lblCutPlateIn.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
+                self.lblCutPlateIn.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
 
                 # Hiện khung chứa biển số được cắt ảnh trắng đen
                 self.lblGrayIn.setPixmap(QtGui.QPixmap("contour.jpg"))
                 print(char)
-                # self.txtPlateIn.setText(char)
+                self.txtPlateIn.setText(char)
                 success = True
                 self.load_table()
                 break
