@@ -16,7 +16,7 @@ def createCheckIn(customer_card,license_plate,date_check_in):
     db_parking = connection()['smart_parking']['customer_parking']
     data_find = db_customer.find_one({"customer_card":customer_card})
 
-    data = {'date_check_in':date_check_in,
+    data = {'date_check_in': date_check_in,
             'license_plate':license_plate,
             'customer':data_find,
             'fee':0,

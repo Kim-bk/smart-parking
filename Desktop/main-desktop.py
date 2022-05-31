@@ -438,7 +438,8 @@ class UI(QMainWindow):
                 os.remove(path_capture_entrance)
             else:
                 ##### Create data
-                #createCheckIn(id_rfid_vao,str(char),dt)
+                dt = dt.strftime("%d/%m/%Y %H:%M:%S")
+                createCheckIn(id_rfid_vao,str(char),dt)
 
                 # Xu ly mo cong duoi ni nhe
                 # # Hiện khung chứa biển số được cắt
@@ -449,6 +450,7 @@ class UI(QMainWindow):
                 print(char)
                 # self.txtPlateIn.setText(char)
                 success = True
+                self.load_table()
                 break
             count = count - 1
         return success
@@ -469,18 +471,15 @@ class UI(QMainWindow):
             if char == '0' or len(char) < 8:
                 os.remove(path_capture_exit)
             else:
-                if getPlatebyRfid(id_rfid_ra) == char:
-                    print('Biển số xe ra: ' + str(len(char)))
-                    ########## data
-                    ##### if check == 0: khong mo cong, check ==1:mo cong
-                    check = createCheckOut(id_rfid_ra,str(char),dt)
-                        
+                dt = dt.strftime("%d/%m/%Y %H:%M:%S")
+                if createCheckOut(id_rfid_ra,str(char),dt) == 1:
                     # Hiện khung chứa biển số được cắt
                     self.lblCutOut.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
-
                     # Hiện khung chứa biển số được cắt ảnh trắng đen
                     self.lblGrayOut.setPixmap(QtGui.QPixmap("contour.jpg"))
                     self.txtPlateOut.setText(char)
+                    print(char)
+                    self.load_table()
                 else:
                     os.remove(path_capture_exit)
                     wrong_pl = True
