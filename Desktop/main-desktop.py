@@ -116,7 +116,7 @@ def find_contours(dimensions, img) :
     return img_res
 
 # Find characters in the resulting images
-def segment_characters(image) :
+def segment_characters(image,pos, tail_path) :
     # Preprocess cropped license plate image
     img = cv2.resize(image, (333, 75))
     img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -135,7 +135,8 @@ def segment_characters(image) :
 
     # Estimations of character contours sizes of cropped license plates
     dimensions = [LP_WIDTH/6, LP_WIDTH/2, LP_HEIGHT/10, 2*LP_HEIGHT/3]
-    cv2.imwrite('contour.jpg',img_dilate)
+    contour_path = '../PBL5/contour/' + pos + '/' + tail_path + '.jpg'
+    cv2.imwrite(contour_path, img_dilate)
     # Get contours within cropped license plate
     char_list = find_contours(dimensions, img_dilate)
     return char_list
@@ -204,17 +205,19 @@ def reset(self, pos = ''):
 
 
 
-def process_liscense(self, img, pos):
+def process_liscense(self, img, pos, tail_path):
     # Getting plate prom the processed image
+   
     try:
         _, plate, success = detect_plate(self, img, pos)
         if success == False:
             rs = '0'
         else:
+            cut_path = '../PBL5/plate_cut/' + pos + '/' + tail_path + '.jpg'
             # Cắt khung chứa biển số
             plate_tg = cv2.cvtColor(plate, cv2.COLOR_BGR2RGB)
-            cv2.imwrite('plate_cut.jpg',plate_tg)
-            char = segment_characters(plate_tg)
+            cv2.imwrite(cut_path, plate_tg)
+            char = segment_characters(plate_tg, pos, tail_path)
             rs = show_results(char)
     except TypeError:  rs = '0'
     except ValueError: rs = '0'
@@ -425,14 +428,15 @@ class UI(QMainWindow):
                  
     def capture_entrance(self):
         dt = datetime.now()
+        tail_path = str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)
         success = False
         count = 10
         while count > 0:
             image = ImageQt.fromqpixmap(self.lblCamEntrance.pixmap())
-            path_capture_entrance = '../PBL5/capture/img-' + str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)+ '.jpg' 
+            path_capture_entrance = '../PBL5/capture/entrance/img-' + tail_path + '.jpg' 
             image.save(path_capture_entrance) 
             img = cv2.imread(path_capture_entrance)
-            char = process_liscense(self, img, 'entrance')
+            char = process_liscense(self, img, 'entrance', tail_path)
 
             if char == '0' or len(char) != 8:
                 os.remove(path_capture_entrance)
@@ -443,10 +447,12 @@ class UI(QMainWindow):
 
                 # Xu ly mo cong duoi ni nhe
                 # # Hiện khung chứa biển số được cắt
-                self.lblCutPlateIn.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
+                cut_img  = '../PBL5/plate_cut/entrance/' + tail_path + '.jpg'
+                self.lblCutPlateIn.setPixmap(QtGui.QPixmap(cut_img))
 
                 # Hiện khung chứa biển số được cắt ảnh trắng đen
-                self.lblGrayIn.setPixmap(QtGui.QPixmap("contour.jpg"))
+                contour_img  = '../PBL5/contour/entrance/' + tail_path + '.jpg'
+                self.lblGrayIn.setPixmap(QtGui.QPixmap(contour_img))
                 print(char)
                 self.txtPlateIn.setText(char)
                 success = True
@@ -457,27 +463,34 @@ class UI(QMainWindow):
 
     def capture_exit(self):
         dt = datetime.now()
+        tail_path = str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)
         success = False
         wrong_pl = False
         count = 10
         while count > 0:
             image = ImageQt.fromqpixmap(self.lblCamExit.pixmap())
             dt = datetime.now()
-            path_capture_exit = '../PBL5/capture/img-' + str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)+ '.jpg' 
+            path_capture_exit = '../PBL5/capture/exit/img-' + tail_path + '.jpg' 
             image.save(path_capture_exit) 
             img = cv2.imread(path_capture_exit)
-            char = process_liscense(self, img, 'exit')
+            char = process_liscense(self, img, 'exit', tail_path)
 
             if char == '0' or len(char) != 8:
                 os.remove(path_capture_exit)
             else:
                 dt = dt.strftime("%d/%m/%Y %H:%M:%S")
                 if createCheckOut(id_rfid_ra,str(char),dt) == 1:
-                    # Hiện khung chứa biển số được cắt
-                    self.lblCutOut.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
+                    # Xu ly mo cong duoi ni nhe
+                    # # Hiện khung chứa biển số được cắt
+                    cut_img  = '../PBL5/plate_cut/exit/' + tail_path + '.jpg'
+                    self.lblCutOut.setPixmap(QtGui.QPixmap(cut_img))
+
                     # Hiện khung chứa biển số được cắt ảnh trắng đen
-                    self.lblGrayOut.setPixmap(QtGui.QPixmap("contour.jpg"))
-                    self.txtPlateOut.setText(char)
+                    contour_img  = '../PBL5/contour/exit' + tail_path + '.jpg'
+                    self.lblGrayOut.setPixmap(QtGui.QPixmap(contour_img))
+                
+                    # Hiện khung chứa biển số ra được cắt ảnh trắng đen
+                    # self.txtPlateOut.setText(char)
                     print(char)
                     self.load_table()
                 else:
