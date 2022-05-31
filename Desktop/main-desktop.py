@@ -468,7 +468,7 @@ class UI(QMainWindow):
             img = cv2.imread(path_capture_exit)
             char = process_liscense(self, img, 'exit')
 
-            if char == '0' or len(char) < 8:
+            if char == '0' or len(char) != 8:
                 os.remove(path_capture_exit)
             else:
                 dt = dt.strftime("%d/%m/%Y %H:%M:%S")
