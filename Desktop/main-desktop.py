@@ -34,7 +34,7 @@ from sklearn.metrics import f1_score
 def detect_plate(self, img, pos): # the function detects and perfors blurring on the number plate.
     plate_img = img.copy()
     roi = img.copy()
-    plate_rect = plate_cascade.detectMultiScale(plate_img, scaleFactor = 1.2, minNeighbors = 7) # detects numberplates and returns the coordinates and dimensions of detected license plate's contours.
+    plate_rect = plate_cascade.detectMultiScale(plate_img, scaleFactor = 1.05, minNeighbors = 6, minSize = (150, 30)) # detects numberplates and returns the coordinates and dimensions of detected license plate's contours.
     for (x,y,w,h) in plate_rect:
         roi_ = roi[y:y+h, x:x+w, :] # extracting the Region of Interest of license plate for blurring.
         plate = roi[y:y+h, x:x+w, :]
@@ -207,15 +207,14 @@ def reset(self, pos = ''):
 def process_liscense(self, img, pos):
     # Getting plate prom the processed image
     try:
-        _, plate = detect_plate(self, img, pos)
-        if plate == '0':
+        _, plate, success = detect_plate(self, img, pos)
+        if success == False:
             rs = '0'
         else:
             # Cắt khung chứa biển số
-            plate = cv2.cvtColor(plate, cv2.COLOR_BGR2RGB)
             plate_tg = cv2.cvtColor(plate, cv2.COLOR_BGR2RGB)
             cv2.imwrite('plate_cut.jpg',plate_tg)
-            char = segment_characters(plate)
+            char = segment_characters(plate_tg)
             rs = show_results(char)
     except TypeError:  rs = '0'
     except ValueError: rs = '0'
@@ -435,17 +434,15 @@ class UI(QMainWindow):
             img = cv2.imread(path_capture_entrance)
             char = process_liscense(self, img, 'entrance')
 
-            if char == '0' or len(char) < 8:
+            if char == '0' or len(char) != 8:
                 os.remove(path_capture_entrance)
             else:
                 ##### Create data
                 #createCheckIn(id_rfid_vao,str(char),dt)
 
                 # Xu ly mo cong duoi ni nhe
-
-
-                # Hiện khung chứa biển số được cắt
-                self.lblCutPlateIn.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
+                # # Hiện khung chứa biển số được cắt
+                # self.lblCutPlateIn.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
 
                 # Hiện khung chứa biển số được cắt ảnh trắng đen
                 self.lblGrayIn.setPixmap(QtGui.QPixmap("contour.jpg"))
@@ -565,7 +562,7 @@ class UI(QMainWindow):
 if __name__ == "__main__":
     #Init variables for AI
     #Load the model has been trained before 
-    model = keras.models.load_model('../PBL5/AI/data_test/character_model.h5',custom_objects={"custom_f1score": custom_f1score})
+    model = keras.models.load_model('../PBL5/AI/data_test/character_model_new.h5',custom_objects={"custom_f1score": custom_f1score})
     plate_cascade = cv2.CascadeClassifier('../PBL5/AI/archive/cascade.xml')
     app = QApplication(sys.argv)
     UIWindow = UI()
