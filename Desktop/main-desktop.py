@@ -17,7 +17,7 @@ import requests
 # Process database with mongodb
 from datetime import datetime
 
-from mongo import createCheckIn,findAll,createCheckOut,getByIdRfid,getPlatebyRfid
+from mongo import createCheckIn,findAll,createCheckOut,getByIdRfid,getPlatebyRfid,getImageExit
 
 
 # AI code 
@@ -116,7 +116,7 @@ def find_contours(dimensions, img) :
     return img_res
 
 # Find characters in the resulting images
-def segment_characters(image) :
+def segment_characters(image, pos, tail_path) :
     # Preprocess cropped license plate image
     img = cv2.resize(image, (333, 75))
     img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -135,7 +135,8 @@ def segment_characters(image) :
 
     # Estimations of character contours sizes of cropped license plates
     dimensions = [LP_WIDTH/6, LP_WIDTH/2, LP_HEIGHT/10, 2*LP_HEIGHT/3]
-    cv2.imwrite('contour.jpg',img_dilate)
+    contour_path = '../PBL5/contour/' + pos + '/' + tail_path + '.jpg'
+    cv2.imwrite(contour_path, img_dilate)
     # Get contours within cropped license plate
     char_list = find_contours(dimensions, img_dilate)
     return char_list
@@ -178,43 +179,18 @@ def custom_f1score(y, y_pred):
 # end AI code
 
 
-
-def reset(self, pos = ''):
-    if pos == 'entrance':
-        self.lblImgEntrance.clear()
-        self.lblCutPlateIn.clear()
-        self.txtPlateIn.clear()
-        self.lblGrayIn.clear()
-
-    elif pos == 'exit':
-        self.lblImgExit.clear()
-        self.txtPlateOut.clear()
-        self.lblCutOut.clear()
-        self.lblGrayOut.clear()
-
-    else:
-        self.lblImgEntrance.clear()
-        self.lblImgExit.clear()
-        self.lblCutPlateIn.clear()
-        self.lblGrayIn.clear()
-        self.lblGrayOut.clear()
-        self.txtPlateIn.clear()
-        self.txtPlateOut.clear()
-        self.lblCutOut.clear()
-
-
-
-def process_liscense(self, img, pos):
+def process_liscense(self, img, pos, tail_path):
     # Getting plate prom the processed image
     try:
         _, plate, success = detect_plate(self, img, pos)
         if success == False:
             rs = '0'
         else:
+            cut_path = '../PBL5/plate_cut/' + pos + '/' + tail_path + '.jpg'
             # Cắt khung chứa biển số
             plate_tg = cv2.cvtColor(plate, cv2.COLOR_BGR2RGB)
-            cv2.imwrite('plate_cut.jpg',plate_tg)
-            char = segment_characters(plate_tg)
+            cv2.imwrite(cut_path, plate_tg)
+            char = segment_characters(plate_tg, pos, tail_path)
             rs = show_results(char)
     except TypeError:  rs = '0'
     except ValueError: rs = '0'
@@ -227,13 +203,13 @@ class VideoThread(QThread):
     change_pixmap_signal2 = pyqtSignal(np.ndarray)
  
     def run(self):
-        cap_esp32_entrance = cv2.VideoCapture(0)
-        cap_esp32_exit = cv2.VideoCapture("http://192.168.43.26:81/stream")
+        cap_esp32_exit = cv2.VideoCapture(0)
+        cap_esp32_entrance = cv2.VideoCapture("http://192.168.43.26:81/stream")
      
         while True:
             ret1, cv_img1 = cap_esp32_entrance.read()
             ret2, cv_img2 = cap_esp32_exit.read()
-            if  ret2  and ret1:
+            if  ret1 and ret2:
                 self.change_pixmap_signal1.emit(cv_img1)
                 self.change_pixmap_signal2.emit(cv_img2)
           
@@ -259,7 +235,7 @@ class UI(QMainWindow):
         # self.btnScreenshot_Entrance.clicked.connect(self.capture_entrance)
       
         self.btnScreenshot_Exit.clicked.connect(self.capture_exit)
-        # self.load_table()
+        self.load_table()
 
         self.thread = VideoThread()
         # connect its signal to the update_image slot
@@ -276,22 +252,24 @@ class UI(QMainWindow):
         def send_string_vao():
             if request.method == "GET":  # if we make a post request to the endpoint, look for the image in the request body
                 if(getByIdRfid(id_rfid_vao) != None):
-                    check = self.capture_entrance()
-                    if check:
+                    checkif = self.capture_entrance()
+                    if checkif:
                         print("Da chup")
-                        check ="True"
-                        requests.post("http://192.168.43.65:7350", check)
+                        check ="Ok"
+                        print(check)
                         return check
                     else:
                         print("Loi")
                         check ="False"
-                        requests.post("http://192.168.43.65:7350", check)
+                        print(check)
                         return check
                 else:
                     print("Not in db")
                     check ="not_in_db"
-                    requests.post("http://192.168.43.65:7350", check)
+                    print(check)
                     return check
+            
+          
 
         @app_.route("/send-id", methods=["POST"])
         def get_id_vao():
@@ -310,18 +288,18 @@ class UI(QMainWindow):
                     check = self.capture_exit()
                     if check:
                         print("Da chup")
-                        check ="True"
-                        requests.post("http://192.168.43.65:7350", check)
+                        check ="Ok"
+                        print(check)
                         return check
                     else :
                         print("Loi")
                         check ="False"
-                        requests.post("http://192.168.43.65:7350", check)
+                        print(check)
                         return check        
                 else:
                     print("Not in db")
                     check ="not_in_db"
-                    requests.post("http://192.168.43.65:7350", check)
+                    print(check)
                     return check
 
         @app_.route("/send-id-ra", methods=["POST"])
@@ -333,6 +311,14 @@ class UI(QMainWindow):
                 print(id[2:-1])
                 id_rfid_ra = id[2:-1]
                 return data
+        #load table
+        @app_.route("/load_table", methods=["POST"])
+        def load_table():
+            if request.method == "POST":  # if we make a post request to the endpoint, look for the image in the request body
+                data = request.get_data()
+                self.load_table()
+                return data
+        
         kwargs = {'host': '192.168.43.65', 'port': 7350, 'threaded': True, 'use_reloader': False, 'debug': False}
         flaskThread = Thread(target=app_.run, daemon=True, kwargs=kwargs).start()
         #load clock
@@ -377,26 +363,8 @@ class UI(QMainWindow):
                 self.txtTime.setText('%s:%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
 
     def reset(self):
-        # print(''+pos)
-        # if pos == 'entrance':
-        #     self.lblImgEntrance.clear()
-        #     self.lblCutPlateIn.clear()
-        #     self.txtPlateIn.clear()
-        #     self.lblGrayIn.clear()
-
-        # elif pos == 'exit':
-        #     self.lblImgExit.clear()
-        #     self.txtPlateOut.clear()
-        #     self.lblCutOut.clear()
-        #     self.lblGrayOut.clear()
-
-        # else:
-        self.lblImgEntrance.clear()
         self.lblImgExit.clear()
-        self.lblCutPlateIn.clear()
-        self.lblGrayIn.clear()
         self.lblGrayOut.clear()
-        self.txtPlateIn.clear()
         self.txtPlateOut.clear()
         self.lblCutOut.clear()
 
@@ -426,67 +394,79 @@ class UI(QMainWindow):
     def capture_entrance(self):
         dt = datetime.now()
         success = False
-        count = 10
-        while count > 0:
-            image = ImageQt.fromqpixmap(self.lblCamEntrance.pixmap())
-            path_capture_entrance = '../PBL5/capture/img-' + str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)+ '.jpg' 
-            image.save(path_capture_entrance) 
-            img = cv2.imread(path_capture_entrance)
-            char = process_liscense(self, img, 'entrance')
+        tail_path = str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)
+        image = ImageQt.fromqpixmap(self.lblCamEntrance.pixmap())
+        path_capture_entrance = '../PBL5/capture/img-' + tail_path + '.jpg' 
+        image.save(path_capture_entrance) 
+        img = cv2.imread(path_capture_entrance)
+        char = process_liscense(self, img, 'entrance', tail_path)
 
-            if char == '0' or len(char) != 8:
-                os.remove(path_capture_entrance)
-            else:
-                ##### Create data
-                dt = dt.strftime("%d/%m/%Y %H:%M:%S")
-                createCheckIn(id_rfid_vao,str(char),dt)
+        if char == '0' or len(char) != 8:
+            os.remove(path_capture_entrance)
+        else:
+            ##### Create data
+            
 
-                # Xu ly mo cong duoi ni nhe
-                # # Hiện khung chứa biển số được cắt
-                self.lblCutPlateIn.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
+            # Xu ly mo cong duoi ni nhe
+            # # Hiện khung chứa biển số được cắt
+          
+            cut_img  = '../PBL5/plate_cut/entrance/' + tail_path + '.jpg'
+            self.lblCutPlateIn.setPixmap(QtGui.QPixmap(cut_img))
 
                 # Hiện khung chứa biển số được cắt ảnh trắng đen
-                self.lblGrayIn.setPixmap(QtGui.QPixmap("contour.jpg"))
-                print(char)
-                self.txtPlateIn.setText(char)
-                success = True
-                self.load_table()
-                break
-            count = count - 1
+            contour_img  = '../PBL5/contour/entrance/' + tail_path + '.jpg'
+            self.lblGrayIn.setPixmap(QtGui.QPixmap(contour_img))
+            
+            dt = dt.strftime("%d/%m/%Y %H:%M:%S")
+            createCheckIn(id_rfid_vao,str(char),dt,cut_img,contour_img)
+            
+            print(char)
+            success = True
+            #check ="Ok"
+            #requests.post("http://192.168.43.65:7350", check)
+            
+            # self.txtPlateIn.setText('Tai sao phai the')
+            
+
         return success
 
     def capture_exit(self):
         dt = datetime.now()
+        tail_path = str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)
         success = False
         wrong_pl = False
-        count = 10
-        while count > 0:
-            image = ImageQt.fromqpixmap(self.lblCamExit.pixmap())
-            dt = datetime.now()
-            path_capture_exit = '../PBL5/capture/img-' + str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)+ '.jpg' 
-            image.save(path_capture_exit) 
-            img = cv2.imread(path_capture_exit)
-            char = process_liscense(self, img, 'exit')
+        image = ImageQt.fromqpixmap(self.lblCamExit.pixmap())
+        dt = datetime.now()
+        path_capture_exit = '../PBL5/capture/img-' + tail_path + '.jpg' 
+        image.save(path_capture_exit) 
+        img = cv2.imread(path_capture_exit)
+        char = process_liscense(self, img, 'exit', tail_path)
 
-            if char == '0' or len(char) != 8:
-                os.remove(path_capture_exit)
-            else:
+        if char == '0' or len(char) != 8:
+            os.remove(path_capture_exit)
+        else:
+           
+            ob_image = getImageExit(id_rfid_ra)
+            cut_img  = ob_image['cut_img']
+            print(char)
+            print(ob_image['license_plate'])
+            self.lblCutPlateIn.setPixmap(QtGui.QPixmap(cut_img))
+            # Hiện khung chứa biển số được cắt ảnh trắng đen
+            contour_img  = ob_image['contour_img']
+            self.lblGrayIn.setPixmap(QtGui.QPixmap(contour_img))
+            cut_img_exit  = '../PBL5/plate_cut/exit/' + tail_path + '.jpg'
+            self.lblCutOut.setPixmap(QtGui.QPixmap(cut_img_exit))
+            contour_img_exit  = '../PBL5/contour/exit/' + tail_path + '.jpg'
+            self.lblGrayOut.setPixmap(QtGui.QPixmap(contour_img_exit))
+            
+            if ob_image['license_plate'] == str(char):
                 dt = dt.strftime("%d/%m/%Y %H:%M:%S")
-                if createCheckOut(id_rfid_ra,str(char),dt) == 1:
-                    # Hiện khung chứa biển số được cắt
-                    self.lblCutOut.setPixmap(QtGui.QPixmap("plate_cut.jpg"))
-                    # Hiện khung chứa biển số được cắt ảnh trắng đen
-                    self.lblGrayOut.setPixmap(QtGui.QPixmap("contour.jpg"))
-                    self.txtPlateOut.setText(char)
-                    print(char)
-                    self.load_table()
-                else:
-                    os.remove(path_capture_exit)
-                    wrong_pl = True
-                success = True
-                break
-            count = count - 1
-
+                createCheckOut(id_rfid_ra,str(char),dt)
+               
+            else:
+                os.remove(path_capture_exit)
+                wrong_pl = True
+            success = True
         if success == True and wrong_pl == True:
             success =  False
         return success
@@ -496,7 +476,6 @@ class UI(QMainWindow):
         qt_img = self.convert_cv_qt(cv_img)
         self.lblCamEntrance.setPixmap(qt_img)
       
-       
     def update_image_exit(self, cv_img):
         """Updates the image_label with a new opencv image"""
         qt_img = self.convert_cv_qt(cv_img)

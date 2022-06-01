@@ -11,7 +11,7 @@ def connection():
     return conn
 
 
-def createCheckIn(customer_card,license_plate,date_check_in):
+def createCheckIn(customer_card,license_plate,date_check_in,cut_img,contour_img):
     db_customer = connection()['smart_parking']['customer']
     db_parking = connection()['smart_parking']['customer_parking']
     data_find = db_customer.find_one({"customer_card":customer_card})
@@ -21,9 +21,16 @@ def createCheckIn(customer_card,license_plate,date_check_in):
             'customer':data_find,
             'fee':0,
             'date_check_out':'',
-            'status':True}
-    db_parking.insert_one(data)
-    
+            'status':True,
+            'cut_img':cut_img,
+            'contour_img':contour_img
+            }
+    kq=db_parking.find_one({"customer": data_find,'status':True})
+    if kq != None:
+        kq=db_parking.find_one_and_update({"customer": data_find,'status':True}, 
+                                 {"$set": {"license_plate":data['license_plate']} })
+    else:
+        db_parking.insert_one(data)
 
 dt = datetime.now()
 dt = dt.strftime("%d/%m/%Y %H:%M:%S")  
@@ -36,9 +43,8 @@ def createCheckOut(customer_card,license_plate,date_check_out):
     customer = db_customer.find_one({"customer_card": customer_card})
     kq=db_parking.find_one_and_update({"customer": customer,'license_plate':license_plate,'status':True}, 
                                  {"$set": {"date_check_out": date_check_out,"fee":5000,'status':False}})
-    if kq==None:
-        return 0
-    return 1
+    
+    return kq
         
 dt = datetime.now()
 dt = dt.strftime("%d/%m/%Y %H:%M:%S")  
@@ -58,3 +64,11 @@ def getPlatebyRfid(rfid_card):
     #biển số xe
     plate=''
     return plate
+
+
+def getImageExit(customer_card):
+    db_customer = connection()['smart_parking']['customer']
+    db_parking = connection()['smart_parking']['customer_parking']
+    customer = db_customer.find_one({"customer_card": customer_card})
+    kq=db_parking.find_one({"customer": customer,'status':True})
+    return kq
