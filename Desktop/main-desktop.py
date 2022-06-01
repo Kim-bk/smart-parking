@@ -116,7 +116,7 @@ def find_contours(dimensions, img) :
     return img_res
 
 # Find characters in the resulting images
-def segment_characters(image, pos, tail_path) :
+def segment_characters(image,pos, tail_path) :
     # Preprocess cropped license plate image
     img = cv2.resize(image, (333, 75))
     img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -178,9 +178,9 @@ def custom_f1score(y, y_pred):
   return tf.py_function(f1score, (y, y_pred), tf.double)  
 # end AI code
 
-
 def process_liscense(self, img, pos, tail_path):
     # Getting plate prom the processed image
+   
     try:
         _, plate, success = detect_plate(self, img, pos)
         if success == False:
@@ -393,6 +393,7 @@ class UI(QMainWindow):
                  
     def capture_entrance(self):
         dt = datetime.now()
+        tail_path = str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)
         success = False
         tail_path = str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)
         image = ImageQt.fromqpixmap(self.lblCamEntrance.pixmap())
@@ -404,16 +405,11 @@ class UI(QMainWindow):
         if char == '0' or len(char) != 8:
             os.remove(path_capture_entrance)
         else:
-            ##### Create data
-            
-
-            # Xu ly mo cong duoi ni nhe
             # # Hiện khung chứa biển số được cắt
-          
             cut_img  = '../PBL5/plate_cut/entrance/' + tail_path + '.jpg'
             self.lblCutPlateIn.setPixmap(QtGui.QPixmap(cut_img))
 
-                # Hiện khung chứa biển số được cắt ảnh trắng đen
+            # Hiện khung chứa biển số được cắt ảnh trắng đen
             contour_img  = '../PBL5/contour/entrance/' + tail_path + '.jpg'
             self.lblGrayIn.setPixmap(QtGui.QPixmap(contour_img))
             
@@ -422,11 +418,7 @@ class UI(QMainWindow):
             
             print(char)
             success = True
-            #check ="Ok"
-            #requests.post("http://192.168.43.65:7350", check)
-            
             # self.txtPlateIn.setText('Tai sao phai the')
-            
 
         return success
 
@@ -462,7 +454,6 @@ class UI(QMainWindow):
             if ob_image['license_plate'] == str(char):
                 dt = dt.strftime("%d/%m/%Y %H:%M:%S")
                 createCheckOut(id_rfid_ra,str(char),dt)
-               
             else:
                 os.remove(path_capture_exit)
                 wrong_pl = True

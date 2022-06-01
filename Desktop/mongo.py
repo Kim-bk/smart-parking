@@ -60,12 +60,6 @@ def getByIdRfid(id_rfid):
     results = db_customer.find_one({'customer_card':id_rfid})
     return results
 
-def getPlatebyRfid(rfid_card):
-    #biển số xe
-    plate=''
-    return plate
-
-
 def getImageExit(customer_card):
     db_customer = connection()['smart_parking']['customer']
     db_parking = connection()['smart_parking']['customer_parking']
