@@ -9,7 +9,7 @@ import cv2
 import numpy as np
 from PIL import ImageQt
 import os
-from flask import Flask,request, render_template
+from flask import Flask,request
 
 from threading import Thread
 import sys
@@ -211,14 +211,14 @@ class VideoThread(QThread):
  
     def run(self):
         # cap_esp32_exit = cv2.VideoCapture(0)
-        cap_esp32_entrance = cv2.VideoCapture("http://192.168.43.26:81/stream")
+        #cap_esp32_entrance = cv2.VideoCapture("http://192.168.43.26:81/stream")
 
         cap_esp32_exit =cv2.VideoCapture(0)
         while True:
-            ret1, cv_img1 = cap_esp32_entrance.read()
+            #ret1, cv_img1 = cap_esp32_entrance.read()
             ret2, cv_img2 = cap_esp32_exit.read()
-            if  ret2:
-                self.change_pixmap_signal1.emit(cv_img1)
+            if ret2:
+                #self.change_pixmap_signal1.emit(cv_img1)
                 self.change_pixmap_signal2.emit(cv_img2)
           
 class UI(QMainWindow):
@@ -332,6 +332,7 @@ class UI(QMainWindow):
         def load_table_ra():
             if request.method == "POST":  # if we make a post request to the endpoint, look for the image in the request body
                 data = request.get_data()
+                createCheckOut(id_rfid_ra,str(char),dt)
                 self.load_table()
                 return data
             
@@ -442,6 +443,9 @@ class UI(QMainWindow):
         return success
 
     def capture_exit(self):
+        global id_rfid_ra
+        global char
+        global dt
         dt = datetime.now()
         tail_path = str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)
         success = False
@@ -472,7 +476,6 @@ class UI(QMainWindow):
             
             if ob_image['license_plate'] == str(char):
                 dt = dt.strftime("%d/%m/%Y %H:%M:%S")
-                createCheckOut(id_rfid_ra,str(char),dt)
             else:
                 os.remove(path_capture_exit)
                 wrong_pl = True
