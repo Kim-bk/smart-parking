@@ -32,10 +32,17 @@ def createCheckIn(customer_card,license_plate,date_check_in,cut_img,contour_img)
     else:
         db_parking.insert_one(data)
 
+
 dt = datetime.now()
 dt = dt.strftime("%d/%m/%Y %H:%M:%S")  
 #createCheckIn("8317128168",'92EA-98765', dt )
 
+def getImageExit(customer_card):
+    db_customer = connection()['smart_parking']['customer']
+    db_parking = connection()['smart_parking']['customer_parking']
+    customer = db_customer.find_one({"customer_card": customer_card})
+    kq=db_parking.find_one({"customer": customer,'status':True})
+    return kq
 
 def createCheckOut(customer_card,license_plate,date_check_out):
     db_customer = connection()['smart_parking']['customer']
