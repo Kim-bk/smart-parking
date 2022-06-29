@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'd:\Semester 6\PBL5\Desktop\ui-main.ui'
+# Form implementation generated from reading ui file 'd:\Semester6\PBL5\Desktop\ui-main.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -210,7 +210,7 @@ class Ui_MainWindow(object):
         self.tbData.setGeometry(QtCore.QRect(890, 540, 931, 351))
         self.tbData.setStyleSheet("")
         self.tbData.setObjectName("tbData")
-        self.tbData.setColumnCount(6)
+        self.tbData.setColumnCount(5)
         self.tbData.setRowCount(0)
         item = QtWidgets.QTableWidgetItem()
         self.tbData.setHorizontalHeaderItem(0, item)
@@ -222,8 +222,6 @@ class Ui_MainWindow(object):
         self.tbData.setHorizontalHeaderItem(3, item)
         item = QtWidgets.QTableWidgetItem()
         self.tbData.setHorizontalHeaderItem(4, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tbData.setHorizontalHeaderItem(5, item)
         self.btnScreenshot_Entrance = QtWidgets.QPushButton(self.centralwidget)
         self.btnScreenshot_Entrance.setGeometry(QtCore.QRect(20, 40, 131, 31))
         self.btnScreenshot_Entrance.setObjectName("btnScreenshot_Entrance")
@@ -268,16 +266,14 @@ class Ui_MainWindow(object):
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">t</p></body></html>"))
         self.tbData.setWhatsThis(_translate("MainWindow", "<html><head/><body><p><br/></p></body></html>"))
         item = self.tbData.horizontalHeaderItem(0)
-        item.setText(_translate("MainWindow", "ID"))
-        item = self.tbData.horizontalHeaderItem(1)
         item.setText(_translate("MainWindow", "Card"))
-        item = self.tbData.horizontalHeaderItem(2)
+        item = self.tbData.horizontalHeaderItem(1)
         item.setText(_translate("MainWindow", "Name"))
-        item = self.tbData.horizontalHeaderItem(3)
+        item = self.tbData.horizontalHeaderItem(2)
         item.setText(_translate("MainWindow", "Phone Number"))
-        item = self.tbData.horizontalHeaderItem(4)
+        item = self.tbData.horizontalHeaderItem(3)
         item.setText(_translate("MainWindow", "Booking Date"))
-        item = self.tbData.horizontalHeaderItem(5)
+        item = self.tbData.horizontalHeaderItem(4)
         item.setText(_translate("MainWindow", "Lisence Plate"))
         self.btnScreenshot_Entrance.setText(_translate("MainWindow", "Capture"))
         self.btnScreenshot_Exit.setText(_translate("MainWindow", "Capture"))

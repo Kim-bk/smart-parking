@@ -63,7 +63,7 @@ def find_contours(dimensions, img) :
         intX, intY, intWidth, intHeight = cv2.boundingRect(cntr)
         
         # checking the dimensions of the contour to filter out the characters by contour's size
-        if intWidth > lower_width and intWidth < upper_width and intHeight > lower_height and intHeight < upper_height :
+        if 400 < intWidth * intHeight < 1000:
             x_cntr_list.append(intX) #stores the x coordinate of the character's contour, to used later for indexing the contours
 
             char_copy = np.zeros((44,24))
@@ -170,14 +170,15 @@ def custom_f1score(y, y_pred):
 if __name__ == "__main__": 
 
      # Loads the data required for detecting the license plates from cascade classifier.
-    plate_cascade = cv2.CascadeClassifier('D:/Semester6/PBL5/AI/archive/cascade.xml')
+    plate_cascade = cv2.CascadeClassifier('D:/Semester6/PBL5/AI/train/cascade.xml')
  
     #load the model has been trained before
     model = keras.models.load_model('D:/Semester6/PBL5/AI/data_test/character_model.h5',custom_objects={"custom_f1score": custom_f1score})
-    stages = 396
-    for img in range(32634, 41420):
+    stages = 893
+  
+    for img in range(893, 1748):
         try:
-            path_img = 'D:/Semester6/PBL5/AI/images/oto/detected/' + str(i) + '.jpg'
+            path_img = 'D:/Semester6/PBL5/AI/images/GreenParking_new/GreenParking/1 (' + str(img) + ').jpg'
             if path.exists(path_img):
                 print(str(img))
                 img = cv2.imread(path_img)
@@ -193,15 +194,16 @@ if __name__ == "__main__":
                 print('===STAGE'+ str(stages) + '===')
                 for i,ch in enumerate(char):
                     out = False
-                    j = -150
+                    j = 1070
                     img = cv2.resize(ch, (28,28), interpolation=cv2.INTER_AREA)
                     while path.exists('D:/Semester6/PBL5/AI/data_test/train/class_' + str(show_results()[i]) + '/' + str(j) + '.jpg') == True:
                         j = j + 1
                         
                     cv2.imwrite('D:/Semester6/PBL5/AI/data_test/train/class_' + str(show_results()[i]) + '/' + str(j) + '.jpg', img)
-                print('===END IMG'+ str(img) + '===')
+                print('===END IMG'+ str(stages) + '===')
                 stages = stages + 1
-        except: continue
+        except: 
+            continue
     print('************')
     print('FINISH')
     print('************')  
