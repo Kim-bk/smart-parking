@@ -31,8 +31,7 @@ def createCheckIn(customer_card,license_plate,date_check_in,cut_img,contour_img)
                                  {"$set": {"license_plate":data['license_plate']} })
     else:
         db_parking.insert_one(data)
-        
-    
+
 
 dt = datetime.now()
 dt = dt.strftime("%d/%m/%Y %H:%M:%S")  
@@ -68,7 +67,9 @@ def getByIdRfid(id_rfid):
     results = db_customer.find_one({'customer_card':id_rfid})
     return results
 
-def getPlatebyRfid(rfid_card):
-    #biển số xe
-    plate=''
-    return plate
+def getImageExit(customer_card):
+    db_customer = connection()['smart_parking']['customer']
+    db_parking = connection()['smart_parking']['customer_parking']
+    customer = db_customer.find_one({"customer_card": customer_card})
+    kq=db_parking.find_one({"customer": customer,'status':True})
+    return kq
