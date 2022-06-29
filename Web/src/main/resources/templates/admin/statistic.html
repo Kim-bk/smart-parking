@@ -125,7 +125,7 @@
 							href="#" id="navbarDropdown" role="button"
 							data-bs-toggle="dropdown" aria-expanded="false"> <img
 								src="../admin/assets/images/users/1.jpg" alt="user"
-								class="profile-pic me-2">Markarn Doe
+								class="profile-pic me-2">Hoang Dung
 						</a>
 							<ul class="dropdown-menu" aria-labelledby="navbarDropdown"></ul>
 						</li>
@@ -182,30 +182,6 @@
 
 							<div class="content">
 
-								<div class="container text-left">
-									<div class="row justify-content-center">
-										<div class="col-lg-10">
-											<br>
-											<form action="#" class="row">
-												<div class="col-md-6">
-													<div class="form-group">
-														<label for="input_from">From</label> <input type="text"
-															class="form-control" id="input_from"
-															placeholder="Start Date">
-													</div>
-												</div>
-												<div class="col-md-6">
-													<div class="form-group">
-														<label for="input_from">To</label> <input type="text"
-															class="form-control" id="input_to"
-															placeholder="Start Date">
-													</div>
-												</div>
-											</form>
-										</div>
-									</div>
-
-								</div>
 							</div>
 							<div class="card-body">
 
@@ -227,61 +203,22 @@
 											</tr>
 										</thead>
 										<tbody>
-											<tr>
-												<td>1</td>
-												<td>Nguyen Van A</td>
-												<td>0973709562</td>
-												<td>vana@gmail.com</td>
+										<span th:each="item:${list}" >
+										<tr>
+												<td th:utext=${itemStat.index}></td>
+												<td th:utext=${item.customer.name}></td>
+												<td th:utext=${item.customer.numberPhone}></td>
+												<td th:utext=${item.customer.email}></td>
 												<td>Lien Chieu - Da Nang</td>
-												<td>43-EA 00206</td>
-												<td>12:30 8-3-2022</td>
-												<td>19:00 8-3-2022</td>
-												<td>10.000 đ</td>
+												<td th:utext=${item.license_plate}></td>
+												<td th:utext=${item.date_check_in}></td>
+												<td th:utext=${item.date_check_out}></td>
+												<td th:utext=${item.fee}></td>
 											</tr>
-											<tr>
-												<td>2</td>
-												<td>Nguyen Van A</td>
-												<td>0973709562</td>
-												<td>vana@gmail.com</td>
-												<td>Lien Chieu - Da Nang</td>
-												<td>43-EA 00206</td>
-												<td>12:30 8-3-2022</td>
-												<td>19:00 8-3-2022</td>
-												<td>10.000 đ</td>
-											</tr>
-											<tr>
-												<td>3</td>
-												<td>Nguyen Van A</td>
-												<td>0973709562</td>
-												<td>vana@gmail.com</td>
-												<td>Lien Chieu - Da Nang</td>
-												<td>43-EA 00206</td>
-												<td>12:30 8-3-2022</td>
-												<td>19:00 8-3-2022</td>
-												<td>10.000 đ</td>
-											</tr>
-											<tr>
-												<td>4</td>
-												<td>Nguyen Van A</td>
-												<td>0973709562</td>
-												<td>vana@gmail.com</td>
-												<td>Lien Chieu - Da Nang</td>
-												<td>43-EA 00206</td>
-												<td>12:30 8-3-2022</td>
-												<td>19:00 8-3-2022</td>
-												<td>10.000 đ</td>
-											</tr>
-											<tr>
-												<td>5</td>
-												<td>Nguyen Van A</td>
-												<td>0973709562</td>
-												<td>vana@gmail.com</td>
-												<td>Lien Chieu - Da Nang</td>
-												<td>43-EA 00206</td>
-												<td>12:30 8-3-2022</td>
-												<td>19:00 8-3-2022</td>
-												<td>10.000 đ</td>
-											</tr>
+											
+										</span>
+										
+										
 											
 										</tbody>
 									</table>
@@ -290,26 +227,11 @@
 							<form class="row g-3">
   
   <div class="col-auto" style="margin-left: 950px">
-    <input type="text" class="form-control" id="inputPassword2" placeholder="150.000" style="border-color: red;text-align: center;">
+    <input type="text" class="form-control" id="inputPassword2" th:value="${total}" style="border-color: red;text-align: center;">
   </div>
  
 </form>
-							<!-- Pagination -->
-							<nav aria-label="Page navigation example"
-								style="margin-left: 500px">
-								<ul class="pagination">
-									<li class="page-item"><a class="page-link" href="#"
-										aria-label="Previous"> <span aria-hidden="true">&laquo;</span>
-									</a></li>
-									<li class="page-item"><a class="page-link" href="#">1</a></li>
-									<li class="page-item"><a class="page-link" href="#">2</a></li>
-									<li class="page-item"><a class="page-link" href="#">3</a></li>
-									<li class="page-item"><a class="page-link" href="#"
-										aria-label="Next"> <span aria-hidden="true">&raquo;</span>
-									</a></li>
-								</ul>
-							</nav>
-							<!-- End Pagination -->
+						
 
 
 						</div>

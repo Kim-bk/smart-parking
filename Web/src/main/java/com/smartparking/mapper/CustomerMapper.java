@@ -1,11 +1,11 @@
 package com.smartparking.mapper;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.smartparking.dto.AddressDTO;
 import com.smartparking.dto.CustomerDTO;
-import com.smartparking.entity.AddressEntity;
 import com.smartparking.entity.CustomerEntity;
 import com.smartparking.service.impl.AddressService;
 
@@ -18,6 +18,9 @@ public class CustomerMapper {
 	
 	@Autowired
 	private AddressService addressService;
+	
+	@Autowired
+	private ModelMapper mapper;
 	
 	public CustomerEntity toEntity(CustomerDTO customer) {
 		CustomerEntity entity = new CustomerEntity();
@@ -39,6 +42,20 @@ public class CustomerMapper {
 		entity.setId(customer.getId());
 		
 		return entity;
+	}
+	
+	public CustomerDTO toDTO(CustomerEntity entity) {
+		CustomerDTO dto = new CustomerDTO();
+		dto = mapper.map(entity, CustomerDTO.class);
+		
+		String nameProvine = entity.getAddress().getProvinceAddress().getName();
+		String nameDistrict = entity.getAddress().getDistrictAddress().getName();
+		String nameWard = entity.getAddress().getWardAddress().getName();
+		
+		String nameAddress = entity.getAddress().getSpecificAddress()+","+
+							 nameWard+","+nameDistrict+","+nameProvine;
+		dto.setNameAddress(nameAddress);
+		return dto;
 	}
 
 }

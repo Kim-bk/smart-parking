@@ -3,6 +3,8 @@ package com.smartparking.controller;
 import java.util.List;
 import java.util.Optional;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +18,9 @@ import com.smartparking.dto.CustomerDTO;
 import com.smartparking.dto.DistrictDTO;
 import com.smartparking.dto.ProvinceDTO;
 import com.smartparking.dto.WardDTO;
+import com.smartparking.entity.CustomerEntity;
+import com.smartparking.entity.CustomerParkingEntity;
+import com.smartparking.service.impl.CustomerParkingService;
 import com.smartparking.service.impl.CustomerService;
 import com.smartparking.service.impl.DistrictService;
 import com.smartparking.service.impl.ProvinceService;
@@ -36,6 +41,9 @@ public class UserController {
 	
 	@Autowired
 	private CustomerService customerService;
+	
+	@Autowired
+	private CustomerParkingService cusParService;
 	
 	
 	
@@ -76,6 +84,50 @@ public class UserController {
 		
 		customerService.save(customer);
 		return "redirect:/user/home";
+	}
+	
+	@PostMapping("/login")
+	public String Login(@RequestParam(name="email") Optional<String> email,@RequestParam(name="password") Optional<String> password,HttpServletRequest request,Model model) 
+	{
+		String email1 = email.get();
+		//String pass = password.get();
+		if (customerService.findByEmailAndPassword(email1)!=null) {
+			CustomerEntity cus = (CustomerEntity) request.getSession().getAttribute("CUSTOMER");
+			if (cus == null) {
+				cus = new CustomerEntity();
+				request.getSession().setAttribute("CUSTOMER", cus);
+			}
+			cus = customerService.findByEmailAndPassword(email1);
+			request.getSession().setAttribute("CUSTOMER", cus);
+			model.addAttribute("customer", cus);
+			return "user/personal";
+		}
+		return "redirect:/user/home";
+		
+	}
+	
+	@GetMapping("/user/profile")
+	public String profile(Model model,HttpServletRequest request) {
+		CustomerEntity cus = (CustomerEntity) request.getSession().getAttribute("CUSTOMER");
+		model.addAttribute("customer", cus);
+		return "user/profile";
+		
+	}
+	
+	@GetMapping("/user/statistics")
+	public String statistic(Model model,HttpServletRequest request) {
+		CustomerEntity cus = (CustomerEntity) request.getSession().getAttribute("CUSTOMER");
+		model.addAttribute("customer", cus);
+		List<CustomerParkingEntity> list = cusParService.findByCustomer(cus);
+		model.addAttribute("list",list);
+		float total = 0;
+		for (CustomerParkingEntity item : list) {
+			total += item.getFee();
+		}
+		model.addAttribute("total", total);
+
+		return "user/statistic";
+		
 	}
 
 }

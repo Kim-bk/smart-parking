@@ -17,7 +17,7 @@ import requests
 # Process database with mongodb
 from datetime import datetime
 
-from mongo import createCheckIn,findAll,createCheckOut,getByIdRfid,getImageExit
+from mongo import createCheckIn,findAll,createCheckOut,getByIdRfid,getPlatebyRfid,getImageExit
 
 
 # AI code 
@@ -31,12 +31,16 @@ from tensorflow.python.saved_model import loader_impl
 from tensorflow.python.keras.saving.saved_model import load as saved_model_load
 from sklearn.metrics import f1_score 
 
+
+positions = 0
+
 def get_slot():
     list = findAll()
     people =[]
     for item in list:
         people.append(item)
     return len(people)
+
 
 def detect_plate(self, img, pos): # the function detects and perfors blurring on the number plate.
     plate_img = img.copy()
@@ -277,8 +281,7 @@ class UI(QMainWindow):
                     check ="not_in_db"
                     print(check)
                     return check
-            
-          
+   
 
         @app_.route("/send-id", methods=["POST"])
         def get_id_vao():
@@ -399,7 +402,8 @@ class UI(QMainWindow):
             people.append(data_item)
        # people = [{"ID": "1", "Card": "100221", "Name": "Hoang Kim", "Phone Number": "0935740126" ,"Booking Date": "16/05/2022", "Lisence Plate": "43D92646" }]
         row = 0
-        self.tbData.setRowCount(len(people))
+        self.tbData.setRow
+        (len(people))
         for person in people:
             self.tbData.setItem(row, 0, QtWidgets.QTableWidgetItem(person["Card"]))
             self.tbData.setItem(row, 1, QtWidgets.QTableWidgetItem(person["Name"]))
@@ -439,7 +443,8 @@ class UI(QMainWindow):
             print(char)
             success = True
             # self.txtPlateIn.setText('Tai sao phai the')
-
+            
+        position = position + 1
         return success
 
     def capture_exit(self):
@@ -480,6 +485,8 @@ class UI(QMainWindow):
                 os.remove(path_capture_exit)
                 wrong_pl = True
             success = True
+            position = position - 1
+
         if success == True and wrong_pl == True:
             success =  False
         return success
@@ -549,6 +556,7 @@ class UI(QMainWindow):
     #             self.lblGrayIn.setPixmap(QtGui.QPixmap("contour.jpg"))
 
     #             self.txtPlateIn.setText(char)
+
 
 if __name__ == "__main__":
     #Init variables for AI

@@ -120,7 +120,7 @@
 							href="#" id="navbarDropdown" role="button"
 							data-bs-toggle="dropdown" aria-expanded="false"> <img
 								src="../admin/assets/images/users/1.jpg" alt="user"
-								class="profile-pic me-2">Hoang Dung
+								class="profile-pic me-2"><span th:utext=${customer.name}></span>
 						</a>
 							<ul class="dropdown-menu" aria-labelledby="navbarDropdown"></ul>
 						</li>
@@ -135,7 +135,7 @@
 		<!-- Left Sidebar - style you can find in sidebar.scss  -->
 		<!-- ============================================================== -->
 
-		<span th:insert="admin/sidebar.html"></span>
+		<span th:insert="user/sidebar.html"></span>
 
 
 
@@ -164,12 +164,7 @@
 
 				</div>
 			</div>
-			<!-- ============================================================== -->
-			<!-- End Bread crumb and right sidebar toggle -->
-			<!-- ============================================================== -->
-			<!-- ============================================================== -->
-			<!-- Container fluid  -->
-			<!-- ============================================================== -->
+		
 			<div class="container-fluid">
 				<!-- ============================================================== -->
 				<!-- Sales chart -->
