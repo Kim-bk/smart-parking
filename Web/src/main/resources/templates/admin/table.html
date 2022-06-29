@@ -125,7 +125,7 @@
 							href="#" id="navbarDropdown" role="button"
 							data-bs-toggle="dropdown" aria-expanded="false"> <img
 								src="../admin/assets/images/users/1.jpg" alt="user"
-								class="profile-pic me-2">Markarn Doe
+								class="profile-pic me-2">Hoang Dung
 						</a>
 							<ul class="dropdown-menu" aria-labelledby="navbarDropdown"></ul>
 						</li>
@@ -218,51 +218,62 @@
 												<th class="border-top-0">Number phone</th>
 												<th class="border-top-0">Email</th>
 												<th class="border-top-0">Address</th>
-												<th class="border-top-0"></th>
+												<th class="border-top-0">Edit</th>
 
 
 											</tr>
 										</thead>
 										<tbody>
-											<tr>
-												<td>1</td>
-												<td>Nguyen Van A</td>
-												<td>0973709562</td>
-												<td>vana@gmail.com</td>
-												<td>Lien Chieu - Da Nang</td>
-											</tr>
-											<tr>
-												<td>2</td>
-												<td>Nguyen Van A</td>
-												<td>0973709562</td>
-												<td>vana@gmail.com</td>
-												<td>Lien Chieu - Da Nang</td>
-											</tr>
-											<tr>
-												<td>3</td>
-												<td>Nguyen Van A</td>
-												<td>0973709562</td>
-												<td>vana@gmail.com</td>
-												<td>Lien Chieu - Da Nang</td>
-											</tr>
-											<tr>
-												<td>4</td>
-												<td>Nguyen Van A</td>
-												<td>0973709562</td>
-												<td>vana@gmail.com</td>
-												<td>Lien Chieu - Da Nang</td>
-											</tr>
-											<tr>
-												<td>5</td>
-												<td>Nguyen Van A</td>
-												<td>0973709562</td>
-												<td>vana@gmail.com</td>
-												<td>Lien Chieu - Da Nang</td>
-											</tr>
+										<span th:each="item,loop:${list}">
+										<tr>
+												<input type="hidden" th:id="'id'+${loop.index}" th:value ="${item.id}" />
+												<td th:utext ="${loop.index}"></td>
+												<td th:utext="${item.name}"></td>
+												<td th:utext ="${item.numberPhone}"></td>
+												<td th:utext ="${item.email}"></td>
+												<td th:utext ="${item.address.specificAddress}"></td>
+											    <td>			
+											    <button th:id = "${loop.index}"  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#edit_model">Edit</button>
+											    </td>		
+										</tr>
+										</span>
+											
 											
 										</tbody>
 									</table>
 								</div>
+							</div>
+							
+							<div class="modal fade" id="edit_model" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+							  <div class="modal-dialog">
+							    <div class="modal-content">
+							      <div class="modal-header">
+							        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+							        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							      </div>
+							     
+							      
+							       <form th:action="@{/admin/saveCustomerCard}" th:method="POST">
+							        <div class="modal-body">
+							          <div class="mb-3">
+							            <input type="hidden" class="form-control" id="customer_id" name ="customer_id">
+							          </div>
+							 
+							          <div class="mb-3">
+							            <label for="recipient-name" class="col-form-label" id ="customer_card" >Customer Card:</label>
+							            <input type="text" class="form-control" id="recipient-name" name ="customer_card">
+							          </div>
+							  
+							      </div>
+							      <div class="modal-footer">
+							        <input type="submit" class="btn btn-primary" value="Update"/>
+							      </div>
+						
+							      </form>
+							      
+							      
+							    </div>
+							  </div>
 							</div>
 							<!-- Pagination -->
 							<nav aria-label="Page navigation example"
@@ -285,43 +296,14 @@
 						</div>
 					</div>
 				</div>
-
-				<!-- ============================================================== -->
-				<!-- End PAge Content -->
-				<!-- ============================================================== -->
-				<!-- ============================================================== -->
-				<!-- Right sidebar -->
-				<!-- ============================================================== -->
-				<!-- .right-sidebar -->
-				<!-- ============================================================== -->
-				<!-- End Right sidebar -->
-				<!-- ============================================================== -->
-			</div>
-			<!-- ============================================================== -->
-			<!-- End Container fluid  -->
-			<!-- ============================================================== -->
-			<!-- ============================================================== -->
-			<!-- footer -->
-			<!-- ============================================================== -->
 			<footer class="footer">
 			
 			</footer>
-			<!-- ============================================================== -->
-			<!-- End footer -->
-			<!-- ============================================================== -->
+		
 		</div>
-		<!-- ============================================================== -->
-		<!-- End Page wrapper  -->
-		<!-- ============================================================== -->
 	</div>
-	<!-- ============================================================== -->
-	<!-- End Wrapper -->
-	<!-- ============================================================== -->
-	<!-- ============================================================== -->
-	<!-- All Jquery -->
-	<!-- ============================================================== -->
+	<script src="/admin/js/saveid.js"></script>
 	<script src="../admin/assets/plugins/jquery/dist/jquery.min.js"></script>
-	<!-- Bootstrap tether Core JavaScript -->
 	<script
 		src="../admin/assets/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="/admin/js/app-style-switcher.js"></script>
@@ -337,6 +319,22 @@
 	<script src="/calendar/js/bootstrap.min.js"></script>
 	<script src="/calendar/js/rome.js"></script>
 	<script src="/calendar/js/main.js"></script>
+	<script>
+	$(document).ready(function(){
+
+	for (let i =0;i<=6;i++){
+		$("#"+i).on('click',function(event){
+			event.preventDefault();
+			var el = document.getElementById('id'+i)
+			$("#customer_id").val(el.value)
+			$('#edit_model').modal()
+			});
+	}
+	
+	})
+
+	
+	</script>
 </body>
 
 </html>

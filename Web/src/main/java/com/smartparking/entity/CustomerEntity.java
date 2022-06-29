@@ -22,6 +22,8 @@ public class CustomerEntity {
 	@Field(value = "customer_card")
 	private String customerCard;
 	
+	
+	
 	private AddressEntity address;
 
 	public CustomerEntity() {

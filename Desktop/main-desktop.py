@@ -17,7 +17,7 @@ import requests
 # Process database with mongodb
 from datetime import datetime
 
-from mongo import createCheckIn,findAll,createCheckOut,getByIdRfid,getPlatebyRfid
+from mongo import createCheckIn,findAll,createCheckOut,getByIdRfid,getPlatebyRfid,getImageExit
 
 
 # AI code 
@@ -30,6 +30,8 @@ import keras
 from tensorflow.python.saved_model import loader_impl
 from tensorflow.python.keras.saving.saved_model import load as saved_model_load
 from sklearn.metrics import f1_score 
+
+positions = 0
 
 def detect_plate(self, img, pos): # the function detects and perfors blurring on the number plate.
     plate_img = img.copy()
@@ -427,6 +429,7 @@ class UI(QMainWindow):
             row = row + 1
                  
     def capture_entrance(self):
+        global positions
         dt = datetime.now()
         tail_path = str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)
         success = False
@@ -442,8 +445,7 @@ class UI(QMainWindow):
                 os.remove(path_capture_entrance)
             else:
                 ##### Create data
-                dt = dt.strftime("%d/%m/%Y %H:%M:%S")
-                createCheckIn(id_rfid_vao,str(char),dt)
+                
 
                 # Xu ly mo cong duoi ni nhe
                 # # Hiện khung chứa biển số được cắt
@@ -453,6 +455,9 @@ class UI(QMainWindow):
                 # Hiện khung chứa biển số được cắt ảnh trắng đen
                 contour_img  = '../PBL5/contour/entrance/' + tail_path + '.jpg'
                 self.lblGrayIn.setPixmap(QtGui.QPixmap(contour_img))
+                dt = dt.strftime("%d/%m/%Y %H:%M:%S")
+                createCheckIn(id_rfid_vao,str(char),dt,cut_img,contour_img)
+                positions = positions + 1
                 print(char)
                 self.txtPlateIn.setText(char)
                 success = True
@@ -478,16 +483,21 @@ class UI(QMainWindow):
             if char == '0' or len(char) != 8:
                 os.remove(path_capture_exit)
             else:
-                dt = dt.strftime("%d/%m/%Y %H:%M:%S")
-                if createCheckOut(id_rfid_ra,str(char),dt) == 1:
-                    # Xu ly mo cong duoi ni nhe
-                    # # Hiện khung chứa biển số được cắt
-                    cut_img  = '../PBL5/plate_cut/exit/' + tail_path + '.jpg'
-                    self.lblCutOut.setPixmap(QtGui.QPixmap(cut_img))
+                ob_image = getImageExit(id_rfid_ra)
+                cut_img  = ob_image['cut_img']
+                self.lblCutOut.setPixmap(QtGui.QPixmap(cut_img))
 
                     # Hiện khung chứa biển số được cắt ảnh trắng đen
-                    contour_img  = '../PBL5/contour/exit' + tail_path + '.jpg'
-                    self.lblGrayOut.setPixmap(QtGui.QPixmap(contour_img))
+                contour_img  = ob_image['contour_img']
+                self.lblGrayOut.setPixmap(QtGui.QPixmap(contour_img))
+
+                dt = dt.strftime("%d/%m/%Y %H:%M:%S")
+                ob = createCheckOut(id_rfid_ra,str(char),dt)
+                positions = positions -1
+                if ob != None :
+                    # Xu ly mo cong duoi ni nhe
+                    # # Hiện khung chứa biển số được cắt
+                    
                 
                     # Hiện khung chứa biển số ra được cắt ảnh trắng đen
                     # self.txtPlateOut.setText(char)
@@ -570,6 +580,7 @@ class UI(QMainWindow):
     #             self.lblGrayIn.setPixmap(QtGui.QPixmap("contour.jpg"))
 
     #             self.txtPlateIn.setText(char)
+
 
 if __name__ == "__main__":
     #Init variables for AI
