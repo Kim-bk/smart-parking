@@ -44,28 +44,39 @@ def find_contours(dimensions, img) :
     # Find all contours in the image
     cntrs, _ = cv2.findContours(img.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
+
+
     # Retrieve potential dimensions
     lower_width = dimensions[0]
     upper_width = dimensions[1]
     lower_height = dimensions[2]
     upper_height = dimensions[3]
-    
+   
     # Check largest 5 or  15 contours for license plate or character respectively
     cntrs = sorted(cntrs, key=cv2.contourArea, reverse=True)[:15]
     
     ii = cv2.imread('contour.jpg')
-    
     x_cntr_list = []
-    target_contours = []
+    x_cntr_list_first = []
+    x_cntr_list_sec = []
+
     img_res = []
+    img_res_first = []
+    img_res_sec = []
     for cntr in cntrs :
         # detects contour in binary image and returns the coordinates of rectangle enclosing it
         intX, intY, intWidth, intHeight = cv2.boundingRect(cntr)
-        
-        # checking the dimensions of the contour to filter out the characters by contour's size
-        if intWidth > lower_width and intWidth < upper_width and intHeight > lower_height and intHeight < upper_height :
-            x_cntr_list.append(intX) #stores the x coordinate of the character's contour, to used later for indexing the contours
+        print('==')
 
+        print(intWidth)
+        print(intHeight)
+        print(intY)
+       
+        # checking the dimensions of the contour to filter out the characters by contour's size
+        # if 400 < intWidth * intHeight < 1000:
+        if intWidth > lower_width and intWidth < upper_width and intHeight > lower_height and intHeight < upper_height :
+            # x_cntr_list.append(intX) #stores the x coordinate of the character's contour, to used later for indexing the contours
+            x_cntr_list_first.append(intX)
             char_copy = np.zeros((44,24))
             # extracting each character using the enclosing rectangle's coordinates.
             char = img[intY:intY+intHeight, intX:intX+intWidth]
@@ -85,18 +96,43 @@ def find_contours(dimensions, img) :
             char_copy[42:44, :] = 0
             char_copy[:, 22:24] = 0
 
-            img_res.append(char_copy) # List that stores the character's binary image (unsorted)
-    
-  
+            # if 0 < intY < 15:
+            #     x_cntr_list_first.append(intX)
+            #     img_res_first.append(char_copy) # List that stores the character's binary image (unsorted)
+            # else:
+            #     x_cntr_list_sec.append(intX)
+            #     img_res_sec.append(char_copy) # List that stores the character's binary image (unsorted)
+
+          
+            img_res_first.append(char_copy) # List that stores the character's binary image (unsorted)
+
     # Return characters on ascending order with respect to the x-coordinate (most-left character first)
             
-    # plt.show()
+ 
     # arbitrary function that stores sorted list of character indeces
-    indices = sorted(range(len(x_cntr_list)), key=lambda k: x_cntr_list[k])
-    img_res_copy = []
-    for idx in indices:
-        img_res_copy.append(img_res[idx])# stores character images according to their index
-    img_res = np.array(img_res_copy)
+
+    #truong hop bien 2 dong
+    # indices_first = sorted(range(len(x_cntr_list_first)), key=lambda k: x_cntr_list_first[k])
+    # indices_sec = sorted(range(len(x_cntr_list_sec)), key=lambda k: x_cntr_list_sec[k])
+    # print(indices_first)
+    # print(indices_sec)
+    # img_res_copy_first = []
+    # for idx in indices_first:
+    #     img_res_copy_first.append(img_res_first[idx])# stores character images according to their index
+
+    # img_res_copy_sec = []
+    # for idx in indices_sec:
+    #     img_res_copy_sec.append(img_res_sec[idx])# stores character images according to their index
+
+    # rs  = img_res_copy_first + img_res_copy_sec
+
+    indices_first = sorted(range(len(x_cntr_list_first)), key=lambda k: x_cntr_list_first[k])
+    
+    img_res_copy_first = []
+    for idx in indices_first:
+        img_res_copy_first.append(img_res_first[idx])# stores character images according to their index
+
+    img_res = np.array(img_res_copy_first)
     # print(img_res)
 
     return img_res
@@ -122,7 +158,7 @@ def segment_characters(image) :
 
     # Estimations of character contours sizes of cropped license plates
     plt.figure(3)
-    dimensions = [LP_WIDTH/6, LP_WIDTH/2, LP_HEIGHT/10, 2*LP_HEIGHT/3]
+    dimensions = [LP_WIDTH/6, LP_WIDTH/2, LP_HEIGHT/5, 2*LP_HEIGHT/3]
     plt.imshow(img_dilate, cmap='gray')
     cv2.imwrite('contour.jpg',img_dilate)
     # Get contours within cropped license plate
@@ -138,7 +174,7 @@ def fix_dimension(img):
 
 def show_results():
     dic = {}
-    characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    characters = '0123456789ABCDEFGHKLMNPSTUVXYZ'
     for i,c in enumerate(characters):
         dic[i] = c
 
@@ -171,13 +207,12 @@ if __name__ == "__main__":
 
      # Loads the data required for detecting the license plates from cascade classifier.
     plate_cascade = cv2.CascadeClassifier('D:/Semester6/PBL5/AI/archive/cascade.xml')
- 
+    # plate_cascade = cv2.CascadeClassifier('D:/Semester6/PBL5/AI/train/cascade.xml')
     #load the model has been trained before
     model = keras.models.load_model('D:/Semester6/PBL5/AI/data_test/character_model.h5',custom_objects={"custom_f1score": custom_f1score})
  
-    img = cv2.imread('D:/Semester6/PBL5/AI/images/oto/detected/128.jpg')
-    #img = cv2.imread('../License-Plate-Recognition/images/oto/462.jpg')
-    #img = cv2.imread('../License-Plate-Recognition/images/CarTGMT/AEONTP_6S81U5_checkin_2020-1-13-16-18bx9UOV6rY5.jpg')
+    # img = cv2.imread('D:/Semester6/PBL5/AI/images/GreenParking_new/GreenParking/1 (11).jpg')
+    img = cv2.imread('D:/Semester6/PBL5/AI/images/oto/all/one_line (2).jpg')
     old_img = img
 
     # Getting plate prom the processed image

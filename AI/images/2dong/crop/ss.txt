@@ -1,0 +1,1748 @@
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1).jpg 2 155 110 127 113 154 121 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (10).jpg 2 144 123 95 84 242 35 151 135
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (100).jpg 2 151 59 94 83 146 18 130 115
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1000).jpg 1 224 196 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1001).jpg 1 168 86 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1002).jpg 2 194 37 91 81 26 18 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1003).jpg 1 201 147 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1004).jpg 1 168 62 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1005).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1006).jpg 1 169 112 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1007).jpg 3 39 91 99 88 209 93 94 83 161 59 143 127
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1008).jpg 1 159 79 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1009).jpg 1 116 111 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (101).jpg 1 255 140 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1010).jpg 1 198 134 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1011).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1012).jpg 2 123 163 96 85 128 148 145 129
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1013).jpg 2 139 63 104 92 39 2 306 272
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1014).jpg 2 243 132 92 82 28 44 124 110
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1015).jpg 2 139 113 95 84 169 112 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1016).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1017).jpg 2 152 52 97 86 127 23 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1018).jpg 2 200 169 93 82 215 54 116 103
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1019).jpg 3 36 88 105 93 171 135 95 84 204 134 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (102).jpg 1 9 53 186 165
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1020).jpg 1 175 80 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1021).jpg 1 200 136 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1022).jpg 1 128 98 92 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1023).jpg 1 188 102 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1024).jpg 2 147 89 117 104 79 108 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1025).jpg 1 188 68 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1026).jpg 1 236 70 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1027).jpg 1 189 63 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1028).jpg 2 218 184 106 94 10 57 182 162
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1029).jpg 2 16 76 151 134 63 18 289 257
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (103).jpg 1 241 74 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1030).jpg 1 46 13 287 255
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1031).jpg 1 134 36 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1032).jpg 1 182 108 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1033).jpg 1 125 61 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1034).jpg 1 196 35 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1035).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1036).jpg 2 203 129 95 85 39 37 258 229
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1037).jpg 1 135 96 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1038).jpg 2 284 75 99 88 132 103 96 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1039).jpg 5 214 78 94 83 37 88 107 95 202 77 142 126 107 18 277 246 63 31 109 97
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (104).jpg 1 197 149 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1040).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1041).jpg 3 324 123 99 88 182 130 97 86 325 2 102 90
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1042).jpg 1 278 96 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1043).jpg 2 170 83 94 84 56 5 278 247
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1044).jpg 2 234 94 97 86 205 95 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1045).jpg 1 176 37 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1046).jpg 2 169 55 94 84 23 22 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1047).jpg 1 184 105 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1048).jpg 1 178 111 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1049).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (105).jpg 1 146 48 117 104
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1050).jpg 2 138 74 96 85 48 26 104 92
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1051).jpg 4 204 166 95 84 180 167 90 80 36 91 100 89 197 50 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1052).jpg 2 165 185 94 84 116 51 193 172
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1053).jpg 2 259 155 93 82 238 3 124 110
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1054).jpg 1 263 118 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1055).jpg 4 175 168 94 84 328 43 107 95 160 16 176 156 54 45 151 134
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1056).jpg 1 162 101 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1057).jpg 2 26 167 90 80 178 64 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1058).jpg 1 136 63 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1059).jpg 2 195 54 97 86 198 103 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (106).jpg 1 133 83 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1060).jpg 3 201 79 93 82 37 90 104 93 44 120 137 122
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1061).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1062).jpg 1 195 150 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1063).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1064).jpg 1 182 112 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1065).jpg 1 223 65 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1066).jpg 1 192 69 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1067).jpg 2 154 54 93 83 10 7 191 170
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1068).jpg 2 143 98 93 82 106 37 190 169
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1069).jpg 1 147 90 92 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (107).jpg 1 171 87 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1070).jpg 2 218 47 93 82 33 100 105 93
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1071).jpg 1 134 54 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1072).jpg 1 152 54 96 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1073).jpg 1 124 5 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1074).jpg 1 151 145 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1075).jpg 1 192 68 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1076).jpg 1 41 8 311 276
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1077).jpg 1 143 43 96 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1078).jpg 1 191 153 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1079).jpg 1 196 60 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (108).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1080).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1081).jpg 1 241 150 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1082).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1083).jpg 3 191 57 93 82 324 54 101 90 192 42 130 115
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1084).jpg 3 143 125 98 87 324 124 97 87 16 19 132 117
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1085).jpg 1 216 65 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1086).jpg 1 180 59 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1087).jpg 2 167 88 92 81 181 98 115 102
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1088).jpg 3 186 46 90 80 37 8 130 115 124 4 200 177
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1089).jpg 2 178 100 93 82 53 27 237 211
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (109).jpg 2 172 117 91 81 95 65 216 193
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1090).jpg 1 46 83 182 162
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1091).jpg 2 246 37 93 82 305 46 112 99
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1092).jpg 2 148 155 95 85 96 138 145 129
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1093).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1094).jpg 2 151 121 96 85 153 100 145 129
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1095).jpg 2 144 92 116 103 228 89 193 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1096).jpg 2 149 118 92 82 116 111 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1097).jpg 1 182 105 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1098).jpg 2 39 94 96 85 222 63 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1099).jpg 1 134 73 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (11).jpg 1 194 188 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (110).jpg 1 134 68 188 167
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1100).jpg 3 147 73 94 84 149 63 145 129 36 108 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1101).jpg 2 44 18 299 266 154 108 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1102).jpg 2 167 76 90 80 41 204 96 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1103).jpg 1 144 119 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1104).jpg 1 70 21 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1105).jpg 1 182 103 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1106).jpg 2 174 70 95 84 32 108 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1107).jpg 2 34 89 109 97 208 106 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1108).jpg 3 196 96 96 85 93 101 95 84 43 22 103 92
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1109).jpg 1 165 1 184 164
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (111).jpg 2 138 89 94 83 157 7 311 276
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1110).jpg 4 333 6 93 83 175 147 93 83 211 16 109 97 46 18 282 251
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1111).jpg 2 193 88 95 84 56 68 109 97
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1112).jpg 2 185 106 94 83 32 139 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1113).jpg 1 173 179 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1114).jpg 2 117 65 148 132 162 73 97 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1115).jpg 3 161 120 95 84 161 13 128 114 42 61 216 192
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1116).jpg 1 152 7 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1117).jpg 1 139 63 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1118).jpg 2 133 82 95 84 41 52 193 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1119).jpg 1 127 154 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (112).jpg 3 168 118 92 82 248 195 92 82 46 40 193 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1120).jpg 2 191 128 95 85 73 110 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1121).jpg 2 159 81 96 85 133 82 92 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1122).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1123).jpg 1 202 44 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1124).jpg 3 159 206 91 81 336 10 90 80 151 74 125 111
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1125).jpg 1 173 90 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1126).jpg 1 179 38 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1127).jpg 1 160 160 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1128).jpg 1 46 27 206 184
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1129).jpg 2 227 125 90 80 37 93 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (113).jpg 1 4 90 193 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1130).jpg 1 177 170 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1131).jpg 2 137 108 100 89 88 48 217 194
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1132).jpg 1 174 110 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1133).jpg 1 236 118 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1134).jpg 2 186 174 96 86 223 174 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1135).jpg 2 134 220 90 80 180 136 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1136).jpg 1 215 79 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1137).jpg 1 162 93 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1138).jpg 1 164 76 102 90
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1139).jpg 1 211 123 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (114).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1140).jpg 4 180 216 91 81 126 67 206 183 131 4 193 171 56 9 199 177
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1141).jpg 2 230 84 92 82 259 87 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1142).jpg 2 61 41 90 80 167 68 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1143).jpg 2 139 95 95 84 38 22 264 235
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1144).jpg 2 221 69 96 86 34 91 104 93
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1145).jpg 3 160 52 107 95 192 63 94 84 214 54 109 97
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1146).jpg 1 229 113 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1147).jpg 2 173 126 95 85 222 110 193 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1148).jpg 2 176 134 95 84 102 91 212 189
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1149).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (115).jpg 1 165 161 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1150).jpg 1 170 108 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1151).jpg 1 172 20 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1152).jpg 1 154 22 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1153).jpg 1 195 96 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1154).jpg 1 194 136 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1155).jpg 2 130 50 96 85 133 32 139 123
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1156).jpg 2 190 139 94 84 153 115 132 117
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1157).jpg 2 204 77 96 86 48 5 255 226
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1158).jpg 1 224 161 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1159).jpg 1 224 54 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (116).jpg 1 165 135 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1160).jpg 2 40 95 90 80 192 106 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1161).jpg 1 141 71 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1162).jpg 3 41 91 96 85 209 108 101 90 325 6 100 89
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1163).jpg 2 224 90 91 81 252 90 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1164).jpg 1 176 172 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1165).jpg 2 214 163 99 88 289 43 126 111
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1166).jpg 2 125 86 95 84 35 20 286 254
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1167).jpg 2 184 43 93 82 12 156 129 114
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1168).jpg 1 220 73 200 177
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1169).jpg 2 187 122 94 84 40 59 212 189
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (117).jpg 1 381 98 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1170).jpg 1 166 114 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1171).jpg 1 255 145 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1172).jpg 2 190 60 96 86 39 56 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1173).jpg 1 173 110 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1174).jpg 3 43 49 90 80 142 18 95 85 171 21 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1175).jpg 1 185 111 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1176).jpg 2 144 108 93 83 38 44 283 251
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1177).jpg 2 150 52 95 84 184 51 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1178).jpg 1 192 109 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1179).jpg 1 156 161 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (118).jpg 3 202 154 92 82 46 96 118 104 176 153 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1180).jpg 1 156 2 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1181).jpg 1 227 131 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1182).jpg 1 290 91 111 98
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1183).jpg 1 154 101 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1184).jpg 3 199 124 94 84 264 137 92 82 33 138 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1185).jpg 2 137 143 96 86 31 79 212 189
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1186).jpg 1 227 130 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1187).jpg 1 217 122 102 91
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1188).jpg 1 230 191 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1189).jpg 1 33 154 145 129
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (119).jpg 1 122 10 222 198
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1190).jpg 1 178 154 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1191).jpg 2 257 82 100 89 172 73 116 103
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1192).jpg 1 178 115 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1193).jpg 1 242 55 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1194).jpg 1 209 109 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1195).jpg 1 210 114 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1196).jpg 1 199 94 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1197).jpg 1 241 117 92 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1198).jpg 1 184 117 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1199).jpg 2 188 86 96 85 155 79 110 98
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (12).jpg 1 121 203 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (120).jpg 2 174 63 90 80 51 110 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1200).jpg 2 268 137 90 80 84 44 188 167
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1201).jpg 2 237 81 92 82 97 193 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1202).jpg 2 191 131 97 86 36 44 257 228
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1203).jpg 2 178 124 96 85 63 38 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1204).jpg 2 248 124 98 87 218 126 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1205).jpg 2 199 118 95 84 130 65 201 179
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1206).jpg 2 241 174 97 86 206 29 174 155
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1207).jpg 2 178 154 93 82 152 152 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1208).jpg 1 164 39 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1209).jpg 3 194 97 93 82 160 88 102 90 69 18 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (121).jpg 1 140 137 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1210).jpg 2 213 94 96 85 84 46 234 208
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1211).jpg 1 243 78 92 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1212).jpg 1 172 94 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1213).jpg 1 166 89 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1214).jpg 2 38 86 94 83 194 60 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1215).jpg 2 177 62 94 84 46 5 233 207
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1216).jpg 3 180 71 94 84 56 42 132 117 112 25 221 197
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1217).jpg 2 185 195 97 87 57 9 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1218).jpg 1 214 80 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1219).jpg 4 202 171 95 84 50 46 114 102 196 161 142 126 151 16 250 222
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (122).jpg 1 143 49 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1220).jpg 1 199 55 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1221).jpg 2 62 52 104 92 187 108 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1222).jpg 2 163 89 93 83 202 91 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1223).jpg 2 197 84 92 81 122 16 208 184
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1224).jpg 2 209 92 93 83 45 19 273 242
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1225).jpg 1 204 127 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1226).jpg 2 209 132 95 84 67 48 123 109
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1227).jpg 2 183 114 92 81 15 15 142 126
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1228).jpg 1 245 72 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1229).jpg 3 184 48 91 81 36 119 99 88 122 155 109 97
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (123).jpg 1 143 67 116 103
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1230).jpg 1 248 125 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1231).jpg 1 174 121 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1232).jpg 1 161 148 100 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1233).jpg 1 141 114 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1234).jpg 2 184 179 97 86 11 119 118 105
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1235).jpg 2 157 74 93 83 240 136 113 100
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1236).jpg 1 142 138 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1237).jpg 1 174 163 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1238).jpg 2 189 130 92 82 222 11 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1239).jpg 2 156 53 93 83 33 94 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (124).jpg 2 167 52 90 80 129 48 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1240).jpg 3 127 174 93 82 90 56 92 82 126 54 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1241).jpg 2 132 113 95 85 105 108 92 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1242).jpg 3 66 34 94 84 214 84 95 84 149 39 209 186
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1243).jpg 2 179 77 95 85 128 64 148 132
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1244).jpg 1 174 99 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1245).jpg 1 212 117 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1246).jpg 3 188 101 98 87 41 33 242 215 129 62 209 186
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1247).jpg 1 242 55 96 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1248).jpg 1 187 113 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1249).jpg 2 156 100 95 84 128 99 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (125).jpg 3 237 99 90 80 79 56 92 82 26 46 136 120
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1250).jpg 2 151 177 96 85 123 179 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1251).jpg 1 188 48 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1252).jpg 1 162 144 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1253).jpg 3 142 97 96 85 106 91 102 90 97 51 189 168
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1254).jpg 1 170 128 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1255).jpg 1 168 136 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1256).jpg 1 155 59 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1257).jpg 1 211 92 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1258).jpg 2 188 166 94 83 190 21 137 122
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1259).jpg 2 221 82 93 83 110 17 294 261
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (126).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1260).jpg 2 180 125 90 80 86 74 245 218
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1261).jpg 2 152 194 93 82 31 9 311 276
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1262).jpg 2 163 96 95 84 40 51 220 195
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1263).jpg 3 174 110 92 82 120 93 145 129 121 56 209 185
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1264).jpg 1 135 51 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1265).jpg 1 259 98 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1266).jpg 1 264 196 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1267).jpg 1 277 68 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1268).jpg 1 29 12 199 176
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1269).jpg 1 172 105 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (127).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1270).jpg 1 168 92 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1271).jpg 3 197 60 93 83 32 90 109 97 164 27 132 117
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1272).jpg 2 179 118 100 89 144 41 107 95
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1273).jpg 2 199 91 93 82 42 22 257 228
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1274).jpg 1 182 91 96 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1275).jpg 1 214 71 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1276).jpg 2 177 98 95 85 57 25 311 276
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1277).jpg 1 279 143 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1278).jpg 2 148 103 93 83 118 95 123 109
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1279).jpg 1 210 135 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (128).jpg 1 201 120 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1280).jpg 2 174 166 93 83 175 79 150 134
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1281).jpg 2 172 90 93 83 112 49 185 164
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1282).jpg 1 201 101 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1283).jpg 1 151 147 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1284).jpg 1 231 107 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1285).jpg 1 244 164 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1286).jpg 2 225 95 93 83 234 99 126 112
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1287).jpg 2 165 130 97 86 109 100 153 137
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1288).jpg 1 135 96 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1289).jpg 1 270 72 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (129).jpg 1 146 46 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1290).jpg 1 201 162 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1291).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1292).jpg 1 181 81 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1293).jpg 1 218 52 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1294).jpg 1 163 123 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1295).jpg 1 193 85 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1296).jpg 1 196 90 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1297).jpg 1 234 67 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1298).jpg 1 205 149 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1299).jpg 1 162 138 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (13).jpg 1 135 26 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (130).jpg 1 116 8 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1300).jpg 1 236 65 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1301).jpg 1 153 67 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1302).jpg 3 30 218 92 82 212 111 94 83 65 28 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1303).jpg 1 150 101 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1304).jpg 1 148 135 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1305).jpg 1 171 37 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1306).jpg 1 214 104 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1307).jpg 3 155 158 96 86 123 13 109 97 250 58 111 98
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1308).jpg 1 117 80 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1309).jpg 1 216 90 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (131).jpg 3 40 80 92 81 198 76 93 83 28 200 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1310).jpg 2 199 105 97 86 45 31 257 228
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1311).jpg 1 168 63 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1312).jpg 1 135 95 96 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1313).jpg 1 164 6 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1314).jpg 2 174 134 99 88 212 138 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1315).jpg 1 159 41 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1316).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1317).jpg 1 138 61 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1318).jpg 2 216 45 92 82 122 3 243 215
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1319).jpg 2 140 113 95 84 98 51 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (132).jpg 1 168 38 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1320).jpg 1 222 70 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1321).jpg 1 254 133 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1322).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1323).jpg 1 159 52 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1324).jpg 1 210 68 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1325).jpg 1 191 34 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1326).jpg 1 172 22 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1327).jpg 1 228 194 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1328).jpg 1 172 3 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1329).jpg 1 197 76 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (133).jpg 2 146 26 93 83 175 27 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1330).jpg 3 197 51 93 82 40 92 98 87 161 47 102 90
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1331).jpg 1 206 9 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1332).jpg 3 151 61 98 87 109 36 235 209 179 66 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1333).jpg 1 129 130 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1334).jpg 1 272 72 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1335).jpg 1 243 108 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1336).jpg 2 196 126 95 84 148 117 142 127
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1337).jpg 1 176 134 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1338).jpg 1 225 143 96 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1339).jpg 1 162 59 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (134).jpg 2 11 58 174 155 74 16 266 237
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1340).jpg 3 196 101 92 82 154 39 179 159 52 4 212 189
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1341).jpg 1 238 121 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1342).jpg 2 160 77 97 86 38 13 225 200
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1343).jpg 1 159 54 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1344).jpg 2 212 112 96 85 53 24 110 97
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1345).jpg 2 202 102 96 85 218 96 121 108
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1346).jpg 1 199 97 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1347).jpg 2 230 157 91 81 66 106 207 184
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1348).jpg 1 215 78 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1349).jpg 1 162 82 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (135).jpg 1 5 59 193 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1350).jpg 3 204 127 92 82 234 130 94 84 347 123 117 103
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1351).jpg 3 239 122 94 84 212 96 95 85 28 4 145 129
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1352).jpg 1 190 122 92 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1353).jpg 2 194 133 93 83 96 19 212 189
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1354).jpg 1 196 115 97 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1355).jpg 1 133 124 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1356).jpg 1 146 57 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1357).jpg 4 151 167 100 89 25 20 96 86 120 155 106 94 92 73 167 149
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1358).jpg 1 120 90 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1359).jpg 1 197 51 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (136).jpg 1 201 132 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1360).jpg 2 190 87 94 84 208 75 120 106
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1361).jpg 2 156 138 98 87 119 133 101 90
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1362).jpg 2 250 64 93 83 45 23 210 187
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1363).jpg 3 254 189 92 82 121 192 92 82 249 10 158 140
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1364).jpg 2 226 106 94 83 258 105 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1365).jpg 1 199 62 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1366).jpg 2 170 33 93 82 135 98 157 140
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1367).jpg 2 241 99 95 84 237 27 185 164
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1368).jpg 1 183 90 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1369).jpg 1 128 120 96 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (137).jpg 2 143 183 94 83 56 34 198 176
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1370).jpg 2 228 125 93 83 197 126 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1371).jpg 2 181 112 96 85 112 72 192 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1372).jpg 1 161 86 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1373).jpg 3 162 44 92 82 52 93 120 106 40 16 120 106
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1374).jpg 3 136 91 99 88 49 15 193 171 32 18 301 268
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1375).jpg 1 242 95 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1376).jpg 1 249 148 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1377).jpg 1 180 67 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1378).jpg 1 197 108 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1379).jpg 1 196 178 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (138).jpg 1 161 116 96 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1380).jpg 1 57 68 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1381).jpg 2 180 127 91 80 55 68 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1382).jpg 1 133 118 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1383).jpg 1 254 128 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1384).jpg 2 220 136 90 80 249 133 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1385).jpg 1 179 208 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1386).jpg 1 176 145 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1387).jpg 1 171 60 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1388).jpg 1 118 69 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1389).jpg 1 148 87 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (139).jpg 1 259 154 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1390).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1391).jpg 2 157 24 96 86 100 108 212 189
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1392).jpg 1 140 85 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1393).jpg 1 254 87 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1394).jpg 1 122 30 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1395).jpg 1 197 208 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1396).jpg 1 191 70 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1397).jpg 2 250 49 91 81 319 56 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1398).jpg 2 177 74 97 86 87 27 193 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1399).jpg 4 204 173 91 81 235 57 100 88 210 59 92 82 175 28 164 146
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (14).jpg 1 171 140 106 94
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (140).jpg 2 141 131 93 83 177 130 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1400).jpg 1 227 53 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1401).jpg 1 154 116 100 89
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1402).jpg 2 183 80 96 85 127 74 156 139
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1403).jpg 2 176 177 91 80 51 23 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1404).jpg 2 205 172 91 81 209 60 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1405).jpg 1 122 51 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1406).jpg 1 209 103 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1407).jpg 2 165 133 97 86 104 94 159 142
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1408).jpg 1 178 90 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1409).jpg 2 199 153 92 82 164 132 115 102
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (141).jpg 4 329 40 113 100 205 142 96 85 326 8 99 88 174 140 96 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1410).jpg 2 209 39 94 84 245 39 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1411).jpg 1 181 68 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1412).jpg 1 212 63 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1413).jpg 1 189 104 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1414).jpg 2 164 78 96 85 60 14 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1415).jpg 1 250 127 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1416).jpg 1 208 94 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1417).jpg 2 8 113 125 110 191 111 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1418).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1419).jpg 1 241 86 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (142).jpg 1 249 79 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1420).jpg 1 152 54 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1421).jpg 2 261 112 95 85 143 82 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1422).jpg 1 173 79 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1423).jpg 1 291 115 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1424).jpg 2 214 118 92 82 114 88 129 114
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1425).jpg 2 196 36 96 85 20 174 116 104
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1426).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1427).jpg 2 346 5 95 85 272 104 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1428).jpg 2 155 94 92 82 126 17 112 99
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1429).jpg 3 199 164 90 80 254 11 165 148 184 9 184 164
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (143).jpg 3 159 166 96 85 128 163 96 85 219 135 113 101
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1430).jpg 2 175 89 95 84 175 76 152 136
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1431).jpg 3 203 141 97 86 31 88 110 97 171 139 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1432).jpg 3 175 118 95 85 41 44 199 176 228 101 193 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1433).jpg 1 166 101 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1434).jpg 1 54 42 122 108
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1435).jpg 2 232 141 91 81 299 148 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1436).jpg 1 327 15 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1437).jpg 2 39 109 94 83 192 130 97 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1438).jpg 2 162 60 93 83 46 26 212 189
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1439).jpg 1 197 196 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (144).jpg 1 218 52 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1440).jpg 1 172 51 92 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1441).jpg 2 200 51 94 84 34 93 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1442).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1443).jpg 2 195 83 97 86 27 22 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1444).jpg 2 182 200 91 81 34 114 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1445).jpg 1 188 97 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1446).jpg 1 170 205 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1447).jpg 1 194 79 92 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1448).jpg 1 190 112 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1449).jpg 1 84 71 257 228
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (145).jpg 1 47 40 214 190
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1450).jpg 2 164 78 94 83 122 70 132 118
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1451).jpg 1 258 137 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1452).jpg 2 186 107 95 84 53 47 233 207
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1453).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1454).jpg 1 147 58 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1455).jpg 1 220 72 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1456).jpg 1 220 79 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1457).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1458).jpg 2 56 97 92 82 192 139 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1459).jpg 2 153 58 93 83 62 38 135 120
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (146).jpg 2 240 73 160 142 111 62 193 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1460).jpg 1 200 124 100 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1461).jpg 1 143 37 96 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1462).jpg 3 151 60 98 87 143 130 123 109 44 110 142 126
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1463).jpg 1 178 119 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1464).jpg 2 180 142 94 83 319 120 108 96
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1465).jpg 2 188 69 92 82 262 145 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1466).jpg 1 157 9 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1467).jpg 2 156 217 90 80 40 11 257 228
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1468).jpg 1 169 76 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1469).jpg 1 164 5 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (147).jpg 1 187 188 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1470).jpg 1 178 86 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1471).jpg 1 162 152 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1472).jpg 2 225 106 94 84 218 42 168 150
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1473).jpg 1 155 64 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1474).jpg 1 133 116 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1475).jpg 1 185 48 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1476).jpg 1 96 129 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1477).jpg 1 138 109 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1478).jpg 1 200 125 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1479).jpg 2 56 2 92 82 199 138 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (148).jpg 1 144 49 92 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1480).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1481).jpg 2 205 176 90 80 41 33 257 228
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1482).jpg 2 224 101 94 84 195 111 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1483).jpg 2 198 92 94 83 28 122 103 91
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1484).jpg 2 260 88 94 84 142 14 294 261
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1485).jpg 1 192 148 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1486).jpg 1 238 164 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1487).jpg 1 212 119 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1488).jpg 1 256 84 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1489).jpg 1 257 113 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (149).jpg 4 300 2 92 81 31 204 101 90 167 94 95 84 40 78 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1490).jpg 1 231 68 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1491).jpg 1 175 39 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1492).jpg 1 124 152 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1493).jpg 1 181 41 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1494).jpg 3 250 79 93 82 9 3 193 171 156 25 126 112
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1495).jpg 1 158 60 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1496).jpg 1 235 137 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1497).jpg 2 178 99 96 86 199 92 113 100
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1498).jpg 2 191 137 90 80 219 137 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1499).jpg 1 201 110 96 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (15).jpg 2 6 2 104 92 132 102 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (150).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1500).jpg 3 175 97 96 85 212 100 90 80 56 21 189 168
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1501).jpg 2 20 177 90 80 157 64 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1502).jpg 1 109 130 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1503).jpg 1 228 120 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1504).jpg 1 173 119 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1505).jpg 2 182 18 282 251 154 16 120 106
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1506).jpg 1 152 175 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1507).jpg 2 177 164 98 87 50 6 267 237
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1508).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1509).jpg 2 260 128 94 84 333 46 121 107
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (151).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1510).jpg 1 167 138 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1511).jpg 1 170 29 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1512).jpg 2 151 65 93 82 100 42 145 129
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1513).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1514).jpg 4 109 136 90 80 137 138 94 83 168 141 94 84 118 20 237 210
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1515).jpg 1 205 113 96 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1516).jpg 1 240 154 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1517).jpg 1 220 159 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1518).jpg 1 205 77 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1519).jpg 2 193 125 91 81 39 30 257 228
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (152).jpg 1 134 81 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1520).jpg 2 155 121 92 82 140 87 155 138
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1521).jpg 1 197 129 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1522).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1523).jpg 1 178 103 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1524).jpg 1 191 37 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1525).jpg 1 166 65 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1526).jpg 2 229 122 93 83 299 127 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1527).jpg 1 198 131 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1528).jpg 1 151 91 97 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1529).jpg 1 131 97 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (153).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1530).jpg 1 255 72 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1531).jpg 1 164 61 96 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1532).jpg 3 242 176 100 89 198 19 202 179 279 183 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1533).jpg 1 210 78 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1534).jpg 1 167 93 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1535).jpg 1 54 182 101 90
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1536).jpg 1 192 80 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1537).jpg 1 252 201 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1538).jpg 1 254 110 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1539).jpg 1 244 57 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (154).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1540).jpg 2 128 131 91 81 234 135 116 103
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1541).jpg 1 190 126 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1542).jpg 1 178 60 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1543).jpg 1 181 45 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1544).jpg 2 159 138 94 83 109 79 197 175
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1545).jpg 1 212 50 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1546).jpg 1 186 78 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1547).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1548).jpg 1 195 89 92 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1549).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (155).jpg 1 154 113 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1550).jpg 2 38 61 219 195 130 104 101 90
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1551).jpg 1 150 21 135 120
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1552).jpg 1 192 188 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1553).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1554).jpg 1 158 119 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1555).jpg 1 172 116 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1556).jpg 1 157 58 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1557).jpg 1 60 192 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1558).jpg 2 233 107 188 167 39 32 270 240
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1559).jpg 1 223 102 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (156).jpg 1 7 58 184 164
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1560).jpg 1 252 84 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1561).jpg 1 230 83 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1562).jpg 1 198 92 96 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1563).jpg 1 189 72 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1564).jpg 2 130 72 95 84 39 25 193 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1565).jpg 1 132 72 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1566).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1567).jpg 1 215 47 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1568).jpg 2 176 132 97 86 197 133 104 92
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1569).jpg 1 181 126 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (157).jpg 2 263 118 95 85 348 36 114 102
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1570).jpg 1 176 148 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1571).jpg 1 194 140 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1572).jpg 1 211 79 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1573).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1574).jpg 2 89 95 139 123 144 107 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1575).jpg 1 232 95 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1576).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1577).jpg 2 217 118 92 82 34 92 102 91
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1578).jpg 1 254 13 193 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1579).jpg 1 145 52 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (158).jpg 2 148 97 95 85 184 98 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1580).jpg 2 162 138 92 82 47 25 212 189
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1581).jpg 2 171 143 95 84 146 142 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1582).jpg 1 245 123 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1583).jpg 4 192 212 94 84 309 159 108 96 100 7 225 200 281 107 132 117
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1584).jpg 1 175 100 119 106
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1585).jpg 1 193 118 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1586).jpg 4 259 169 95 84 294 174 99 88 325 162 131 116 233 11 187 167
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1587).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1588).jpg 1 237 160 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1589).jpg 1 186 103 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (159).jpg 2 213 126 95 84 312 111 118 105
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1590).jpg 2 184 136 92 81 55 94 120 106
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1591).jpg 1 195 107 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1592).jpg 1 176 171 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1593).jpg 1 208 64 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1594).jpg 1 154 98 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1595).jpg 1 164 112 96 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1596).jpg 2 119 82 98 86 154 77 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1597).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1598).jpg 2 158 49 107 95 153 34 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1599).jpg 1 180 206 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (16).jpg 3 185 142 95 85 328 7 102 90 75 102 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (160).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1600).jpg 1 126 89 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1601).jpg 1 158 98 96 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1602).jpg 1 182 142 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1603).jpg 1 150 64 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1604).jpg 2 160 130 95 85 71 20 228 202
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1605).jpg 3 156 101 93 83 108 57 193 171 34 46 199 177
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1606).jpg 1 261 105 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1607).jpg 2 44 82 90 80 164 110 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1608).jpg 1 171 113 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1609).jpg 1 166 198 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (161).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1610).jpg 1 163 183 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1611).jpg 1 189 97 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1612).jpg 1 181 75 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1613).jpg 1 169 58 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1614).jpg 2 243 192 97 86 125 105 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1615).jpg 2 327 2 95 85 220 84 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1616).jpg 3 124 89 92 82 174 94 92 82 44 64 184 164
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1617).jpg 2 171 172 92 82 238 188 101 90
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1618).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1619).jpg 1 158 98 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (162).jpg 1 134 103 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1620).jpg 2 168 54 92 82 97 5 207 184
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1621).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1622).jpg 1 188 89 92 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1623).jpg 1 183 160 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1624).jpg 1 240 31 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1625).jpg 2 162 107 95 85 111 90 145 129
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1626).jpg 1 146 163 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1627).jpg 1 164 76 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1628).jpg 1 169 104 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1629).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (163).jpg 3 132 75 91 81 226 136 117 103 166 74 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1630).jpg 1 48 38 129 114
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1631).jpg 1 228 99 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1632).jpg 1 231 77 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1633).jpg 1 202 104 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1634).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1635).jpg 2 138 179 93 83 163 30 104 92
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1636).jpg 2 219 116 100 89 191 117 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1637).jpg 1 49 39 127 113
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1638).jpg 1 95 83 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1639).jpg 1 185 120 96 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (164).jpg 1 216 70 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1640).jpg 2 149 84 93 83 71 34 233 207
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1641).jpg 1 116 150 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1642).jpg 2 143 91 99 88 48 32 234 208
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1643).jpg 2 152 96 92 82 41 36 212 189
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1644).jpg 1 124 124 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1645).jpg 1 191 118 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1646).jpg 2 38 118 92 82 157 169 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1647).jpg 1 181 65 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1648).jpg 1 165 47 92 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1649).jpg 2 33 209 100 88 180 200 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (165).jpg 2 177 81 93 82 152 90 122 108
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1650).jpg 1 43 15 298 265
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1651).jpg 2 163 104 93 83 123 94 130 115
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1652).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1653).jpg 2 141 144 93 83 41 94 193 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1654).jpg 1 196 159 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1655).jpg 1 157 92 92 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1656).jpg 2 194 65 91 80 146 60 136 121
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1657).jpg 1 147 115 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1658).jpg 2 155 110 94 83 52 12 212 189
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1659).jpg 1 202 68 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (166).jpg 1 170 95 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1660).jpg 1 170 136 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1661).jpg 1 189 2 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1662).jpg 1 198 98 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1663).jpg 1 174 49 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1664).jpg 1 195 163 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1665).jpg 1 160 155 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1666).jpg 1 174 201 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1667).jpg 2 288 201 95 85 251 192 102 90
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1668).jpg 3 311 132 94 84 42 83 112 100 192 106 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1669).jpg 2 1 29 125 110 284 153 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (167).jpg 2 149 105 95 84 184 106 96 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1670).jpg 2 153 95 96 85 57 32 268 238
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1671).jpg 1 262 8 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1672).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1673).jpg 2 199 63 91 81 114 11 236 210
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1674).jpg 1 206 169 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1675).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1676).jpg 2 194 47 92 82 196 31 129 114
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1677).jpg 2 211 43 95 84 31 201 104 92
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1678).jpg 1 164 135 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1679).jpg 1 231 104 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (168).jpg 2 152 62 93 82 56 14 193 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1680).jpg 1 256 57 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1681).jpg 1 46 32 225 200
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1682).jpg 2 260 89 92 82 262 22 125 110
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1683).jpg 1 289 113 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1684).jpg 1 155 154 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1685).jpg 2 36 100 99 88 162 127 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1686).jpg 1 122 112 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1687).jpg 3 327 2 96 86 328 44 105 93 193 150 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1688).jpg 1 242 121 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1689).jpg 3 231 110 94 84 320 111 97 86 226 43 193 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (169).jpg 1 19 75 145 129
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1690).jpg 2 192 165 97 86 47 111 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1691).jpg 2 203 138 93 83 42 89 163 146
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1692).jpg 1 149 113 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1693).jpg 3 190 134 95 85 56 78 114 101 133 50 193 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1694).jpg 1 178 151 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1695).jpg 1 196 121 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1696).jpg 2 152 116 92 82 36 64 212 189
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1697).jpg 2 138 8 132 117 157 148 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1698).jpg 1 164 81 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1699).jpg 1 191 124 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (17).jpg 1 192 120 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (170).jpg 3 121 104 101 90 103 62 193 171 246 46 193 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1700).jpg 1 197 119 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1701).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1702).jpg 1 208 63 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1703).jpg 2 154 120 94 84 123 134 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1704).jpg 1 221 145 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1705).jpg 2 196 126 97 86 236 208 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1706).jpg 1 145 90 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1707).jpg 1 203 106 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1708).jpg 3 268 101 99 88 310 95 93 83 258 73 155 138
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1709).jpg 2 180 73 94 84 216 74 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (171).jpg 1 6 81 173 154
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1710).jpg 2 197 110 99 88 43 13 252 224
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1711).jpg 2 234 208 91 81 203 3 193 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1712).jpg 1 197 33 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1713).jpg 2 196 197 93 82 59 41 120 106
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1714).jpg 2 142 91 94 84 175 95 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1715).jpg 3 209 132 90 80 320 135 90 80 302 7 123 109
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1716).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1717).jpg 1 251 132 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1718).jpg 2 179 111 92 82 186 103 121 107
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1719).jpg 1 192 143 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (172).jpg 1 163 68 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1720).jpg 2 192 123 90 80 223 117 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1721).jpg 1 211 76 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1722).jpg 1 282 114 109 97
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1723).jpg 1 115 139 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1724).jpg 3 220 188 92 82 42 162 99 88 166 41 197 175
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1725).jpg 3 208 185 93 83 148 14 193 171 46 39 193 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1726).jpg 1 200 137 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1727).jpg 3 215 191 90 80 93 99 98 87 48 36 193 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1728).jpg 1 186 135 109 97
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1729).jpg 1 169 141 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (173).jpg 1 272 133 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1730).jpg 3 167 152 93 83 231 42 220 196 52 14 270 240
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1731).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1732).jpg 2 152 120 91 81 51 90 147 131
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1733).jpg 1 170 96 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1734).jpg 2 2 7 90 80 151 49 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1735).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1736).jpg 1 228 50 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1737).jpg 1 168 128 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1738).jpg 1 195 87 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1739).jpg 1 154 41 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (174).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1740).jpg 1 180 46 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1741).jpg 1 177 136 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1742).jpg 2 181 72 94 84 26 200 112 99
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1743).jpg 1 158 58 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1744).jpg 2 155 88 92 82 39 11 306 272
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1745).jpg 1 151 63 115 102
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1746).jpg 2 155 132 96 85 38 213 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1747).jpg 1 96 74 202 180
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (1748).jpg 3 177 40 99 88 107 40 115 102 147 38 132 117
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (175).jpg 1 147 26 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (176).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (177).jpg 1 210 126 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (178).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (179).jpg 3 8 120 109 97 10 57 172 153 71 56 252 224
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (18).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (180).jpg 1 85 86 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (181).jpg 1 278 52 109 97
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (182).jpg 1 160 135 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (183).jpg 1 177 62 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (184).jpg 2 209 103 92 82 131 56 212 189
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (185).jpg 1 275 200 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (186).jpg 2 4 82 193 171 164 140 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (187).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (188).jpg 1 132 122 189 168
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (189).jpg 1 172 106 96 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (19).jpg 1 231 150 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (190).jpg 1 163 67 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (191).jpg 1 206 122 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (192).jpg 1 8 56 184 164
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (193).jpg 1 158 106 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (194).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (195).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (196).jpg 2 186 112 96 85 50 23 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (197).jpg 1 148 83 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (198).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (199).jpg 1 186 79 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (2).jpg 1 133 61 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (20).jpg 1 183 153 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (200).jpg 2 164 137 90 80 228 116 105 93
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (201).jpg 2 148 127 97 86 81 77 219 195
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (202).jpg 1 9 42 202 180
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (203).jpg 1 154 121 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (204).jpg 1 167 118 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (205).jpg 1 207 105 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (206).jpg 1 135 173 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (207).jpg 1 167 70 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (208).jpg 2 208 161 92 82 318 130 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (209).jpg 2 208 121 93 82 37 10 130 115
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (21).jpg 2 197 92 92 82 324 6 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (210).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (211).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (212).jpg 1 169 111 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (213).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (214).jpg 1 178 33 109 97
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (215).jpg 1 53 33 115 102
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (216).jpg 1 163 48 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (217).jpg 1 180 158 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (218).jpg 1 122 1 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (219).jpg 1 173 137 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (22).jpg 1 138 131 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (220).jpg 3 57 40 185 164 98 161 90 80 123 161 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (221).jpg 1 217 102 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (222).jpg 2 178 116 93 83 36 91 102 91
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (223).jpg 2 128 125 94 84 147 120 108 96
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (224).jpg 1 154 91 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (225).jpg 1 135 87 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (226).jpg 2 152 104 91 81 58 44 270 240
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (227).jpg 1 135 101 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (228).jpg 2 156 172 92 82 16 104 107 95
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (229).jpg 1 182 96 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (23).jpg 1 163 74 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (230).jpg 1 154 122 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (231).jpg 2 166 169 91 81 293 112 159 142
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (232).jpg 1 146 104 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (233).jpg 2 144 170 90 80 173 172 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (234).jpg 1 38 12 309 274
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (235).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (236).jpg 2 165 135 96 85 188 166 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (237).jpg 2 168 71 93 83 44 37 222 198
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (238).jpg 1 158 117 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (239).jpg 3 167 81 106 94 269 196 109 97 40 1 311 276
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (24).jpg 1 184 128 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (240).jpg 2 173 102 124 110 0 86 212 189
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (241).jpg 2 221 106 149 132 32 61 234 208
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (242).jpg 2 146 64 98 87 206 32 206 183
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (243).jpg 1 143 140 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (244).jpg 1 80 20 257 228
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (245).jpg 1 148 100 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (246).jpg 1 128 114 92 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (247).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (248).jpg 2 52 75 109 97 200 143 96 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (249).jpg 1 123 129 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (25).jpg 1 134 120 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (250).jpg 2 200 94 90 80 5 66 193 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (251).jpg 2 189 96 92 82 45 25 233 207
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (252).jpg 1 162 75 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (253).jpg 2 168 27 142 126 256 34 193 172
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (254).jpg 1 152 71 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (255).jpg 2 200 82 100 88 235 108 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (256).jpg 3 179 104 95 84 29 94 120 106 206 101 208 185
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (257).jpg 1 167 120 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (258).jpg 1 149 53 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (259).jpg 2 240 206 90 80 19 70 148 132
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (26).jpg 1 176 93 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (260).jpg 2 155 32 92 81 108 91 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (261).jpg 2 163 82 92 82 126 71 117 104
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (262).jpg 1 179 33 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (263).jpg 1 144 107 104 92
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (264).jpg 2 186 118 95 85 173 71 193 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (265).jpg 3 204 160 92 82 172 152 114 102 179 32 161 143
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (266).jpg 1 183 125 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (267).jpg 1 5 46 218 194
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (268).jpg 2 209 149 95 84 33 94 112 100
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (269).jpg 3 182 114 91 81 42 62 193 171 100 66 212 189
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (27).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (270).jpg 1 197 138 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (271).jpg 1 179 87 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (272).jpg 2 219 143 91 81 220 34 126 112
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (273).jpg 1 154 42 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (274).jpg 4 124 78 120 106 272 98 111 98 172 109 92 82 271 32 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (275).jpg 2 192 20 234 208 121 24 193 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (276).jpg 1 196 143 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (277).jpg 1 183 42 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (278).jpg 1 147 138 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (279).jpg 1 159 113 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (28).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (280).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (281).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (282).jpg 1 171 138 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (283).jpg 1 13 57 171 152
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (284).jpg 1 166 108 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (285).jpg 3 327 6 94 83 184 174 91 81 33 102 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (286).jpg 1 154 150 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (287).jpg 1 149 65 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (288).jpg 1 214 84 101 90
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (289).jpg 1 143 29 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (29).jpg 2 169 125 96 85 206 125 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (290).jpg 1 282 143 159 142
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (291).jpg 1 192 145 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (292).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (293).jpg 1 166 69 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (294).jpg 1 142 196 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (295).jpg 1 68 104 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (296).jpg 2 16 71 156 139 78 93 130 116
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (297).jpg 1 102 77 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (298).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (299).jpg 2 142 21 95 85 241 12 188 167
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (3).jpg 1 167 112 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (30).jpg 1 158 123 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (300).jpg 1 38 30 296 264
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (301).jpg 3 60 197 99 88 9 59 175 156 81 44 199 177
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (302).jpg 1 234 128 92 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (303).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (304).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (305).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (306).jpg 1 102 143 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (307).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (308).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (309).jpg 2 195 127 93 83 225 27 212 189
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (31).jpg 2 50 33 131 116 205 33 190 169
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (310).jpg 1 191 154 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (311).jpg 1 195 73 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (312).jpg 2 145 81 90 80 244 192 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (313).jpg 5 261 115 95 85 267 8 122 108 206 9 187 166 33 3 193 171 274 101 125 110
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (314).jpg 1 165 147 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (315).jpg 1 94 155 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (316).jpg 1 141 182 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (317).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (318).jpg 1 248 109 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (319).jpg 3 129 84 93 82 41 73 193 171 124 77 212 189
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (32).jpg 1 231 130 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (320).jpg 2 188 161 92 82 10 7 206 183
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (321).jpg 1 245 23 151 134
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (322).jpg 2 217 79 90 80 190 51 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (323).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (324).jpg 1 158 98 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (325).jpg 2 147 80 97 86 110 55 123 109
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (326).jpg 2 172 47 93 83 50 88 119 106
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (327).jpg 1 78 15 294 261
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (328).jpg 2 202 47 109 97 5 38 257 228
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (329).jpg 1 70 199 114 102
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (33).jpg 1 194 91 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (330).jpg 2 167 164 97 86 134 163 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (331).jpg 1 3 50 207 184
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (332).jpg 2 221 87 95 85 35 104 102 91
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (333).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (334).jpg 1 158 144 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (335).jpg 1 171 110 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (336).jpg 2 191 66 94 83 119 28 199 177
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (337).jpg 1 176 43 257 228
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (338).jpg 3 131 98 109 97 51 61 184 163 38 18 296 264
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (339).jpg 1 228 97 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (34).jpg 1 127 131 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (340).jpg 1 60 41 247 220
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (341).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (342).jpg 3 40 95 95 85 177 99 91 81 207 120 103 92
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (343).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (344).jpg 1 104 97 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (345).jpg 1 183 23 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (346).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (347).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (348).jpg 1 182 122 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (349).jpg 1 49 39 128 113
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (35).jpg 1 132 66 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (350).jpg 1 126 30 104 92
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (351).jpg 1 167 54 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (352).jpg 2 189 86 94 83 127 43 207 184
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (353).jpg 1 269 98 120 106
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (354).jpg 3 128 91 145 129 180 109 92 82 148 116 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (355).jpg 3 152 127 90 80 168 52 276 246 41 5 311 276
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (356).jpg 1 124 96 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (357).jpg 1 218 91 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (358).jpg 4 142 88 104 93 267 16 99 88 20 6 115 102 79 32 233 207
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (359).jpg 2 36 161 103 92 172 104 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (36).jpg 1 132 107 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (360).jpg 2 155 94 92 82 182 96 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (361).jpg 1 223 144 96 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (362).jpg 2 147 69 96 85 44 141 167 149
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (363).jpg 2 209 123 99 88 142 128 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (364).jpg 1 52 96 132 117
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (365).jpg 2 254 123 92 82 146 205 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (366).jpg 1 180 68 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (367).jpg 1 17 70 149 132
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (368).jpg 1 177 107 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (369).jpg 1 174 68 97 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (37).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (370).jpg 3 264 133 90 80 119 69 102 90 250 119 193 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (371).jpg 2 166 68 94 83 114 51 145 129
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (372).jpg 1 158 38 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (373).jpg 1 171 53 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (374).jpg 1 185 37 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (375).jpg 1 182 149 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (376).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (377).jpg 1 176 40 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (378).jpg 1 182 119 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (379).jpg 1 124 129 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (38).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (380).jpg 2 196 128 97 86 126 38 193 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (381).jpg 1 176 167 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (382).jpg 2 148 154 96 86 17 125 109 97
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (383).jpg 1 215 7 166 148
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (384).jpg 1 156 142 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (385).jpg 3 179 94 98 87 134 82 140 124 41 28 225 200
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (386).jpg 1 164 109 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (387).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (388).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (389).jpg 2 170 51 93 83 240 127 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (39).jpg 1 149 46 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (390).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (391).jpg 1 190 134 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (392).jpg 1 16 69 151 135
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (393).jpg 2 183 136 94 84 42 99 113 100
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (394).jpg 3 174 117 93 82 131 86 126 112 41 45 233 207
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (395).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (396).jpg 2 136 218 90 80 181 129 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (397).jpg 1 252 92 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (398).jpg 1 25 50 130 115
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (399).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (4).jpg 1 184 16 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (40).jpg 1 230 96 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (400).jpg 1 143 121 97 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (401).jpg 2 159 119 90 80 65 24 257 228
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (402).jpg 1 112 38 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (403).jpg 3 156 119 95 84 192 118 90 80 48 40 178 158
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (404).jpg 1 157 109 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (405).jpg 1 194 183 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (406).jpg 1 202 131 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (407).jpg 1 166 107 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (408).jpg 1 147 52 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (409).jpg 1 223 70 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (41).jpg 3 141 93 96 86 11 59 173 154 67 32 266 236
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (410).jpg 2 188 86 94 83 59 46 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (411).jpg 1 130 64 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (412).jpg 2 189 51 112 100 9 58 172 153
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (413).jpg 4 197 7 93 82 35 41 137 121 309 74 90 80 198 36 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (414).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (415).jpg 1 113 48 232 206
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (416).jpg 2 207 62 92 82 58 21 101 90
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (417).jpg 1 171 149 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (418).jpg 1 171 105 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (419).jpg 1 143 142 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (42).jpg 1 170 146 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (420).jpg 2 44 57 206 183 172 113 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (421).jpg 1 182 32 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (422).jpg 1 148 50 132 117
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (423).jpg 1 181 56 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (424).jpg 2 149 124 94 84 213 129 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (425).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (426).jpg 1 166 130 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (427).jpg 1 133 25 126 112
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (428).jpg 2 118 61 94 83 243 189 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (429).jpg 4 159 133 94 84 132 125 94 84 219 106 196 174 13 17 137 122
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (43).jpg 1 187 133 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (430).jpg 1 264 8 105 93
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (431).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (432).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (433).jpg 1 198 27 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (434).jpg 2 161 133 95 84 226 133 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (435).jpg 3 240 195 99 88 189 173 90 80 55 22 106 95
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (436).jpg 1 215 113 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (437).jpg 1 207 162 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (438).jpg 2 172 173 92 82 36 111 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (439).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (44).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (440).jpg 1 104 157 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (441).jpg 1 136 80 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (442).jpg 2 198 158 90 80 46 126 116 103
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (443).jpg 2 103 128 93 83 43 83 159 142
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (444).jpg 2 258 182 93 83 285 176 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (445).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (446).jpg 1 186 173 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (447).jpg 3 34 211 96 85 160 102 97 86 46 45 212 189
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (448).jpg 1 149 68 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (449).jpg 1 175 94 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (45).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (450).jpg 1 158 89 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (451).jpg 1 174 91 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (452).jpg 2 143 79 94 84 40 22 282 251
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (453).jpg 1 160 65 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (454).jpg 1 114 90 114 101
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (455).jpg 1 165 58 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (456).jpg 1 123 131 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (457).jpg 1 146 114 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (458).jpg 2 159 122 98 87 217 107 197 175
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (459).jpg 1 170 178 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (46).jpg 1 163 53 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (460).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (461).jpg 1 235 103 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (462).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (463).jpg 1 177 59 92 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (464).jpg 1 135 97 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (465).jpg 2 161 36 93 83 108 8 151 134
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (466).jpg 1 160 135 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (467).jpg 2 175 161 93 82 257 50 142 127
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (468).jpg 1 138 154 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (469).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (47).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (470).jpg 1 239 141 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (471).jpg 1 144 79 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (472).jpg 1 196 3 92 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (473).jpg 2 162 196 97 86 192 198 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (474).jpg 1 236 59 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (475).jpg 2 216 96 94 83 251 96 104 93
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (476).jpg 1 172 97 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (477).jpg 1 147 101 107 95
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (478).jpg 1 54 105 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (479).jpg 3 34 18 132 117 122 46 193 171 173 93 191 170
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (48).jpg 1 149 54 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (480).jpg 2 183 55 97 86 243 35 212 189
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (481).jpg 3 200 93 96 85 168 89 99 88 158 82 138 123
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (482).jpg 1 172 88 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (483).jpg 1 177 63 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (484).jpg 1 156 211 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (485).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (486).jpg 1 40 6 270 240
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (487).jpg 1 178 64 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (488).jpg 1 159 147 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (489).jpg 1 141 110 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (49).jpg 1 130 61 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (490).jpg 1 300 4 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (491).jpg 2 261 121 95 85 208 57 212 189
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (492).jpg 1 123 120 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (493).jpg 1 229 44 193 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (494).jpg 2 159 158 92 81 45 23 222 198
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (495).jpg 1 153 58 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (496).jpg 1 187 121 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (497).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (498).jpg 1 169 106 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (499).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (5).jpg 2 22 220 90 80 150 75 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (50).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (500).jpg 1 204 87 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (501).jpg 2 135 82 95 85 100 48 181 161
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (502).jpg 2 140 59 94 83 90 44 145 129
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (503).jpg 1 57 52 270 240
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (504).jpg 2 127 79 94 84 154 6 276 245
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (505).jpg 3 118 128 95 84 157 137 91 81 188 139 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (506).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (507).jpg 1 200 146 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (508).jpg 1 161 79 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (509).jpg 1 140 157 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (51).jpg 1 171 114 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (510).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (511).jpg 1 131 117 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (512).jpg 2 142 36 97 87 270 195 107 95
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (513).jpg 2 281 83 113 100 128 31 243 215
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (514).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (515).jpg 2 204 218 91 81 152 46 192 170
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (516).jpg 3 30 205 95 84 172 59 91 81 113 52 156 139
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (517).jpg 1 147 126 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (518).jpg 1 199 110 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (519).jpg 1 181 118 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (52).jpg 1 233 48 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (520).jpg 1 161 96 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (521).jpg 2 176 95 92 81 123 68 160 142
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (522).jpg 1 206 117 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (523).jpg 1 160 64 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (524).jpg 2 160 95 93 83 45 47 219 195
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (525).jpg 1 114 121 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (526).jpg 4 181 34 90 80 87 92 95 85 212 180 90 80 231 45 104 92
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (527).jpg 2 231 164 92 82 46 52 180 160
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (528).jpg 1 149 63 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (529).jpg 1 106 64 262 233
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (53).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (530).jpg 2 212 114 118 105 159 145 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (531).jpg 2 176 81 96 86 45 21 247 219
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (532).jpg 2 126 210 93 83 37 31 235 209
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (533).jpg 1 182 121 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (534).jpg 1 136 97 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (535).jpg 1 234 112 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (536).jpg 2 99 68 212 189 217 109 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (537).jpg 1 142 64 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (538).jpg 2 168 47 95 84 50 94 137 122
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (539).jpg 1 144 25 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (54).jpg 1 157 111 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (540).jpg 1 143 83 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (541).jpg 1 140 136 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (542).jpg 3 202 127 93 83 332 14 93 83 229 8 104 92
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (543).jpg 1 175 166 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (544).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (545).jpg 1 171 161 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (546).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (547).jpg 2 229 55 93 82 274 82 145 129
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (548).jpg 1 142 209 97 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (549).jpg 2 217 139 93 83 34 92 120 106
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (55).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (550).jpg 1 195 156 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (551).jpg 1 142 35 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (552).jpg 2 177 84 104 93 178 139 96 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (553).jpg 2 157 120 96 85 104 112 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (554).jpg 1 188 75 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (555).jpg 3 42 85 90 80 191 187 94 84 214 62 112 99
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (556).jpg 3 109 196 97 86 246 189 96 85 129 105 212 189
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (557).jpg 1 157 87 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (558).jpg 1 42 24 236 210
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (559).jpg 2 235 165 91 81 141 8 239 212
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (56).jpg 2 111 105 94 83 242 188 100 89
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (560).jpg 1 158 22 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (561).jpg 1 175 66 114 102
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (562).jpg 2 207 106 97 86 174 76 184 164
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (563).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (564).jpg 1 76 63 246 218
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (565).jpg 1 169 98 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (566).jpg 1 136 117 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (567).jpg 1 12 26 106 95
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (568).jpg 1 25 28 108 96
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (569).jpg 2 116 70 92 82 106 69 233 207
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (57).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (570).jpg 2 206 69 95 85 245 71 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (571).jpg 1 173 52 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (572).jpg 3 198 220 90 80 326 123 95 84 120 19 145 129
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (573).jpg 1 183 50 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (574).jpg 1 186 75 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (575).jpg 1 144 72 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (576).jpg 1 83 56 244 217
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (577).jpg 1 54 24 213 189
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (578).jpg 1 165 130 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (579).jpg 1 144 99 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (58).jpg 1 126 7 130 115
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (580).jpg 2 125 49 96 85 234 135 112 99
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (581).jpg 2 174 130 94 84 222 112 193 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (582).jpg 2 135 138 90 80 47 36 174 155
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (583).jpg 1 167 152 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (584).jpg 1 178 109 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (585).jpg 1 180 73 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (586).jpg 1 214 57 101 90
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (587).jpg 2 172 83 90 80 52 126 102 91
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (588).jpg 1 207 90 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (589).jpg 1 68 201 101 90
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (59).jpg 1 152 110 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (590).jpg 2 203 80 93 83 52 17 106 95
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (591).jpg 3 150 88 96 85 183 86 102 90 149 64 152 136
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (592).jpg 1 195 86 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (593).jpg 1 180 70 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (594).jpg 2 185 74 93 83 20 20 152 136
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (595).jpg 3 178 130 94 83 212 134 93 83 322 21 102 90
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (596).jpg 2 168 178 94 83 54 24 223 198
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (597).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (598).jpg 1 147 126 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (599).jpg 3 197 101 97 86 55 115 95 84 46 84 111 99
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (6).jpg 1 173 67 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (60).jpg 4 304 2 90 80 202 85 92 81 167 77 113 100 25 64 133 118
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (600).jpg 1 195 128 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (601).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (602).jpg 1 134 54 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (603).jpg 2 189 133 92 81 144 104 135 120
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (604).jpg 1 194 51 92 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (605).jpg 1 189 79 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (606).jpg 2 159 187 92 82 131 48 224 199
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (607).jpg 1 67 201 110 98
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (608).jpg 1 176 144 96 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (609).jpg 1 156 110 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (61).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (610).jpg 3 36 217 90 80 160 93 93 83 164 74 142 126
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (611).jpg 1 223 185 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (612).jpg 1 194 146 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (613).jpg 1 175 104 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (614).jpg 1 176 99 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (615).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (616).jpg 3 194 10 92 82 26 175 118 105 91 48 167 149
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (617).jpg 1 167 117 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (618).jpg 3 13 62 164 147 54 22 311 276 269 95 122 108
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (619).jpg 1 278 5 109 97
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (62).jpg 1 284 92 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (620).jpg 1 181 51 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (621).jpg 1 169 89 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (622).jpg 1 277 140 171 152
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (623).jpg 1 114 68 222 198
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (624).jpg 2 203 138 97 87 49 41 189 168
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (625).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (626).jpg 2 169 153 91 81 199 154 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (627).jpg 2 194 122 93 83 85 91 122 109
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (628).jpg 1 109 181 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (629).jpg 3 141 110 99 88 174 108 97 86 168 58 152 136
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (63).jpg 1 7 55 192 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (630).jpg 1 186 35 110 97
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (631).jpg 1 221 65 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (632).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (633).jpg 1 17 67 150 134
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (634).jpg 3 190 88 90 80 127 60 198 176 198 96 117 104
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (635).jpg 1 161 34 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (636).jpg 1 171 88 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (637).jpg 1 210 152 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (638).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (639).jpg 1 255 140 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (64).jpg 1 13 61 161 144
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (640).jpg 2 174 90 90 80 129 78 132 117
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (641).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (642).jpg 3 229 107 94 84 31 94 109 97 155 76 169 151
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (643).jpg 2 149 42 94 84 25 174 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (644).jpg 2 6 52 199 177 82 19 257 228
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (645).jpg 1 167 53 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (646).jpg 1 138 48 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (647).jpg 2 194 141 98 87 236 144 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (648).jpg 2 99 103 92 82 118 18 304 270
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (649).jpg 2 240 71 92 82 237 36 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (65).jpg 1 171 101 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (650).jpg 1 163 101 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (651).jpg 1 177 70 92 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (652).jpg 2 223 132 91 81 123 61 109 97
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (653).jpg 2 222 82 94 83 44 110 145 129
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (654).jpg 3 43 17 92 81 192 109 92 82 267 31 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (655).jpg 2 188 108 98 87 37 38 250 222
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (656).jpg 2 166 194 94 84 139 56 230 204
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (657).jpg 2 288 98 95 84 214 38 172 153
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (658).jpg 1 85 189 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (659).jpg 4 88 46 107 96 168 92 132 117 93 79 183 162 207 108 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (66).jpg 1 182 13 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (660).jpg 1 122 130 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (661).jpg 1 233 114 92 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (662).jpg 2 147 132 93 83 174 128 104 92
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (663).jpg 4 119 74 92 82 150 70 95 84 20 16 121 107 108 27 126 112
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (664).jpg 1 8 45 193 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (665).jpg 1 199 105 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (666).jpg 1 100 106 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (667).jpg 3 154 161 94 84 56 47 120 106 96 3 193 172
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (668).jpg 2 204 96 93 83 149 11 189 168
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (669).jpg 1 168 104 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (67).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (670).jpg 2 48 112 109 97 178 112 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (671).jpg 1 172 73 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (672).jpg 2 126 145 100 89 69 152 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (673).jpg 1 127 82 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (674).jpg 2 161 106 94 84 47 78 104 92
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (675).jpg 1 154 73 96 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (676).jpg 1 175 94 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (677).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (678).jpg 1 165 123 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (679).jpg 1 183 32 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (68).jpg 2 179 10 221 197 87 53 145 129
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (680).jpg 2 235 57 92 82 347 31 113 101
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (681).jpg 3 172 122 91 81 58 48 111 99 129 62 193 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (682).jpg 4 173 62 91 81 35 121 107 95 60 45 101 90 50 82 106 95
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (683).jpg 1 124 57 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (684).jpg 2 134 115 90 80 242 188 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (685).jpg 2 141 47 96 85 66 36 125 111
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (686).jpg 1 183 14 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (687).jpg 2 192 140 90 80 45 103 106 94
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (688).jpg 1 182 67 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (689).jpg 1 159 119 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (69).jpg 1 206 42 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (690).jpg 1 144 187 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (691).jpg 1 165 135 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (692).jpg 1 27 116 97 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (693).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (694).jpg 1 191 97 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (695).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (696).jpg 2 10 62 180 160 66 35 254 226
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (697).jpg 1 30 24 192 170
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (698).jpg 2 270 60 95 85 295 64 118 105
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (699).jpg 2 53 7 97 86 125 7 125 111
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (7).jpg 1 162 42 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (70).jpg 1 201 204 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (700).jpg 1 184 58 92 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (701).jpg 4 162 42 96 86 110 18 148 132 35 7 189 168 104 4 257 228
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (702).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (703).jpg 2 139 167 97 86 49 22 193 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (704).jpg 1 158 69 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (705).jpg 1 168 166 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (706).jpg 1 153 131 92 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (707).jpg 1 148 40 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (708).jpg 1 154 97 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (709).jpg 2 166 78 95 84 41 84 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (71).jpg 3 236 19 96 85 248 118 90 80 194 59 123 109
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (710).jpg 2 158 75 92 82 39 1 311 276
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (711).jpg 2 162 73 101 90 92 17 240 213
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (712).jpg 1 50 140 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (713).jpg 3 188 55 92 82 292 25 126 112 127 9 199 177
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (714).jpg 1 191 155 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (715).jpg 2 202 127 93 83 228 122 132 117
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (716).jpg 1 151 64 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (717).jpg 1 167 214 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (718).jpg 2 178 163 95 85 57 35 145 129
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (719).jpg 1 206 95 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (72).jpg 1 180 99 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (720).jpg 1 183 165 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (721).jpg 1 203 103 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (722).jpg 1 122 169 101 90
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (723).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (724).jpg 1 150 134 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (725).jpg 2 154 92 95 84 66 31 255 226
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (726).jpg 2 153 83 94 84 41 3 311 276
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (727).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (728).jpg 1 178 55 92 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (729).jpg 1 156 90 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (73).jpg 1 160 93 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (730).jpg 1 178 77 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (731).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (732).jpg 3 176 145 93 83 124 123 147 131 232 119 175 156
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (733).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (734).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (735).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (736).jpg 1 170 108 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (737).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (738).jpg 2 158 127 96 85 188 127 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (739).jpg 3 181 79 93 82 37 62 123 109 160 96 193 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (74).jpg 1 194 97 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (740).jpg 1 32 2 193 171
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (741).jpg 1 187 154 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (742).jpg 1 186 21 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (743).jpg 1 168 61 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (744).jpg 1 74 23 257 228
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (745).jpg 1 222 86 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (746).jpg 1 177 131 100 89
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (747).jpg 2 150 150 90 80 12 93 109 97
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (748).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (749).jpg 2 221 167 95 85 168 106 206 183
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (75).jpg 3 11 58 167 149 177 4 262 233 63 7 289 257
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (750).jpg 1 201 110 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (751).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (752).jpg 1 163 72 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (753).jpg 1 193 80 92 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (754).jpg 1 260 125 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (755).jpg 1 154 68 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (756).jpg 2 142 81 93 83 39 12 300 267
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (757).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (758).jpg 1 139 30 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (759).jpg 1 155 127 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (76).jpg 1 166 8 257 228
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (760).jpg 1 201 165 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (761).jpg 2 183 120 98 87 153 57 163 145
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (762).jpg 1 173 176 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (763).jpg 1 154 100 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (764).jpg 1 188 38 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (765).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (766).jpg 1 164 85 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (767).jpg 1 167 35 96 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (768).jpg 1 239 174 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (769).jpg 2 278 4 116 102 13 62 157 140
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (77).jpg 2 164 34 120 106 21 76 142 127
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (770).jpg 1 218 190 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (771).jpg 1 152 152 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (772).jpg 2 83 68 109 97 189 32 247 220
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (773).jpg 1 177 84 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (774).jpg 1 179 56 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (775).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (776).jpg 2 144 130 94 84 33 79 212 189
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (777).jpg 1 112 144 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (778).jpg 2 96 37 107 95 93 86 96 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (779).jpg 1 69 27 275 245
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (78).jpg 1 177 187 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (780).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (781).jpg 1 176 79 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (782).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (783).jpg 3 84 35 156 139 7 58 186 165 60 38 238 212
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (784).jpg 1 125 81 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (785).jpg 1 192 112 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (786).jpg 1 188 112 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (787).jpg 1 194 123 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (788).jpg 3 207 150 96 85 50 128 94 84 210 153 143 127
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (789).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (79).jpg 1 213 174 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (790).jpg 3 149 52 96 85 109 93 117 104 287 157 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (791).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (792).jpg 2 40 4 311 276 158 84 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (793).jpg 1 14 72 160 142
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (794).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (795).jpg 2 151 122 90 80 214 124 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (796).jpg 2 155 81 95 84 244 125 112 99
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (797).jpg 2 67 200 92 82 164 51 125 111
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (798).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (799).jpg 1 142 147 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (8).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (80).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (800).jpg 1 157 119 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (801).jpg 1 244 40 173 154
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (802).jpg 1 135 117 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (803).jpg 1 135 156 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (804).jpg 2 200 52 94 84 308 67 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (805).jpg 1 174 67 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (806).jpg 2 134 82 94 84 19 20 109 97
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (807).jpg 1 156 97 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (808).jpg 2 175 118 93 83 118 79 224 198
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (809).jpg 2 168 112 94 83 160 2 190 168
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (81).jpg 1 187 112 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (810).jpg 1 169 104 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (811).jpg 1 182 141 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (812).jpg 1 124 28 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (813).jpg 2 122 139 92 82 226 119 109 97
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (814).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (815).jpg 2 208 8 91 81 21 28 106 95
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (816).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (817).jpg 3 219 97 94 84 129 95 107 95 219 78 165 147
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (818).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (819).jpg 1 208 67 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (82).jpg 1 176 81 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (820).jpg 1 179 105 138 122
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (821).jpg 1 161 39 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (822).jpg 1 131 179 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (823).jpg 1 166 64 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (824).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (825).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (826).jpg 1 126 81 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (827).jpg 2 162 38 90 80 179 19 109 97
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (828).jpg 1 212 106 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (829).jpg 2 145 45 95 85 183 38 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (83).jpg 1 146 169 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (830).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (831).jpg 2 169 124 92 82 123 82 121 107
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (832).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (833).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (834).jpg 1 190 46 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (835).jpg 1 43 14 304 269
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (836).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (837).jpg 1 169 57 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (838).jpg 1 349 126 101 90
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (839).jpg 2 182 113 97 86 152 113 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (84).jpg 2 171 159 93 83 32 25 140 124
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (840).jpg 1 137 61 207 184
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (841).jpg 2 176 178 96 85 125 154 148 132
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (842).jpg 1 168 184 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (843).jpg 1 164 93 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (844).jpg 1 174 66 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (845).jpg 1 165 171 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (846).jpg 1 187 57 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (847).jpg 1 154 157 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (848).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (849).jpg 1 102 70 222 198
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (85).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (850).jpg 1 149 52 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (851).jpg 3 53 115 95 84 184 76 99 88 32 89 112 100
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (852).jpg 1 140 115 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (853).jpg 2 148 62 120 107 190 72 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (854).jpg 1 177 54 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (855).jpg 2 191 77 93 83 49 73 101 90
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (856).jpg 1 178 36 120 106
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (857).jpg 3 15 68 152 136 117 59 212 189 196 101 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (858).jpg 1 175 54 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (859).jpg 1 287 120 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (86).jpg 1 240 108 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (860).jpg 1 136 170 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (861).jpg 1 154 77 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (862).jpg 2 163 200 96 85 35 38 264 235
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (863).jpg 2 114 137 96 86 156 139 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (864).jpg 1 273 12 108 96
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (865).jpg 1 56 109 102 91
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (866).jpg 4 206 76 93 83 240 75 90 80 327 126 94 84 50 24 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (867).jpg 3 44 54 190 168 41 5 311 276 168 105 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (868).jpg 2 169 56 90 80 46 112 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (869).jpg 1 11 60 170 151
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (87).jpg 1 195 123 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (870).jpg 1 169 156 96 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (871).jpg 1 154 80 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (872).jpg 1 94 74 192 170
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (873).jpg 2 187 116 94 83 98 59 247 220
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (874).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (875).jpg 1 204 54 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (876).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (877).jpg 1 249 74 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (878).jpg 1 181 43 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (879).jpg 1 132 133 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (88).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (880).jpg 4 197 211 95 84 29 45 101 90 75 136 106 94 50 110 132 117
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (881).jpg 1 191 92 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (882).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (883).jpg 1 180 75 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (884).jpg 3 215 120 97 86 71 122 125 111 106 112 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (885).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (886).jpg 2 142 42 90 80 164 47 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (887).jpg 3 170 50 95 85 256 124 103 92 59 40 109 97
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (888).jpg 1 149 160 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (889).jpg 1 102 164 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (89).jpg 4 51 83 114 101 73 69 189 168 171 114 91 81 52 33 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (890).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (891).jpg 2 240 105 93 82 209 105 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (892).jpg 2 172 115 92 82 167 8 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (893).jpg 1 182 54 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (894).jpg 1 171 89 96 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (895).jpg 1 202 139 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (896).jpg 1 14 62 171 152
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (897).jpg 2 161 175 94 83 228 186 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (898).jpg 1 179 218 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (899).jpg 1 159 131 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (9).jpg 3 195 138 106 94 50 29 193 171 98 51 233 207
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (90).jpg 2 174 118 97 86 115 171 130 115
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (900).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (901).jpg 2 260 64 93 82 258 36 153 136
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (902).jpg 1 175 133 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (903).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (904).jpg 2 125 41 91 81 240 190 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (905).jpg 2 104 61 177 158 246 52 159 142
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (906).jpg 2 280 158 92 82 264 32 139 123
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (907).jpg 1 153 121 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (908).jpg 1 152 126 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (909).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (91).jpg 1 14 66 161 144
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (910).jpg 1 159 116 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (911).jpg 2 289 87 101 90 241 69 151 135
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (912).jpg 2 248 41 94 84 250 65 100 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (913).jpg 2 171 89 94 83 38 84 105 93
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (914).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (915).jpg 2 243 78 93 83 166 34 217 194
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (916).jpg 1 42 24 297 264
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (917).jpg 1 175 55 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (918).jpg 1 147 71 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (919).jpg 3 150 101 95 84 16 15 118 105 151 28 105 93
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (92).jpg 2 176 39 94 84 25 30 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (920).jpg 1 253 88 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (921).jpg 1 135 43 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (922).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (923).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (924).jpg 2 145 140 96 85 31 88 111 99
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (925).jpg 1 192 64 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (926).jpg 1 149 141 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (927).jpg 1 136 156 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (928).jpg 1 168 135 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (929).jpg 3 219 59 117 104 152 39 148 132 199 67 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (93).jpg 1 172 81 106 94
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (930).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (931).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (932).jpg 1 143 161 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (933).jpg 2 72 53 94 83 208 147 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (934).jpg 1 9 39 209 186
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (935).jpg 2 278 112 109 97 53 43 123 109
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (936).jpg 3 159 161 90 80 28 19 91 81 211 98 206 183
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (937).jpg 1 8 121 103 92
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (938).jpg 1 194 61 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (939).jpg 1 209 155 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (94).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (940).jpg 2 231 87 92 82 45 116 128 113
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (941).jpg 1 6 54 191 169
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (942).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (943).jpg 1 182 108 96 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (944).jpg 1 148 176 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (945).jpg 2 178 117 97 86 320 118 104 92
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (946).jpg 1 228 62 112 100
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (947).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (948).jpg 3 186 73 94 83 52 107 95 84 39 64 114 102
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (949).jpg 1 146 128 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (95).jpg 1 72 15 277 246
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (950).jpg 1 9 55 178 158
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (951).jpg 2 107 81 99 88 36 147 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (952).jpg 1 14 64 165 147
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (953).jpg 1 172 84 92 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (954).jpg 1 169 82 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (955).jpg 2 38 78 97 86 200 107 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (956).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (957).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (958).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (959).jpg 1 132 144 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (96).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (960).jpg 1 188 75 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (961).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (962).jpg 3 175 64 95 85 31 12 220 196 105 17 204 182
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (963).jpg 2 175 120 90 80 68 91 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (964).jpg 1 147 115 95 85
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (965).jpg 1 177 154 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (966).jpg 1 46 33 211 188
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (967).jpg 1 153 139 93 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (968).jpg 2 169 68 95 85 27 62 143 127
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (969).jpg 1 200 130 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (97).jpg 4 223 105 97 87 190 93 99 88 284 76 132 117 97 62 116 103
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (970).jpg 1 221 49 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (971).jpg 1 223 115 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (972).jpg 2 108 60 225 200 191 107 91 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (973).jpg 1 195 134 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (974).jpg 1 152 79 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (975).jpg 1 235 59 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (976).jpg 1 177 145 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (977).jpg 1 188 155 90 80
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (978).jpg 2 171 123 92 82 38 46 228 202
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (979).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (98).jpg 1 188 94 93 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (980).jpg 3 196 90 92 82 84 85 116 102 283 74 131 116
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (981).jpg 1 127 54 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (982).jpg 2 203 125 93 83 26 74 134 118
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (983).jpg 1 97 53 250 222
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (984).jpg 2 171 126 94 83 184 114 127 113
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (985).jpg 1 143 146 98 87
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (986).jpg
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (987).jpg 1 180 101 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (988).jpg 1 288 69 94 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (989).jpg 2 207 184 92 81 34 88 107 95
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (99).jpg 1 218 54 94 83
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (990).jpg 1 168 121 95 84
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (991).jpg 2 183 97 97 86 61 27 225 200
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (992).jpg 3 186 133 97 86 87 30 90 80 156 145 92 82
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (993).jpg 1 152 114 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (994).jpg 1 262 120 97 86
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (995).jpg 2 132 38 95 85 180 15 241 214
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (996).jpg 1 184 130 99 88
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (997).jpg 2 327 6 99 88 186 195 91 81
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (998).jpg 3 162 161 92 82 173 21 101 90 139 20 135 120
+D:\Semester6\PBL5\AI\images\GreenParking_new\GreenParking\1 (999).jpg 3 153 74 93 83 50 25 193 171 40 5 311 276

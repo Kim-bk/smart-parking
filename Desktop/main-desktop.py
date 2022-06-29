@@ -17,7 +17,7 @@ import requests
 # Process database with mongodb
 from datetime import datetime
 
-from mongo import createCheckIn,findAll,createCheckOut,getByIdRfid,getPlatebyRfid,getImageExit
+from mongo import createCheckIn,findAll,createCheckOut,getByIdRfid,getImageExit
 
 
 # AI code 
@@ -78,7 +78,7 @@ def find_contours(dimensions, img) :
     lower_height = dimensions[2]
     upper_height = dimensions[3]
     
-    # Check largest 5 or  15 contours for license plate or character respectively
+    # Check largest 5 or 15 contours for license plate or character respectively
     cntrs = sorted(cntrs, key=cv2.contourArea, reverse=True)[:15]
     ii = cv2.imread('contour.jpg')
     
@@ -214,6 +214,7 @@ class VideoThread(QThread):
     change_pixmap_signal2 = pyqtSignal(np.ndarray)
  
     def run(self):
+
         # cap_esp32_exit = cv2.VideoCapture(0)
         #cap_esp32_entrance = cv2.VideoCapture("http://192.168.43.26:81/stream")
 
@@ -465,7 +466,6 @@ class UI(QMainWindow):
         if char == '0' or len(char) != 8:
             os.remove(path_capture_exit)
         else:
-           
             ob_image = getImageExit(id_rfid_ra)
             cut_img  = ob_image['cut_img']
             print(char)
@@ -561,7 +561,7 @@ class UI(QMainWindow):
 if __name__ == "__main__":
     #Init variables for AI
     #Load the model has been trained before 
-    model = keras.models.load_model('../PBL5/AI/data_test/character_model_new.h5',custom_objects={"custom_f1score": custom_f1score})
+    model = keras.models.load_model('../PBL5/AI/data_test/character_model_new.h5', custom_objects={"custom_f1score": custom_f1score})
     plate_cascade = cv2.CascadeClassifier('../PBL5/AI/archive/cascade.xml')
     app = QApplication(sys.argv)
     UIWindow = UI()
