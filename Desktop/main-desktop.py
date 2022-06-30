@@ -9,7 +9,7 @@ import cv2
 import numpy as np
 from PIL import ImageQt
 import os
-from flask import Flask,request, render_template
+from flask import Flask,request
 
 from threading import Thread
 import sys
@@ -30,6 +30,17 @@ import keras
 from tensorflow.python.saved_model import loader_impl
 from tensorflow.python.keras.saving.saved_model import load as saved_model_load
 from sklearn.metrics import f1_score 
+
+
+positions = 0
+
+def get_slot():
+    list = findAll()
+    people =[]
+    for item in list:
+        people.append(item)
+    return len(people)
+
 
 def detect_plate(self, img, pos): # the function detects and perfors blurring on the number plate.
     plate_img = img.copy()
@@ -261,14 +272,16 @@ class VideoThread(QThread):
     change_pixmap_signal2 = pyqtSignal(np.ndarray)
  
     def run(self):
-        cap_esp32_exit = cv2.VideoCapture(0)
-        # cap_esp32_entrance = cv2.VideoCapture("http://192.168.43.26:81/stream")
-     
+
+        # cap_esp32_exit = cv2.VideoCapture(0)
+        #cap_esp32_entrance = cv2.VideoCapture("http://192.168.43.26:81/stream")
+
+        cap_esp32_exit =cv2.VideoCapture(0)
         while True:
-            # ret1, cv_img1 = cap_esp32_entrance.read()
+            #ret1, cv_img1 = cap_esp32_entrance.read()
             ret2, cv_img2 = cap_esp32_exit.read()
-            if    ret2:
-                # self.change_pixmap_signal1.emit(cv_img1)
+            if ret2:
+                #self.change_pixmap_signal1.emit(cv_img1)
                 self.change_pixmap_signal2.emit(cv_img2)
           
 class UI(QMainWindow):
@@ -312,8 +325,9 @@ class UI(QMainWindow):
                 if(getByIdRfid(id_rfid_vao) != None):
                     checkif = self.capture_entrance()
                     if checkif:
+                        slot = 6 - get_slot()
                         print("Da chup")
-                        check ="Ok"
+                        check =str(slot)
                         print(check)
                         return check
                     else:
@@ -326,8 +340,7 @@ class UI(QMainWindow):
                     check ="not_in_db"
                     print(check)
                     return check
-            
-          
+   
 
         @app_.route("/send-id", methods=["POST"])
         def get_id_vao():
@@ -374,9 +387,17 @@ class UI(QMainWindow):
         def load_table():
             if request.method == "POST":  # if we make a post request to the endpoint, look for the image in the request body
                 data = request.get_data()
+                createCheckIn(id_rfid_vao,str(char),dt,cut_img,contour_img)
                 self.load_table()
                 return data
-        
+        @app_.route("/load_table_ra", methods=["POST"])
+        def load_table_ra():
+            if request.method == "POST":  # if we make a post request to the endpoint, look for the image in the request body
+                data = request.get_data()
+                createCheckOut(id_rfid_ra,str(char),dt)
+                self.load_table()
+                return data
+            
         kwargs = {'host': '192.168.43.65', 'port': 7350, 'threaded': True, 'use_reloader': False, 'debug': False}
         flaskThread = Thread(target=app_.run, daemon=True, kwargs=kwargs).start()
         #load clock
@@ -440,7 +461,8 @@ class UI(QMainWindow):
             people.append(data_item)
        # people = [{"ID": "1", "Card": "100221", "Name": "Hoang Kim", "Phone Number": "0935740126" ,"Booking Date": "16/05/2022", "Lisence Plate": "43D92646" }]
         row = 0
-        self.tbData.setRowCount(len(people))
+        self.tbData.setRow
+        (len(people))
         for person in people:
             self.tbData.setItem(row, 0, QtWidgets.QTableWidgetItem(person["Card"]))
             self.tbData.setItem(row, 1, QtWidgets.QTableWidgetItem(person["Name"]))
@@ -450,6 +472,11 @@ class UI(QMainWindow):
             row = row + 1
                  
     def capture_entrance(self):
+        global id_rfid_vao
+        global char 
+        global dt
+        global cut_img
+        global contour_img
         dt = datetime.now()
         tail_path = str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)
         success = False
@@ -459,7 +486,7 @@ class UI(QMainWindow):
         image.save(path_capture_entrance) 
         img = cv2.imread(path_capture_entrance)
         char = process_liscense(self, img, 'entrance', tail_path)
-
+        
         if char == '0' or len(char) != 8:
             os.remove(path_capture_entrance)
         else:
@@ -472,15 +499,17 @@ class UI(QMainWindow):
             self.lblGrayIn.setPixmap(QtGui.QPixmap(contour_img))
             
             dt = dt.strftime("%d/%m/%Y %H:%M:%S")
-            createCheckIn(id_rfid_vao,str(char),dt,cut_img,contour_img)
-            
             print(char)
             success = True
             # self.txtPlateIn.setText('Tai sao phai the')
-
+            
+        position = position + 1
         return success
 
     def capture_exit(self):
+        global id_rfid_ra
+        global char
+        global dt
         dt = datetime.now()
         tail_path = str(dt.day) + str(dt.month) + str(dt.year) + str(dt.hour) + str(dt.minute) + str(dt.second)
         success = False
@@ -510,11 +539,12 @@ class UI(QMainWindow):
             
             if ob_image['license_plate'] == str(char):
                 dt = dt.strftime("%d/%m/%Y %H:%M:%S")
-                createCheckOut(id_rfid_ra,str(char),dt)
             else:
                 os.remove(path_capture_exit)
                 wrong_pl = True
             success = True
+            position = position - 1
+
         if success == True and wrong_pl == True:
             success =  False
         return success
@@ -584,6 +614,7 @@ class UI(QMainWindow):
     #             self.lblGrayIn.setPixmap(QtGui.QPixmap("contour.jpg"))
 
     #             self.txtPlateIn.setText(char)
+
 
 if __name__ == "__main__":
     #Init variables for AI
