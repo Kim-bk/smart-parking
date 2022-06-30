@@ -44,8 +44,6 @@ def find_contours(dimensions, img) :
     # Find all contours in the image
     cntrs, _ = cv2.findContours(img.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
-
-
     # Retrieve potential dimensions
     lower_width = dimensions[0]
     upper_width = dimensions[1]
@@ -66,17 +64,16 @@ def find_contours(dimensions, img) :
     for cntr in cntrs :
         # detects contour in binary image and returns the coordinates of rectangle enclosing it
         intX, intY, intWidth, intHeight = cv2.boundingRect(cntr)
-        print('==')
+        # print(intHeight)
+        # print("==")
+        # print(lower_height)
+        # print(upper_height)
+        # print("==end==")
+# checking the dimensions of the contour to filter out the characters by contour's size
+        if intWidth > lower_width and intWidth < upper_width and intHeight > lower_height and intHeight < upper_height:
+            print('vo')
+            x_cntr_list.append(intX) #stores the x coordinate of the character's contour, to used later for indexing the contours
 
-        print(intWidth)
-        print(intHeight)
-        print(intY)
-       
-        # checking the dimensions of the contour to filter out the characters by contour's size
-        # if 400 < intWidth * intHeight < 1000:
-        if intWidth > lower_width and intWidth < upper_width and intHeight > lower_height and intHeight < upper_height :
-            # x_cntr_list.append(intX) #stores the x coordinate of the character's contour, to used later for indexing the contours
-            x_cntr_list_first.append(intX)
             char_copy = np.zeros((44,24))
             # extracting each character using the enclosing rectangle's coordinates.
             char = img[intY:intY+intHeight, intX:intX+intWidth]
@@ -96,22 +93,58 @@ def find_contours(dimensions, img) :
             char_copy[42:44, :] = 0
             char_copy[:, 22:24] = 0
 
-            # if 0 < intY < 15:
-            #     x_cntr_list_first.append(intX)
-            #     img_res_first.append(char_copy) # List that stores the character's binary image (unsorted)
-            # else:
-            #     x_cntr_list_sec.append(intX)
-            #     img_res_sec.append(char_copy) # List that stores the character's binary image (unsorted)
-
-          
-            img_res_first.append(char_copy) # List that stores the character's binary image (unsorted)
-
+            img_res.append(char_copy) # List that stores the character's binary image (unsorted)
+        else: print('khong vo duoc')
+  
     # Return characters on ascending order with respect to the x-coordinate (most-left character first)
             
- 
     # arbitrary function that stores sorted list of character indeces
+    indices = sorted(range(len(x_cntr_list)), key=lambda k: x_cntr_list[k])
+    img_res_copy = []
+    for idx in indices:
+        img_res_copy.append(img_res[idx])# stores character images according to their index
+    # img_res = np.array(img_res_copy)
 
-    #truong hop bien 2 dong
+    return img_res
+         #=========================
+         
+       
+        # checking the dimensions of the contour to filter out the characters by contour's size
+    #     if 400 < intWidth * intHeight < 1000:
+    #         char_copy = np.zeros((44,24))
+    #         # extracting each character using the enclosing rectangle's coordinates.
+    #         char = img[intY:intY+intHeight, intX:intX+intWidth]
+    #         char = cv2.resize(char, (20, 40))
+
+    #         plt.figure(4)
+    #         cv2.rectangle(ii, (intX,intY), (intWidth+intX, intY+intHeight), (50,21,200), 2)
+    #         plt.imshow(ii, cmap='gray')
+
+    #         # Make result formatted for classification: invert colors
+    #         char = cv2.subtract(255, char)
+
+    #         # Resize the image to 24x44 with black border
+    #         char_copy[2:42, 2:22] = char
+    #         char_copy[0:2, :] = 0
+    #         char_copy[:, 0:2] = 0
+    #         char_copy[42:44, :] = 0
+    #         char_copy[:, 22:24] = 0
+
+    #         if 0 < intY < 25:
+    #             x_cntr_list_first.append(intX)
+    #             img_res_first.append(char_copy) # List that stores the character's binary image (unsorted)
+    #         else:
+    #             x_cntr_list_sec.append(intX)
+    #             img_res_sec.append(char_copy) # List that stores the character's binary image (unsorted)
+
+        
+
+    # # Return characters on ascending order with respect to the x-coordinate (most-left character first)
+            
+ 
+    # # arbitrary function that stores sorted list of character indeces
+
+    # #truong hop bien 2 dong
     # indices_first = sorted(range(len(x_cntr_list_first)), key=lambda k: x_cntr_list_first[k])
     # indices_sec = sorted(range(len(x_cntr_list_sec)), key=lambda k: x_cntr_list_sec[k])
     # print(indices_first)
@@ -125,17 +158,7 @@ def find_contours(dimensions, img) :
     #     img_res_copy_sec.append(img_res_sec[idx])# stores character images according to their index
 
     # rs  = img_res_copy_first + img_res_copy_sec
-
-    indices_first = sorted(range(len(x_cntr_list_first)), key=lambda k: x_cntr_list_first[k])
-    
-    img_res_copy_first = []
-    for idx in indices_first:
-        img_res_copy_first.append(img_res_first[idx])# stores character images according to their index
-
-    img_res = np.array(img_res_copy_first)
-    # print(img_res)
-
-    return img_res
+    # return rs
 
 # Find characters in the resulting images
 def segment_characters(image) :
@@ -158,7 +181,7 @@ def segment_characters(image) :
 
     # Estimations of character contours sizes of cropped license plates
     plt.figure(3)
-    dimensions = [LP_WIDTH/6, LP_WIDTH/2, LP_HEIGHT/5, 2*LP_HEIGHT/3]
+    dimensions = [LP_WIDTH/6, LP_WIDTH/2, LP_HEIGHT/10, 2*LP_HEIGHT/3]
     plt.imshow(img_dilate, cmap='gray')
     cv2.imwrite('contour.jpg',img_dilate)
     # Get contours within cropped license plate
@@ -174,7 +197,7 @@ def fix_dimension(img):
 
 def show_results():
     dic = {}
-    characters = '0123456789ABCDEFGHKLMNPSTUVXYZ'
+    characters = '0123456789ABCDEFGHKLMNRPSTUVXYZ'
     for i,c in enumerate(characters):
         dic[i] = c
 
@@ -210,9 +233,8 @@ if __name__ == "__main__":
     # plate_cascade = cv2.CascadeClassifier('D:/Semester6/PBL5/AI/train/cascade.xml')
     #load the model has been trained before
     model = keras.models.load_model('D:/Semester6/PBL5/AI/data_test/character_model.h5',custom_objects={"custom_f1score": custom_f1score})
- 
-    # img = cv2.imread('D:/Semester6/PBL5/AI/images/GreenParking_new/GreenParking/1 (11).jpg')
-    img = cv2.imread('D:/Semester6/PBL5/AI/images/oto/all/one_line (2).jpg')
+    img = cv2.imread('D:/Semester6/PBL5/AI/images/oto/detected/one_line (2).jpg')
+    # img = cv2.imread('D:/Semester6/PBL5/AI/images/2dong/detected/1 (1).jpg')
     old_img = img
 
     # Getting plate prom the processed image
@@ -262,6 +284,5 @@ if __name__ == "__main__":
     display(output_img, 'Nhận dạng ký tự của biển số xe')
 
     plt.show()
-
 
 

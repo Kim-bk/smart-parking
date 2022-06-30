@@ -7,7 +7,7 @@ import keras
 from tensorflow.python.saved_model import loader_impl
 from tensorflow.python.keras.saving.saved_model import load as saved_model_load
 from sklearn.metrics import f1_score 
-from os import path
+
 
 # Testing the above function
 def display(img_, title=''):
@@ -22,24 +22,34 @@ def display(img_, title=''):
 
 
 def detect_plate(img, text=''): # the function detects and perfors blurring on the number plate.
-    plate_img = img.copy()
-    roi = img.copy()
+    try:
+        plate_img = img.copy()
+        roi = img.copy()
+        plate_cascade = cv2.CascadeClassifier('D:/Semester6/PBL5/AI/archive/cascade.xml')
+        plate_rect = plate_cascade.detectMultiScale(plate_img, scaleFactor = 1.2, minNeighbors = 7) # detects numberplates and returns the coordinates and dimensions of detected license plate's contours.
 
-    plate_rect = plate_cascade.detectMultiScale(plate_img, scaleFactor = 1.2, minNeighbors = 7) # detects numberplates and returns the coordinates and dimensions of detected license plate's contours.
-   
-    # print(plate_rect)
-    for (x,y,w,h) in plate_rect:
-        roi_ = roi[y:y+h, x:x+w, :] # extracting the Region of Interest of license plate for blurring.
-        plate = roi[y:y+h, x:x+w, :]
-        cv2.rectangle(plate_img, (x+2,y), (x+w-3, y+h-5), (51,181,155), 3) # finally representing the detected contours by drawing rectangles around the edges.
-    if text!='':
-        plate_img = cv2.putText(plate_img, text, (x-w//2,y-h//2), 
-                                cv2.FONT_HERSHEY_COMPLEX_SMALL , 0.5, (51,181,155), 1, cv2.LINE_AA)
+        for (x,y,w,h) in plate_rect:
+            roi_ = roi[y:y+h, x:x+w, :] # extracting the Region of Interest of license plate for blurring.
+            plate = roi[y:y+h, x:x+w, :]
+            cv2.rectangle(plate_img, (x+2,y), (x+w-3, y+h-5), (51,181,155), 3) # finally representing the detected contours by drawing rectangles around the edges.
         
-    return plate_img, plate # returning the processed image.
+        return plate_img, plate, True, 1 # returning the processed image. 
+    except UnboundLocalError:  
+        
+        #dung model cascade bien 2 hang su dung
+        plate_cascade = cv2.CascadeClassifier('D:/Semester6/PBL5/AI/train/cascade.xml')
+        plate_rect = plate_cascade.detectMultiScale(plate_img, scaleFactor = 1.05, minNeighbors = 6, minSize = (90, 80)) # detects numberplates and returns the coordinates and dimensions of detected license plate's contours.
+        for (x,y,w,h) in plate_rect:
+            roi_ = roi[y:y+h, x:x+w, :] # extracting the Region of Interest of license plate for blurring.
+            plate = roi[y:y+h, x:x+w, :]
+            cv2.rectangle(plate_img, (x+2,y), (x+w-3, y+h-5), (51,181,155), 3) # finally representing the detected contours by drawing rectangles around the edges.
+        try:       
+            return plate_img, plate, True, 2 # returning the processed image.
+        except UnboundLocalError:
+            return plate_img, False, False, 0
 
 # Match contours to license plate or character template
-def find_contours(dimensions, img) :
+def find_contours(dimensions, img, line) :
 
     # Find all contours in the image
     cntrs, _ = cv2.findContours(img.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
@@ -49,60 +59,96 @@ def find_contours(dimensions, img) :
     upper_width = dimensions[1]
     lower_height = dimensions[2]
     upper_height = dimensions[3]
-    
+   
     # Check largest 5 or  15 contours for license plate or character respectively
     cntrs = sorted(cntrs, key=cv2.contourArea, reverse=True)[:15]
     
     ii = cv2.imread('contour.jpg')
-    
-    x_cntr_list = []
-    target_contours = []
-    img_res = []
+    x_cntr_list_first = []
+    x_cntr_list_sec = []
+   
+    img_res_first = []
+    img_res_sec = []
     for cntr in cntrs :
         # detects contour in binary image and returns the coordinates of rectangle enclosing it
         intX, intY, intWidth, intHeight = cv2.boundingRect(cntr)
-        
-        # checking the dimensions of the contour to filter out the characters by contour's size
-        if 400 < intWidth * intHeight < 1000:
-            x_cntr_list.append(intX) #stores the x coordinate of the character's contour, to used later for indexing the contours
+        print('==')
 
-            char_copy = np.zeros((44,24))
-            # extracting each character using the enclosing rectangle's coordinates.
-            char = img[intY:intY+intHeight, intX:intX+intWidth]
-            char = cv2.resize(char, (20, 40))
+        print(intWidth)
+        print(intHeight)
+        print(intY)
+       
+        if line == 1:
+            if intWidth > lower_width and intWidth < upper_width and intHeight > lower_height and intHeight < upper_height :
+                x_cntr_list_first.append(intX) #stores the x coordinate of the character's contour, to used later for indexing the contours
+                char_copy = np.zeros((44,24))
+                # extracting each character using the enclosing rectangle's coordinates.
+                char = img[intY:intY+intHeight, intX:intX+intWidth]
+                char = cv2.resize(char, (20, 40))
 
-            plt.figure(4)
-            cv2.rectangle(ii, (intX,intY), (intWidth+intX, intY+intHeight), (50,21,200), 2)
-            plt.imshow(ii, cmap='gray')
-
-            # Make result formatted for classification: invert colors
-            char = cv2.subtract(255, char)
-
-            # Resize the image to 24x44 with black border
-            char_copy[2:42, 2:22] = char
-            char_copy[0:2, :] = 0
-            char_copy[:, 0:2] = 0
-            char_copy[42:44, :] = 0
-            char_copy[:, 22:24] = 0
-
-            img_res.append(char_copy) # List that stores the character's binary image (unsorted)
-    
-  
-    # Return characters on ascending order with respect to the x-coordinate (most-left character first)
+                char = cv2.subtract(255, char)
+                # Resize the image to 24x44 with black border
+                char_copy[2:42, 2:22] = char
+                char_copy[0:2, :] = 0
+                char_copy[:, 0:2] = 0
+                char_copy[42:44, :] = 0
+                char_copy[:, 22:24] = 0
+              
+                img_res_first.append(char_copy)
+                  # Return characters on ascending order with respect to the x-coordinate (most-left character first)
+              
+            # arbitrary function that stores sorted list of character indeces
+            indices = sorted(range(len(x_cntr_list_first)), key=lambda k: x_cntr_list_first[k])
+            img_res_copy = []
+            for idx in indices:
+                img_res_copy.append(img_res_first[idx])# stores character images according to their index
+            img_res = np.array(img_res_copy)
+            rs = img_res
             
-    # plt.show()
-    # arbitrary function that stores sorted list of character indeces
-    indices = sorted(range(len(x_cntr_list)), key=lambda k: x_cntr_list[k])
-    img_res_copy = []
-    for idx in indices:
-        img_res_copy.append(img_res[idx])# stores character images according to their index
-    img_res = np.array(img_res_copy)
-    # print(img_res)
+        if line == 2:
+            if 300 < intWidth * intHeight < 10000:
+                char_copy = np.zeros((44,24))
+                # extracting each character using the enclosing rectangle's coordinates.
+                char = img[intY:intY+intHeight, intX:intX+intWidth]
+                char = cv2.resize(char, (20, 40))
 
-    return img_res
+                plt.figure(4)
+                cv2.rectangle(ii, (intX,intY), (intWidth+intX, intY+intHeight), (50,21,200), 2)
+                plt.imshow(ii, cmap='gray')
+
+                # Make result formatted for classification: invert colors
+                char = cv2.subtract(255, char)
+
+                # Resize the image to 24x44 with black border
+                char_copy[2:42, 2:22] = char
+                char_copy[0:2, :] = 0
+                char_copy[:, 0:2] = 0
+                char_copy[42:44, :] = 0
+                char_copy[:, 22:24] = 0
+
+                if 0 < intY < 20:
+                    x_cntr_list_first.append(intX)
+                    img_res_first.append(char_copy) # List that stores the character's binary image (unsorted)
+                else:
+                    x_cntr_list_sec.append(intX)
+                    img_res_sec.append(char_copy) # List that stores the character's binary image (unsorted)
+            
+            indices_first = sorted(range(len(x_cntr_list_first)), key=lambda k: x_cntr_list_first[k])
+            indices_sec = sorted(range(len(x_cntr_list_sec)), key=lambda k: x_cntr_list_sec[k])
+            
+            img_res_copy_first = []
+            for idx in indices_first:
+                img_res_copy_first.append(img_res_first[idx])# stores character images according to their index
+
+            img_res_copy_sec = []
+            for idx in indices_sec:
+                img_res_copy_sec.append(img_res_sec[idx])# stores character images according to their index
+            rs  = img_res_copy_first + img_res_copy_sec  
+
+    return rs
 
 # Find characters in the resulting images
-def segment_characters(image) :
+def segment_characters(image, line) :
 
     # Preprocess cropped license plate image
     img = cv2.resize(image, (333, 75))
@@ -126,7 +172,7 @@ def segment_characters(image) :
     plt.imshow(img_dilate, cmap='gray')
     cv2.imwrite('contour.jpg',img_dilate)
     # Get contours within cropped license plate
-    char_list = find_contours(dimensions, img_dilate)
+    char_list = find_contours(dimensions, img_dilate, line)
     return char_list
 
 # Predicting the output
@@ -138,7 +184,7 @@ def fix_dimension(img):
 
 def show_results():
     dic = {}
-    characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    characters = '0123456789ABCDEFGHKLMNPSRTUVXYZ'
     for i,c in enumerate(characters):
         dic[i] = c
 
@@ -168,59 +214,67 @@ def custom_f1score(y, y_pred):
 
 
 if __name__ == "__main__": 
-
+   
      # Loads the data required for detecting the license plates from cascade classifier.
-    plate_cascade = cv2.CascadeClassifier('D:/Semester6/PBL5/AI/train/cascade.xml')
- 
+    # plate_cascade = cv2.CascadeClassifier('D:/Semester6/PBL5/AI/archive/cascade.xml')
     #load the model has been trained before
     model = keras.models.load_model('D:/Semester6/PBL5/AI/data_test/character_model.h5',custom_objects={"custom_f1score": custom_f1score})
-    stages = 1
-    correct = 0
-    wrong_2 = 0
-    wrong_1 = 0
-    wrong_above2 = 0
-    for img in range(1, 1748):
-        try:
-            path_img = 'D:/Semester6/PBL5/AI/images/2dong/detected/1 (' + str(img) + ').jpg'
-            # path_img = 'D:/Semester6/PBL5/AI/images/oto/detected/one_line (' + str(img) + ').jpg'
-            if path.exists(path_img):
-                print(str(img))
-                img = cv2.imread(path_img)
-                #img = cv2.imread('../License-Plate-Recognition/images/oto/462.jpg')
-                #img = cv2.imread('../License-Plate-Recognition/images/CarTGMT/AEONTP_6S81U5_checkin_2020-1-13-16-18bx9UOV6rY5.jpg')
-                old_img = img
-                # Getting plate prom the processed image
-                output_img, plate = detect_plate(img)
-                plate = cv2.cvtColor(plate, cv2.COLOR_BGR2RGB)
-                char = segment_characters(plate)
-                # print(show_results())
-                # Segmented characters and their predicted value.
-                print('===STAGE'+ str(stages) + '===')
-                rs = show_results()
-                print(rs)
-                print(len(rs))
-                if rs != "":
-                    len_rs = int(len(rs))
-                    wrong_char = abs(9 - len_rs)
-                    if wrong_char == 0:
-                        correct += 1
-                    elif wrong_char == 1:
-                        wrong_1 += 1
-                    elif wrong_char == 2:
-                        wrong_2 += 1
-                    else:
-                        wrong_above2 += 1
-                print('===END IMG'+ str(stages) + '===')
-                
-             
-                stages = stages + 1
-        except: 
-            continue
-    print("so bien nhan dang dung: ", correct)
-    print("so bien nhan dang sai 1 ky tu: ", wrong_1)
-    print("so bien nhan dang sai 2 ky tu: ", wrong_2)
-    print("so bien nhan dang sai 2 ky tu: ", wrong_above2)
-    print('************')
-    print('FINISH')
-    print('************')  
+ 
+    # img = cv2.imread('D:/Semester6/PBL5/AI/images/oto/detected/one_line (3).jpg')
+    img = cv2.imread('D:/Semester6/PBL5/AI/images/2dong/detected/1 (144).jpg')
+    old_img = img
+
+    # Getting plate prom the processed image
+    output_img, plate, success, line = detect_plate(img)
+    if success == True:
+
+        plt.figure(1)
+        output_img_tg = cv2.cvtColor(output_img, cv2.COLOR_BGR2RGB)
+        ax = plt.subplot(111)
+        ax.imshow(output_img_tg)
+        plt.axis('off')
+    
+
+
+        plate = cv2.cvtColor(plate, cv2.COLOR_BGR2RGB)
+        # plt.figure(figsize=(1,6))
+        plt.figure(2)
+        plate_tg = cv2.cvtColor(plate, cv2.COLOR_BGR2RGB)
+        ax = plt.subplot(111)
+        ax.imshow(plate_tg)
+        plt.title("Cắt khung chứa biển số")
+        plt.axis('off')
+
+
+
+        char = segment_characters(plate, line)
+        plt.figure(5)
+    
+        for i in range(len(char)):
+            plt.subplot(1, len(char) , i+1)
+            plt.imshow(char[i], cmap='gray')
+            plt.axis('off')
+    
+
+        print(show_results())
+        # Segmented characters and their predicted value.
+        plt.figure(6)
+        for i,ch in enumerate(char):
+            img = cv2.resize(ch, (28,28), interpolation=cv2.INTER_AREA)
+            plt.subplot(3,4,i+1)
+            plt.imshow(img,cmap='gray')
+            plt.title(f'Ký tự dự đoán: {show_results()[i]}')
+
+
+        # plate_number = show_results()
+        # output_img, plate = detect_plate(old_img, plate_number)
+        # plt.figure(7)
+        # display(output_img, 'Nhận dạng ký tự của biển số xe')
+
+        plt.show()
+        print('tre')
+    else:
+        print('err')
+
+
 
