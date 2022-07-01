@@ -86,9 +86,6 @@ def detect_plate(self, img, pos): # the function detects and perfors blurring on
         except UnboundLocalError:
             return plate_img, False, False, 0
 
-
-
-
 # Match contours to license plate or character template
 def find_contours(dimensions, img, line) :
     # Find all contours in the image
@@ -272,16 +269,13 @@ class VideoThread(QThread):
     change_pixmap_signal2 = pyqtSignal(np.ndarray)
  
     def run(self):
-
-        # cap_esp32_exit = cv2.VideoCapture(0)
-        #cap_esp32_entrance = cv2.VideoCapture("http://192.168.43.26:81/stream")
-
-        cap_esp32_exit =cv2.VideoCapture(0)
+        cap_esp32_exit = cv2.VideoCapture("http://192.168.43.37:81/stream")
+        cap_esp32_entrance = cv2.VideoCapture("http://192.168.43.26:81/stream")
         while True:
-            #ret1, cv_img1 = cap_esp32_entrance.read()
+            ret1, cv_img1 = cap_esp32_entrance.read()
             ret2, cv_img2 = cap_esp32_exit.read()
             if ret2:
-                #self.change_pixmap_signal1.emit(cv_img1)
+                self.change_pixmap_signal1.emit(cv_img1)
                 self.change_pixmap_signal2.emit(cv_img2)
           
 class UI(QMainWindow):
@@ -437,7 +431,6 @@ class UI(QMainWindow):
                     self.txtTime.setText('0%s:0%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
                 else:
                     self.txtTime.setText('%s:%s:0%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
-            
             else:
                 self.txtTime.setText('%s:%s:%s  -  %s/%s/%s' %(dt.hour, dt.minute, dt.second, dt.day, dt.month, dt.year))
 
