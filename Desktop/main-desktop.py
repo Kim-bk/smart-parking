@@ -210,15 +210,15 @@ class VideoThread(QThread):
     change_pixmap_signal2 = pyqtSignal(np.ndarray)
  
     def run(self):
-        # cap_esp32_exit = cv2.VideoCapture(0)
-        #cap_esp32_entrance = cv2.VideoCapture("http://192.168.43.26:81/stream")
+        cap_esp32_exit = cv2.VideoCapture("http://192.168.43.37:81/stream")
+        cap_esp32_entrance = cv2.VideoCapture("http://192.168.43.26:81/stream")
 
-        cap_esp32_exit =cv2.VideoCapture(0)
+        #cap_esp32_entrance =cv2.VideoCapture(0)
         while True:
-            #ret1, cv_img1 = cap_esp32_entrance.read()
+            ret1, cv_img1 = cap_esp32_entrance.read()
             ret2, cv_img2 = cap_esp32_exit.read()
-            if ret2:
-                #self.change_pixmap_signal1.emit(cv_img1)
+            if ret1 and ret2:
+                self.change_pixmap_signal1.emit(cv_img1)
                 self.change_pixmap_signal2.emit(cv_img2)
           
 class UI(QMainWindow):
@@ -338,7 +338,6 @@ class UI(QMainWindow):
             
         kwargs = {'host': '192.168.43.65', 'port': 7350, 'threaded': True, 'use_reloader': False, 'debug': False}
         flaskThread = Thread(target=app_.run, daemon=True, kwargs=kwargs).start()
-        #load clock
         self.display_time()
 
     @pyqtSlot(np.ndarray)
