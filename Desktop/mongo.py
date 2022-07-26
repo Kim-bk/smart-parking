@@ -27,8 +27,8 @@ def createCheckIn(customer_card,license_plate,date_check_in,cut_img,contour_img)
             }
     kq=db_parking.find_one({"customer": data_find,'status':True})
     if kq != None:
-        kq=db_parking.find_one_and_update({"customer": data_find,'status':True}, 
-                                 {"$set": {"license_plate":data['license_plate']} })
+        kq=db_parking.update_one({"customer": data_find,'status':True}, 
+                                 {"$set": {"license_plate":data['license_plate'],"date_check_in":data['date_check_in'],"cut_img" : data['cut_img'],"contour_img":data['contour_img']} })
     else:
         db_parking.insert_one(data)
 
